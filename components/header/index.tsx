@@ -91,7 +91,12 @@ const Header = () => {
               <LocaleSwitcher />
 
               <button
-                onClick={() => setIsBookingOpen(true)}
+                onClick={() =>
+                  window.open(
+                    "https://the-district-ekkamai.hotelrunner.com/bv3/search",
+                    "_blank",
+                  )
+                }
                 className="hidden sm:block border border-white text-white px-6 py-2 text-[10px] font-bold uppercase tracking-widest hover:bg-brand hover:border-brand hover:text-black transition-all duration-300 cursor-pointer"
               >
                 {t("checkAvailability")}
