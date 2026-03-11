@@ -280,9 +280,12 @@ export default function GalleryPage() {
             {t("subHeader")}
           </p>
           <div className="flex flex-col gap-4 mb-8">
-            {sections.map((sections, index) => {
+            {sections.map((sections) => {
               return (
-                <div onClick={() => hdlRoomTitleClick(sections.label)}>
+                <div
+                  onClick={() => hdlRoomTitleClick(sections.label)}
+                  key={sections.label}
+                >
                   <p className="text-brand hover:text-white/30 cursor-pointer">
                     {"- " + sections.label}
                   </p>
@@ -294,7 +297,11 @@ export default function GalleryPage() {
           <div className="flex flex-col gap-20">
             {sections.map((section) => {
               return (
-                <div id={section.label} className="flex flex-col gap-4">
+                <div
+                  id={section.label}
+                  key={section.description}
+                  className="flex flex-col gap-4"
+                >
                   <h1 className="text-3xl">{section.label}</h1>
                   <h4>{section.description}</h4>
                   <AutoSlideImage
@@ -306,7 +313,10 @@ export default function GalleryPage() {
                   <div className="flex items-baseline justify-between w-full ">
                     {section.facility.map((el) => {
                       return (
-                        <div className="flex flex-col items-center">
+                        <div
+                          className="flex flex-col items-center"
+                          key={el.description}
+                        >
                           <img
                             className="w-20 h-20"
                             style={{
