@@ -14,7 +14,7 @@
     "checkAvailability": "Check Availability",
     "story": "Story",
     "offers": "Offers",
-    "gallery": "Gallery",
+    "gallery": "Accomodation",
     "blog": "Blog",
     "stay": "Stay",
     "dine": "Dine",
@@ -64,7 +64,9 @@
     }
   },
   "GalleryPage": {
-    "header": "Gallery",
+    "header": "Accomodation",
+    "subHeader":"here's what we are offering",
+    "facility":"in this room we offer you",
     "curated": "Curated Moments at the District"
   },
   "BlogPage": {

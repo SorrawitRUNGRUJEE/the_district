@@ -65,6 +65,8 @@
   },
   "GalleryPage": {
     "header": "画廊",
+    "subHeader":"place holder 1",
+    "facility":"in this room we offer you",
     "curated": "The District 精选瞬间"
   },
   "BlogPage": {
