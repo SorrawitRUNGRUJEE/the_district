@@ -5,7 +5,7 @@ excerpt: "Exploring the best of Ekkamai: THAY Ekkamai: The Local Nightlife. Expe
 coverImage: "/content/blog/0007-thay-nightlife-experience/0007-cover.jpg"
 category: "NIGHTLIFE"
 featured: false
-tags: ["Nightlife","Party","LiveMusic","Local"]
+tags: ["Nightlife", "Neighbourhood"]
 ---
 
 ## THAY Ekkamai: The Local Nightlife

@@ -5,7 +5,7 @@ excerpt: "Exploring the best of Ekkamai: Wellness and Spa Retreats. Experience t
 coverImage: "/content/blog/0004-wellness-and-spa-retreats/0004-cover.jpg"
 category: "WELLNESS"
 featured: false
-tags: ["Spa","Massage","Wellness","Lifestyle"]
+tags: ["Lifestyle"]
 ---
 
 ## Wellness and Spa Retreats

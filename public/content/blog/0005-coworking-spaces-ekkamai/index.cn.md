@@ -5,7 +5,7 @@ excerpt: "Exploring the best of Ekkamai: Digital Nomad Guide: Coworking. Experie
 coverImage: "/content/blog/0005-coworking-spaces-ekkamai/0005-cover.jpg"
 category: "LIFESTYLE"
 featured: false
-tags: ["Work","Nomad","Lifestyle","Coffee"]
+tags: ["Lifestyle", "Food"]
 ---
 
 ## Digital Nomad Guide: Coworking

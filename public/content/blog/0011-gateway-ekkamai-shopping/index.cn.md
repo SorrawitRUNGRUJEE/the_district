@@ -5,7 +5,7 @@ excerpt: "Exploring the best of Ekkamai: Shopping at Gateway Ekkamai. Experience
 coverImage: "/content/blog/0011-gateway-ekkamai-shopping/0011-cover.jpg"
 category: "SHOPPING"
 featured: false
-tags: ["Japanese","Mall","Neighbourhood","Lifestyle"]
+tags: ["Food", "Neighbourhood", "Lifestyle"]
 ---
 
 ## Shopping at Gateway Ekkamai

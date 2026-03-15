@@ -5,7 +5,7 @@ excerpt: "Exploring the best of Ekkamai: Best Brunch Spots in Ekkamai. Experienc
 coverImage: "/content/blog/0009-best-brunch-spots/0009-cover.jpg"
 category: "FOOD"
 featured: false
-tags: ["Food","Breakfast","Brunch","Lifestyle"]
+tags: ["Food", "Lifestyle"]
 ---
 
 ## Best Brunch Spots in Ekkamai

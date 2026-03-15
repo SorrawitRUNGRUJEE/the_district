@@ -1,6 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
+import { cache } from "react";
 
 const contentDirectory = path.join(process.cwd(), "public/content/blog");
 
@@ -27,10 +28,10 @@ export interface BlogPost {
 /**
  * Get a single post by slug and locale
  */
-export async function getPostBySlug(
+export const getPostBySlug = cache(async (
   slug: string,
   locale: string,
-): Promise<BlogPost | null> {
+): Promise<BlogPost | null> => {
   const fullPath = path.join(contentDirectory, slug, `index.${locale}.md`);
 
   if (!fs.existsSync(fullPath)) return null;
@@ -43,13 +44,13 @@ export async function getPostBySlug(
     frontmatter: data as BlogFrontmatter,
     content,
   };
-}
+});
 
 /**
  * Get all posts for a specific locale with Advanced Sorting
  * Featured posts come first, then sorted by date (newest to oldest)
  */
-export async function getAllPosts(locale: string): Promise<BlogPost[]> {
+export const getAllPosts = cache(async (locale: string): Promise<BlogPost[]> => {
   if (!fs.existsSync(contentDirectory)) return [];
 
   const folders = fs.readdirSync(contentDirectory);
@@ -81,15 +82,15 @@ export async function getAllPosts(locale: string): Promise<BlogPost[]> {
       const dateB = new Date(b.frontmatter.date as string).getTime();
       return dateB - dateA;
     });
-}
+});
 
 /**
  * Get all unique tags with counts, sorted by frequency (High to Low)
  * and then alphabetically (A-Z) if counts are equal.
  */
-export async function getAllTagsWithCount(
+export const getAllTagsWithCount = cache(async (
   locale: string,
-): Promise<{ name: string; count: number }[]> {
+): Promise<{ name: string; count: number }[]> => {
   const posts = await getAllPosts(locale);
   const tagCounts: Record<string, number> = {};
 
@@ -111,4 +112,4 @@ export async function getAllTagsWithCount(
       // 2. Secondary Sort: Alphabetical (Ascending)
       return a.name.localeCompare(b.name);
     });
-}
+});

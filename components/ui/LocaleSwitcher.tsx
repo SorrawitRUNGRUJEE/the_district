@@ -68,7 +68,7 @@ export default function LocaleSwitcher() {
         disabled={isPending}
         className={`cursor-pointer flex items-center transition-all hover:scale-110 active:scale-95 ${isPending ? "opacity-50" : ""}`}
       >
-        <div className="relative h-6 w-6 overflow-hidden rounded-full border border-white/10 shadow-lg">
+        <div className="relative h-4 w-6 overflow-hidden rounded-sm shadow-md">
           <Image
             src={currentLang.flag}
             alt={currentLang.label}

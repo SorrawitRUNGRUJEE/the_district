@@ -14,7 +14,7 @@ export default function OffersPage() {
             {t("header")}
           </h1>
           {/* Brand accent line */}
-          <div className="mx-auto mt-8 h-[1px] w-24 bg-brand"></div>
+          <div className="mx-auto mt-8 h-px w-24 bg-brand"></div>
         </div>
       </div>
 
@@ -24,7 +24,7 @@ export default function OffersPage() {
           className={`${containerClass} flex flex-col md:flex-row gap-8 items-center`}
         >
           <div className="w-full md:w-1/2">
-            <div className="relative aspect-[4/3] w-full bg-neutral-900 overflow-hidden shadow-2xl cursor-pointer group">
+            <div className="relative aspect-4/3 w-full bg-neutral-900 overflow-hidden shadow-2xl cursor-pointer group">
               <SafeImage
                 src="/images/offers/offer-1.jpg"
                 alt="Stay"
@@ -61,7 +61,7 @@ export default function OffersPage() {
           className={`${containerClass} flex flex-col md:flex-row-reverse gap-8 items-center`}
         >
           <div className="w-full md:w-1/2">
-            <div className="relative aspect-[4/3] w-full bg-neutral-900 overflow-hidden shadow-2xl cursor-pointer group">
+            <div className="relative aspect-4/3 w-full bg-neutral-900 overflow-hidden shadow-2xl cursor-pointer group">
               <SafeImage
                 src="/images/offers/offer-2.jpg"
                 alt="Experience"
@@ -97,7 +97,7 @@ export default function OffersPage() {
           className={`${containerClass} flex flex-col md:flex-row gap-8 items-center`}
         >
           <div className="w-full md:w-1/2">
-            <div className="relative aspect-[4/3] w-full bg-neutral-900 overflow-hidden shadow-2xl cursor-pointer group">
+            <div className="relative aspect-4/3 w-full bg-neutral-900 overflow-hidden shadow-2xl cursor-pointer group">
               <SafeImage
                 src="/images/offers/offer-3.jpg"
                 alt="Dining"

@@ -9,7 +9,7 @@ export default function SingleImage({
 }) {
   return (
     <div className="not-prose my-12 overflow-hidden rounded-[2rem] shadow-xl border border-white/5">
-      <div className="aspect-[16/9] relative">
+      <div className="aspect-video relative">
         <SafeImage
           src={src}
           alt={alt || "Blog image"}

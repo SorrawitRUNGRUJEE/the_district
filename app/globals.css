@@ -7,4 +7,9 @@
   --color-brand: #fece00;
   --color-brand-light: #ffde4d;
   --color-brand-dark: #cbab27;
+  --drop-shadow-brand: 0 0 12px rgba(254, 206, 0, 0.5);
+}
+
+@utility text-shadow-brand {
+  text-shadow: 0 0 12px rgba(254, 206, 0, 0.5);
 }

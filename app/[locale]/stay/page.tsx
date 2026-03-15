@@ -1,27 +1,21 @@
-"use client";
-
-import { motion } from "framer-motion";
+import PageHeader from "@/components/layout/PageHeader";
+import ComingSoon from "@/components/ui/ComingSoon";
 import { useTranslations } from "next-intl";
 
 export default function StayPage() {
   const t = useTranslations("StayPage");
+  const containerClass = "max-w-7xl mx-auto px-6 md:px-12 lg:px-16";
 
   return (
-    <main className="bg-neutral-950 text-white min-h-screen flex flex-col items-center justify-center p-6">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-center space-y-8"
-      >
-        <h1 className="text-4xl md:text-6xl font-light tracking-[0.5em] uppercase opacity-40">
-          {t("header")}
-        </h1>
-        <div className="w-12 h-px bg-brand/30 mx-auto" />
-        <p className="text-[10px] tracking-[0.3em] text-neutral-500 uppercase">
-          {t("status")}
-        </p>
-      </motion.div>
+    <main className="min-h-screen bg-neutral-900 flex flex-col">
+      <PageHeader title={t("header")} containerClass={containerClass} />
+      <ComingSoon
+        statusText={t("status")}
+        description={
+          t("description") ||
+          "Our luxury stays are currently being prepared to offer you the ultimate Ekkamai experience."
+        }
+      />
     </main>
   );
 }

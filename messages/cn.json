@@ -11,6 +11,7 @@
     "inquiries": "常规咨询"
   },
   "Navigation": {
+    "home": "主页",
     "checkAvailability": "查看空房",
     "story": "品牌故事",
     "offers": "特别优惠",
@@ -19,10 +20,11 @@
     "stay": "住宿",
     "dine": "餐饮",
     "neighbourhood": "周边地区",
-    "facilities": "配套设施",
     "contact": "联系我们",
-    "goGreen": "绿色环保",
     "privacy": "隐私政策"
+  },
+  "FloatingMessenger": {
+    "tagline": "随时联系我们！"
   },
   "Booking": {
     "header": "查看空房",
@@ -65,8 +67,8 @@
   },
   "GalleryPage": {
     "header": "画廊",
-    "subHeader":"place holder 1",
-    "facility":"in this room we offer you",
+    "dormLabel": "宿舍",
+    "privateLabel": "私人套房",
     "curated": "The District 精选瞬间"
   },
   "BlogPage": {
@@ -87,35 +89,25 @@
   },
   "StayPage": {
     "header": "住宿",
-    "status": "精致居住体验 即将登场"
+    "status": "精致居住体验 即将登场",
+    "description": "我们正在精心打造更高品质的住宿空间，为您提供极致的艾卡迈 (Ekkamai) 居住体验。"
   },
   "DinePage": {
     "header": "餐饮",
-    "status": "卓越烹饪艺术 即将登场"
+    "status": "卓越烹饪艺术 即将登场",
+    "description": "精选全球美食与当地风味，我们正在为您筹备一场难忘的味蕾盛宴。"
   },
   "NeighbourhoodPage": {
     "header": "周边地区",
-    "status": "艾卡迈当地指南 正在策划中"
-  },
-  "FacilitiesPage": {
-    "header": "设施",
-    "status": "高品质配套设施 正在策划中"
-  },
-  "GoGreenPage": {
-    "header": "绿色环保",
-    "status": "我们对绿色未来的承诺"
+    "status": "艾卡迈当地指南 正在策划中",
+    "description": "通过我们的深度视角，探索艾卡迈的独特魅力。旅游指南正在更新中，为您带来最新推荐。"
   },
   "PrivacyPage": {
     "header": "隐私政策",
-    "status": "确保您的安全与舒适"
+    "status": "确保您的安全与舒适",
+    "description": "我们的隐私政策正在更新中，以确保您的数据得到最高标准的透明保护和安全处理。"
   },
   "ContactPage": {
-    "header": "联系我们",
-    "form": {
-      "name": "姓名",
-      "email": "电子邮件",
-      "message": "内容",
-      "submit": "发送消息"
-    }
+    "header": "联系我们"
   }
 }

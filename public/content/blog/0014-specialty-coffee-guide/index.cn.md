@@ -5,7 +5,7 @@ excerpt: "Exploring the best of Ekkamai: The Ultimate Specialty Coffee Guide. Ex
 coverImage: "/content/blog/0014-specialty-coffee-guide/0014-cover.jpg"
 category: "LIFESTYLE"
 featured: true
-tags: ["Cafe","Coffee","Lifestyle","Neighbourhood"]
+tags: ["Food", "Lifestyle", "Neighbourhood"]
 ---
 
 ## The Ultimate Specialty Coffee Guide

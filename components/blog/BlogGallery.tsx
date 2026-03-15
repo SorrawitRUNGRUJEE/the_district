@@ -35,12 +35,12 @@ export default function BlogGallery({ images }: BlogGalleryProps) {
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         navigation={true}
         pagination={{ clickable: true }}
-        className="rounded-[2rem] overflow-hidden shadow-xl"
+        className="rounded-4xl overflow-hidden shadow-xl"
       >
         {imageList.map((src, index) => (
           <SwiperSlide
             key={index}
-            className="aspect-[16/10] md:aspect-[16/9] bg-neutral-900"
+            className="aspect-16/10 md:aspect-video bg-neutral-900"
           >
             <div className="relative w-full h-full">
               <SafeImage
@@ -48,7 +48,7 @@ export default function BlogGallery({ images }: BlogGalleryProps) {
                 alt={`Gallery image ${index + 1}`}
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
 
               {/* Counter Indicator */}
               <div className="absolute top-6 right-8 text-white/20 text-[10px] font-medium tracking-[0.4em]">

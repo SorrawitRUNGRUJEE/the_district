@@ -11,18 +11,20 @@
     "inquiries": "General Inquiries"
   },
   "Navigation": {
+    "home": "Home",
     "checkAvailability": "Check Availability",
     "story": "Story",
     "offers": "Offers",
-    "gallery": "Accomodation",
+    "gallery": "Gallery",
     "blog": "Blog",
     "stay": "Stay",
     "dine": "Dine",
     "neighbourhood": "Neighbourhood",
-    "facilities": "Facilities",
     "contact": "Contact",
-    "goGreen": "Go Green",
     "privacy": "Privacy Policy"
+  },
+  "FloatingMessenger": {
+    "tagline": "Chat with us!"
   },
   "Booking": {
     "header": "Availability",
@@ -64,9 +66,9 @@
     }
   },
   "GalleryPage": {
-    "header": "Accomodation",
-    "subHeader":"here's what we are offering",
-    "facility":"in this room we offer you",
+    "header": "Gallery",
+    "dormLabel": "Dormitory",
+    "privateLabel": "Private Suites",
     "curated": "Curated Moments at the District"
   },
   "BlogPage": {
@@ -87,35 +89,25 @@
   },
   "StayPage": {
     "header": "Stay",
-    "status": "Refined Living Experience Coming Soon"
+    "status": "Refined Living Experience Coming Soon",
+    "description": "Our luxury stays are currently being prepared to offer you the ultimate Ekkamai experience."
   },
   "DinePage": {
     "header": "Dine",
-    "status": "Culinary Excellence Coming Soon"
+    "status": "Culinary Excellence Coming Soon",
+    "description": "Our culinary experiences are currently being curated to delight your palate."
   },
   "NeighbourhoodPage": {
     "header": "Neighbourhood",
-    "status": "Ekkamai Local Guide Under Curation"
-  },
-  "FacilitiesPage": {
-    "header": "Facilities",
-    "status": "Elevated Amenities Under Curation"
-  },
-  "GoGreenPage": {
-    "header": "Go Green",
-    "status": "Our Commitment to a Greener Future"
+    "status": "Ekkamai Local Guide Under Curation",
+    "description": "Discover Ekkamai through our local insights. This guide is currently being updated with fresh recommendations."
   },
   "PrivacyPage": {
     "header": "Privacy Policy",
-    "status": "Ensuring Your Security and Comfort"
+    "status": "Ensuring Your Security and Comfort",
+    "description": "Our privacy policy is being updated to ensure your data is handled with the highest level of care and transparency."
   },
   "ContactPage": {
-    "header": "Contact",
-    "form": {
-      "name": "NAME",
-      "email": "EMAIL",
-      "message": "MESSAGE",
-      "submit": "Send Message"
-    }
+    "header": "Contact"
   }
 }

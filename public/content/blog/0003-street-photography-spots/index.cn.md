@@ -5,7 +5,7 @@ excerpt: "Exploring the best of Ekkamai: Ekkamai Street Photography Spots. Exper
 coverImage: "/content/blog/0003-street-photography-spots/0003-cover.jpg"
 category: "CULTURE"
 featured: false
-tags: ["Photo","Guide","Culture","Art"]
+tags: ["Neighbourhood", "Lifestyle"]
 ---
 
 ## Ekkamai Street Photography Spots

@@ -5,7 +5,7 @@ excerpt: "Exploring the best of Ekkamai: Bangkok Travel Tips: Using the BTS. Exp
 coverImage: "/content/blog/0002-travel-tips-bangkok-bts/0002-cover.jpg"
 category: "TIPS"
 featured: false
-tags: ["Travel","BTS","Guide","Neighbourhood"]
+tags: ["Neighbourhood"]
 ---
 
 ## Bangkok Travel Tips: Using the BTS

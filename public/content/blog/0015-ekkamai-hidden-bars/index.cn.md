@@ -5,7 +5,7 @@ excerpt: "Exploring the best of Ekkamai: Ekkamai After Dark: Hidden Bars Guide. 
 coverImage: "/content/blog/0015-ekkamai-hidden-bars/0015-cover.jpg"
 category: "NIGHTLIFE"
 featured: true
-tags: ["Nightlife","Bar","Secret","Drink","Neighbourhood"]
+tags: ["Nightlife", "Neighbourhood"]
 ---
 
 ## Ekkamai After Dark: Hidden Bars Guide

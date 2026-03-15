@@ -58,7 +58,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 z-[200] bg-black/50 backdrop-blur-sm"
+            className="fixed inset-0 z-200 bg-black/50 backdrop-blur-sm"
           />
 
           {/* Neutral Toned Modal */}
@@ -66,7 +66,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 50 }}
-            className="fixed bottom-0 left-0 right-0 z-[201] w-full bg-neutral-900 p-6 text-white lg:bottom-auto lg:left-1/2 lg:top-1/2 lg:max-w-[420px] lg:-translate-x-1/2 lg:-translate-y-1/2 lg:rounded-3xl shadow-2xl border border-white/5 outline-none"
+            className="fixed bottom-0 left-0 right-0 z-201 w-full bg-neutral-900 p-6 text-white lg:bottom-auto lg:left-1/2 lg:top-1/2 lg:max-w-[420px] lg:-translate-x-1/2 lg:-translate-y-1/2 lg:rounded-3xl shadow-2xl border border-white/5 outline-none"
             tabIndex={-1}
           >
             <button

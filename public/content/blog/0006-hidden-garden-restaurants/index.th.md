@@ -5,7 +5,7 @@ excerpt: "Exploring the best of Ekkamai: Hidden Garden Restaurants. Experience t
 coverImage: "/content/blog/0006-hidden-garden-restaurants/0006-cover.jpg"
 category: "FOOD"
 featured: false
-tags: ["Food","Garden","Dinner","Secret"]
+tags: ["Food", "Nightlife"]
 ---
 
 ## Hidden Garden Restaurants
