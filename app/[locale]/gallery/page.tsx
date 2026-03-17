@@ -13,6 +13,7 @@ import { useEffect, useState } from "react";
 
 export default function GalleryPage() {
   const t = useTranslations("GalleryPage");
+  const tRooms = useTranslations("GalleryRooms"); // Added for constants translation
   const containerClass = "max-w-7xl mx-auto px-6 md:px-12 lg:px-16";
   const [activeSection, setActiveSection] = useState("");
 
@@ -72,7 +73,7 @@ export default function GalleryPage() {
                         <div className="inline-flex items-center gap-2 px-2 py-1 bg-brand/10 border border-brand/20 rounded-xs">
                           <div className="w-1 h-1 rounded-full bg-brand animate-pulse" />
                           <span className="text-[10px] font-black tracking-widest uppercase text-brand italic">
-                            {section.status}
+                            {tRooms(section.status)}
                           </span>
                         </div>
                       )}
@@ -104,7 +105,7 @@ export default function GalleryPage() {
                           </span>
                         </div>
                         <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-white/20">
-                          Capacity
+                          {tRooms("facilities.capacity")}
                         </span>
                       </div>
 
@@ -115,22 +116,23 @@ export default function GalleryPage() {
                         let show = true;
                         let value = "";
 
-                        if (facility.key === "beds") value = section.info.beds;
+                        // Resolve dynamic values using translation keys
+                        if (facility.key === "beds")
+                          value = tRooms(section.info.beds);
                         if (facility.key === "restroom")
-                          value = section.info.restroom;
+                          value = tRooms(section.info.restroom);
+
+                        // Check exact string match since constants were updated to keys
                         if (facility.key === "tv") {
                           show =
-                            section.info.extras?.some((e) =>
-                              e.includes("TV"),
-                            ) || false;
-                          value = "Included";
+                            section.info.extras?.includes("extras.tv") || false;
+                          value = tRooms("extras.tv");
                         }
                         if (facility.key === "wifi") {
                           show =
-                            section.info.extras?.some((e) =>
-                              e.includes("WIFI"),
-                            ) || false;
-                          value = "High-speed";
+                            section.info.extras?.includes("extras.wifi") ||
+                            false;
+                          value = tRooms("extras.wifi");
                         }
 
                         if (!show) return null;
@@ -161,7 +163,7 @@ export default function GalleryPage() {
                               )}
                             </div>
                             <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-white/20 shrink-0">
-                              {facility.label}
+                              {tRooms(facility.label)}
                             </span>
                           </div>
                         );

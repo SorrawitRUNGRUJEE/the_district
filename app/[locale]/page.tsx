@@ -1,3 +1,4 @@
+import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 
 export default function Home() {
@@ -8,7 +9,6 @@ export default function Home() {
       className="relative flex min-h-screen flex-col items-center justify-center bg-cover bg-center bg-no-repeat px-4 text-center"
       style={{ backgroundImage: "url('/images/home/hero-bg.jpg')" }}
     >
-      {/* Overlay for better text legibility */}
       <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]"></div>
 
       {/* Hero Content */}
@@ -24,9 +24,12 @@ export default function Home() {
         </p>
 
         <div className="pt-10">
-          <button className="border border-white px-10 py-3 text-[10px] font-bold uppercase tracking-[0.2em] text-white hover:bg-brand hover:border-brand hover:text-black transition-all duration-300 cursor-pointer">
+          <Link
+            href="/gallery"
+            className="inline-block border border-white px-10 py-3 text-[10px] font-bold uppercase tracking-[0.2em] text-white hover:bg-brand hover:border-brand hover:text-black transition-all duration-300"
+          >
             {t("cta")}
-          </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -11,11 +11,6 @@ const Footer = () => {
 
   const socialIcons = [
     {
-      name: "tiktok",
-      icon: "/icons/social/tiktok.svg",
-      url: BRAND_INFO.socials.tiktok,
-    },
-    {
       name: "instagram",
       icon: "/icons/social/instagram.svg",
       url: BRAND_INFO.socials.instagram,
@@ -24,6 +19,11 @@ const Footer = () => {
       name: "facebook",
       icon: "/icons/social/facebook.svg",
       url: BRAND_INFO.socials.facebook,
+    },
+    {
+      name: "tiktok",
+      icon: "/icons/social/tiktok.svg",
+      url: BRAND_INFO.socials.tiktok,
     },
     {
       name: "line",

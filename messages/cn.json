@@ -17,12 +17,14 @@
     "privacy": "隐私政策"
   },
   "FloatingMessenger": {
-    "tagline": "随时联系我们！"
+    "tagline": "随时联系我们！",
+    "scanToChat": "扫码聊天",
+    "scanInstruction": "请在手机上打开 LINE 应用并扫描二维码与我们联系。"
   },
   "HomePage": {
     "title": "The District",
     "subtitle": "诚挚贴心的青年旅舍服务",
-    "cta": "探索艾卡迈"
+    "cta": "探索我们的客房"
   },
   "StoryPage": {
     "title": "品牌故事",
@@ -55,6 +57,33 @@
     "dormLabel": "宿舍",
     "privateLabel": "私人套房",
     "curated": "The District 精选瞬间"
+  },
+  "GalleryRooms": {
+    "facilities": {
+      "capacity": "可容纳人数",
+      "beds": "床型",
+      "restroom": "洗手间",
+      "wifi": "无线网络",
+      "tv": "智能电视"
+    },
+    "status": {
+      "sharedDormitory": "多人混合宿舍",
+      "privateLargeRoom": "大型私人客房",
+      "privateCompactRoom": "紧凑型私人客房",
+      "privateFamilyRoom": "家庭客房"
+    },
+    "info": {
+      "beds8": "8张上下铺",
+      "beds4Plus1": "4张上下铺 + 1张双人床",
+      "beds3": "3张上下铺",
+      "beds2Plus1": "2张上下铺 + 1张双人床",
+      "sharedRestroom": "公共卫浴",
+      "privateBathroom": "独立卫浴"
+    },
+    "extras": {
+      "wifi": "高速无线网络",
+      "tv": "智能电视"
+    }
   },
   "BlogPage": {
     "header": "部落格",

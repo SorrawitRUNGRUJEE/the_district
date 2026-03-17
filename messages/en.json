@@ -17,12 +17,14 @@
     "privacy": "Privacy Policy"
   },
   "FloatingMessenger": {
-    "tagline": "Chat with us!"
+    "tagline": "Chat with us!",
+    "scanToChat": "Scan to chat",
+    "scanInstruction": "Open the LINE app on your mobile device and scan the QR code to connect with us."
   },
   "HomePage": {
     "title": "The District",
     "subtitle": "Genuine Hostel Service",
-    "cta": "Explore Ekkamai"
+    "cta": "Explore Our Rooms"
   },
   "StoryPage": {
     "title": "Our Story",
@@ -55,6 +57,33 @@
     "dormLabel": "Dormitory",
     "privateLabel": "Private Suites",
     "curated": "Curated Moments at the District"
+  },
+  "GalleryRooms": {
+    "facilities": {
+      "capacity": "Capacity",
+      "beds": "Bed Type",
+      "restroom": "Restroom",
+      "wifi": "Wifi",
+      "tv": "Smart TV"
+    },
+    "status": {
+      "sharedDormitory": "SHARED DORMITORY",
+      "privateLargeRoom": "PRIVATE LARGE ROOM",
+      "privateCompactRoom": "PRIVATE COMPACT ROOM",
+      "privateFamilyRoom": "PRIVATE FAMILY ROOM"
+    },
+    "info": {
+      "beds8": "8 BUNK BEDS",
+      "beds4Plus1": "4 BUNKS + 1 QUEEN BED",
+      "beds3": "3 BUNK BEDS",
+      "beds2Plus1": "2 BUNKS + 1 QUEEN BED",
+      "sharedRestroom": "SHARED RESTROOM",
+      "privateBathroom": "PRIVATE BATHROOM"
+    },
+    "extras": {
+      "wifi": "HIGH-SPEED WIFI",
+      "tv": "SMART TV"
+    }
   },
   "BlogPage": {
     "header": "Blog",

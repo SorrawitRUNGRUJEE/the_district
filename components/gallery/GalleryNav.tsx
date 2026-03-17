@@ -1,9 +1,9 @@
 "use client";
 
+import { DORM_ROOMS, PRIVATE_ROOMS } from "@/components/gallery/constants";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
-import { DORM_ROOMS, PRIVATE_ROOMS } from "./constants";
 
 interface GalleryNavProps {
   activeSection: string;

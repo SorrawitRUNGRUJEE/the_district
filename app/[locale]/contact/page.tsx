@@ -37,14 +37,14 @@ export default function ContactPage() {
 
   const socialItems = [
     {
-      name: "Facebook",
-      href: BRAND_INFO.socials.facebook,
-      icon: "/icons/social/facebook.svg",
-    },
-    {
       name: "Instagram",
       href: BRAND_INFO.socials.instagram,
       icon: "/icons/social/instagram.svg",
+    },
+    {
+      name: "Facebook",
+      href: BRAND_INFO.socials.facebook,
+      icon: "/icons/social/facebook.svg",
     },
     {
       name: "TikTok",
@@ -208,7 +208,7 @@ export default function ContactPage() {
               className="space-y-4 order-2 lg:row-span-2 pt-12 border-t border-white/5 lg:pt-0 lg:border-t-0"
             >
               {/* Map Header */}
-              <div className="flex items-center gap-4 group/mapheader cursor-default">
+              <div className="flex items-center gap-8 group/mapheader cursor-default">
                 <div
                   className="w-10 h-10 bg-brand group-hover/mapheader:bg-brand-light group-hover/mapheader:drop-shadow-brand transition-all duration-500"
                   style={{

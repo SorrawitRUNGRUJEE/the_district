@@ -1,5 +1,5 @@
+import { routing } from "@/i18n/routing";
 import { getRequestConfig } from "next-intl/server";
-import { routing } from "./routing";
 
 /**
  * Immutable deep merge to prevent mutation of the base (fallback) messages.
