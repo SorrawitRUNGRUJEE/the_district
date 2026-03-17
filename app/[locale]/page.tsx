@@ -17,7 +17,7 @@ export default function Home() {
           {t("title")}
         </h1>
 
-        <div className="mx-auto h-[1px] w-24 bg-brand"></div>
+        <div className="mx-auto h-px w-24 bg-brand"></div>
 
         <p className="max-w-xl text-lg md:text-xl font-light tracking-[0.3em] text-white/90 uppercase italic drop-shadow-sm">
           {t("subtitle")}

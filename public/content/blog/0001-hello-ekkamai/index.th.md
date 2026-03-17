@@ -5,7 +5,7 @@ excerpt: "สัมผัสเสน่ห์ของเอกมัย ย่
 coverImage: "/content/blog/0001-hello-ekkamai/0001-cover.jpg"
 category: "NEIGHBOURHOOD"
 featured: true
-tags: ["Neighbourhood", "Lifestyle", "Food", "Nightlife", "Guide"]
+tags: ["Neighbourhood", "Lifestyle", "Food", "Nightlife"]
 ---
 
 ## จิตวิญญาณแห่งสุขุมวิท 63

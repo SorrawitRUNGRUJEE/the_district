@@ -5,7 +5,7 @@ excerpt: "Exploring the best of Ekkamai: Inside The District: A Design Story. Ex
 coverImage: "/content/blog/0013-the-district-design-story/0013-cover.jpg"
 category: "STORY"
 featured: true
-tags: ["Hostel","Design","Story","Travel"]
+tags: ["Story", "Neighbourhood"]
 ---
 
 ## Inside The District: A Design Story

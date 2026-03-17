@@ -1,4 +1,5 @@
 import "@/app/globals.css";
+import FloatingMessenger from "@/components/floating-messenger";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { routing } from "@/i18n/routing";
@@ -55,6 +56,7 @@ export default async function RootLayout({
           <Header />
           <main>{children}</main>
           <Footer />
+          <FloatingMessenger />
         </NextIntlClientProvider>
       </body>
     </html>

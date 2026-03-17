@@ -5,7 +5,7 @@ excerpt: "Exploring the best of Ekkamai: Wattana Panich: The 50-Year Beef Broth.
 coverImage: "/content/blog/0012-wattana-panich-legend/0012-cover.jpg"
 category: "FOOD"
 featured: false
-tags: ["Food","Local","StreetFood","Neighbourhood","Legendary"]
+tags: ["Food", "Neighbourhood"]
 ---
 
 ## Wattana Panich: The 50-Year Beef Broth

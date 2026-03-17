@@ -1,4 +1,5 @@
-import TagFilter from "@/components/blog/TagFilter";
+import BlogNav from "@/components/blog/BlogNav";
+import PageHeader from "@/components/layout/PageHeader";
 import SafeImage from "@/components/ui/SafeImage";
 import { Link } from "@/i18n/routing";
 import { getAllPosts, getAllTagsWithCount } from "@/lib/markdown";
@@ -19,17 +20,14 @@ export default async function BlogPage({
   const containerClass = "max-w-7xl mx-auto px-6 md:px-12 lg:px-16";
 
   // --- Filter Logic ---
-  const selectedTags = tag ? tag.split(",") : [];
+  const selectedTag = tag || null;
   const allPosts = await getAllPosts(locale);
   const allTagsWithCount = await getAllTagsWithCount(locale);
   const totalPostsCount = allPosts.length;
 
-  const filteredPosts =
-    selectedTags.length > 0
-      ? allPosts.filter((post) =>
-          post.frontmatter.tags?.some((t) => selectedTags.includes(t)),
-        )
-      : allPosts;
+  const filteredPosts = selectedTag
+    ? allPosts.filter((post) => post.frontmatter.tags?.includes(selectedTag))
+    : allPosts;
 
   // --- Pagination Logic ---
   const currentPage = Number(page) || 1;
@@ -59,34 +57,24 @@ export default async function BlogPage({
 
   const getPageLink = (pageNum: number | string) => {
     const baseUrl = `blog?page=${pageNum}`;
-    return selectedTags.length > 0
-      ? `${baseUrl}&tag=${selectedTags.join(",")}`
-      : baseUrl;
+    return selectedTag ? `${baseUrl}&tag=${selectedTag}` : baseUrl;
   };
 
   return (
     /* Changed to bg-neutral-900 to ensure visual consistency across all sections */
     <main className="bg-neutral-900 text-white min-h-screen flex flex-col">
-      {/* Page Header (Kept bg-black for high-contrast branding) */}
-      <header className="pt-24 pb-8 text-center bg-black border-b border-white/5">
-        <div className={containerClass}>
-          <h1 className="text-5xl md:text-7xl font-light tracking-[0.3em] uppercase text-white leading-tight">
-            {t("header")}
-          </h1>
-          <div className="mx-auto mt-8 h-[1px] w-24 bg-brand"></div>
-        </div>
-      </header>
+      <PageHeader title={t("header")} containerClass={containerClass} />
 
-      {/* Floating Filter: Purely transparent background now that main is unified */}
-      <TagFilter
+      <BlogNav
         allTags={allTagsWithCount}
-        selectedTags={selectedTags}
+        selectedTag={selectedTag}
         allLabel={t("filter.all")}
         totalCount={totalPostsCount}
+        containerClass={containerClass}
       />
 
       {/* Blog Grid: pt-0 to sit flush with the filter capsule */}
-      <section className="pb-20 border-b border-white/5 flex-grow pt-0">
+      <section className="pb-20 border-b border-white/5 grow pt-10 md:pt-16">
         <div className={containerClass}>
           {paginatedPosts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
@@ -102,7 +90,7 @@ export default async function BlogPage({
                     <div className="w-full overflow-hidden shadow-2xl bg-neutral-950 rounded-sm">
                       <Link
                         href={`/blog/${blog.slug}`}
-                        className="block relative aspect-[16/9] cursor-pointer"
+                        className="block relative aspect-video cursor-pointer"
                       >
                         <SafeImage
                           src={
@@ -111,7 +99,7 @@ export default async function BlogPage({
                           }
                           alt={(title as string) || "Blog cover"}
                           preload={index < 2}
-                          className="opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-[1s] ease-out"
+                          className="opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000 ease-out"
                         />
                         {featured && (
                           <div className="absolute top-6 left-6 bg-brand text-black text-[8px] font-black tracking-[0.2em] uppercase px-3 py-1 italic shadow-xl z-10">
@@ -124,12 +112,12 @@ export default async function BlogPage({
                     <div className="space-y-4">
                       <div className="flex items-center gap-4 text-[10px] font-bold tracking-[0.2em] text-brand uppercase">
                         <span>{(category as string) || "JOURNAL"}</span>
-                        <span className="w-8 h-[1px] bg-white/20"></span>
+                        <span className="w-8 h-px bg-white/20"></span>
                         <span className="text-white/40">{date as string}</span>
                       </div>
 
                       <Link href={`/blog/${blog.slug}`}>
-                        <h2 className="text-2xl font-light tracking-wide text-white uppercase leading-tight hover:text-brand-light transition-colors min-h-[3.5rem]">
+                        <h2 className="text-2xl font-light tracking-wide text-white uppercase leading-tight hover:text-brand-light transition-colors min-h-14">
                           {title as string}
                         </h2>
                       </Link>

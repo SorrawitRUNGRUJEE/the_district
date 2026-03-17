@@ -5,7 +5,7 @@ excerpt: "Beyond the skyscrapers lies a neighborhood that perfectly blends herit
 coverImage: "/content/blog/0001-hello-ekkamai/0001-cover.jpg"
 category: "NEIGHBOURHOOD"
 featured: true
-tags: ["Neighbourhood", "Lifestyle", "Food", "Nightlife", "Guide"]
+tags: ["Neighbourhood", "Lifestyle", "Food", "Nightlife"]
 ---
 
 ## The Soul of Sukhumvit 63

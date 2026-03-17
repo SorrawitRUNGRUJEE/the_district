@@ -1,19 +1,35 @@
 "use client";
 
 import { Link } from "@/i18n/routing";
+import BookingButton from "@/components/ui/BookingButton";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 interface MenuOverlayProps {
   isOpen: boolean;
   onClose: () => void;
-  onBookingClick: () => void;
 }
 
-const MenuOverlay = ({ isOpen, onClose, onBookingClick }: MenuOverlayProps) => {
+const MenuOverlay = ({ isOpen, onClose }: MenuOverlayProps) => {
   const t = useTranslations("Navigation");
+  const pathname = usePathname();
   const [animate, setAnimate] = useState(false);
   const [prevIsOpen, setPrevIsOpen] = useState(isOpen);
+
+  const isActive = (href: string) => {
+    if (href === "/") return pathname.split("/").length === 2;
+    return pathname.includes(href);
+  };
+
+  const getLinkClass = (href: string, animateState: boolean, delay: string) =>
+    `w-full py-3 text-center text-base font-bold tracking-[0.25em] uppercase transition-all duration-400 relative ${
+      animateState ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
+    } ${delay} cursor-pointer ${
+      isActive(href)
+        ? "text-brand after:absolute after:bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-8 after:h-px after:bg-brand hover:text-shadow-brand"
+        : "text-white/80 hover:text-brand hover:text-shadow-brand"
+    }`;
 
   // Sync animation state with visibility toggle
   if (isOpen !== prevIsOpen) {
@@ -39,27 +55,23 @@ const MenuOverlay = ({ isOpen, onClose, onBookingClick }: MenuOverlayProps) => {
   if (!isOpen) return null;
 
   const mainItems = [
+    { label: t("home"), href: "/" },
     { label: t("story"), href: "/story" },
-    { label: t("offers"), href: "/offers" },
     { label: t("gallery"), href: "/gallery" },
     { label: t("blog"), href: "/blog" },
+    { label: t("contact"), href: "/contact" },
   ];
 
   const secondaryItems = [
     { label: t("stay"), href: "/stay" },
     { label: t("dine"), href: "/dine" },
     { label: t("neighbourhood"), href: "/neighbourhood" },
-    { label: t("facilities"), href: "/facilities" },
-    { label: t("contact"), href: "/contact" },
   ];
-
-  // Updated to font-bold for premium consistency
-  const menuLinkStyle = `w-full py-3 text-center text-base font-bold tracking-[0.25em] text-white/80 hover:text-brand uppercase transition-[opacity,transform] duration-400`;
 
   return (
     <div
       onClick={onClose}
-      className={`fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-xl transition-opacity duration-400 ease-out overflow-y-auto ${animate ? "opacity-100" : "opacity-0"}`}
+      className={`fixed inset-0 z-100 flex items-center justify-center bg-black/60 backdrop-blur-xl transition-opacity duration-400 ease-out overflow-y-auto ${animate ? "opacity-100" : "opacity-0"}`}
     >
       <div
         onClick={(e) => e.stopPropagation()}
@@ -67,7 +79,7 @@ const MenuOverlay = ({ isOpen, onClose, onBookingClick }: MenuOverlayProps) => {
       >
         <button
           onClick={onClose}
-          className="fixed right-6 top-6 z-[120] text-3xl font-light text-white/40 hover:text-brand hover:rotate-90 lg:absolute cursor-pointer transition-all"
+          className="fixed right-6 top-6 z-120 text-3xl font-light text-white/40 hover:text-brand hover:rotate-90 lg:absolute cursor-pointer transition-all"
         >
           ✕
         </button>
@@ -77,41 +89,35 @@ const MenuOverlay = ({ isOpen, onClose, onBookingClick }: MenuOverlayProps) => {
             {/* Primary Navigation (Mobile Only) */}
             <div className="flex w-full flex-col items-center lg:hidden">
               {mainItems.map((item, index) => (
-                <div
-                  key={item.label}
-                  className="w-full flex flex-col items-center"
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={onClose}
+                  className={getLinkClass(
+                    item.href,
+                    animate,
+                    `[transition-delay:${index * 30 + 50}ms]`,
+                  )}
                 >
-                  <Link
-                    href={item.href}
-                    onClick={onClose}
-                    style={{ transitionDelay: `${index * 30 + 50}ms` }}
-                    className={`${menuLinkStyle} ${animate ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"} cursor-pointer`}
-                  >
-                    {item.label}
-                  </Link>
-                  <div className="w-12 h-[0.5px] bg-white/10 mx-auto" />
-                </div>
+                  {item.label}
+                </Link>
               ))}
             </div>
 
             {/* Secondary Navigation Items */}
             {secondaryItems.map((item, index) => (
-              <div
-                key={item.label}
-                className="w-full flex flex-col items-center"
-              >
-                <Link
-                  href={item.href}
-                  onClick={onClose}
-                  style={{ transitionDelay: `${(index + 4) * 30 + 50}ms` }}
-                  className={`${menuLinkStyle} ${animate ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"} cursor-pointer`}
-                >
-                  {item.label}
-                </Link>
-                {index !== secondaryItems.length - 1 && (
-                  <div className="w-12 h-[0.5px] bg-white/10 mx-auto" />
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={onClose}
+                className={getLinkClass(
+                  item.href,
+                  animate,
+                  `[transition-delay:${(index + 4) * 30 + 50}ms]`,
                 )}
-              </div>
+              >
+                {item.label}
+              </Link>
             ))}
           </div>
 
@@ -119,12 +125,10 @@ const MenuOverlay = ({ isOpen, onClose, onBookingClick }: MenuOverlayProps) => {
           <div
             className={`mt-10 w-full flex justify-center lg:hidden transition-all duration-400 delay-300 ${animate ? "scale-100 opacity-100" : "scale-95 opacity-0"}`}
           >
-            <button
-              onClick={onBookingClick}
-              className="w-full max-w-[240px] border border-white/20 px-6 py-4 text-[10px] font-bold uppercase tracking-[0.3em] text-white hover:bg-brand hover:border-brand hover:text-black cursor-pointer transition-all duration-300"
-            >
-              {t("checkAvailability")}
-            </button>
+            <BookingButton
+              onClick={onClose}
+              className="w-full max-w-[240px] px-6 py-4 tracking-[0.3em]"
+            />
           </div>
         </nav>
       </div>

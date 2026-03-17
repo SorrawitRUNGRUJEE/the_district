@@ -5,7 +5,7 @@ excerpt: "Exploring the best of Ekkamai: 24 Hours in Donki Mall. Experience the 
 coverImage: "/content/blog/0008-donki-mall-24h-guide/0008-cover.jpg"
 category: "SHOPPING"
 featured: false
-tags: ["Japanese","24h","Mall","Food"]
+tags: ["Food"]
 ---
 
 ## 24 Hours in Donki Mall

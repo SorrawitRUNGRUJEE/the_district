@@ -1,34 +1,38 @@
 "use client";
 
-import BookingModal from "@/components/booking/BookingModal";
 import MenuOverlay from "@/components/header/MenuOverlay";
+import BookingButton from "@/components/ui/BookingButton";
 import LocaleSwitcher from "@/components/ui/LocaleSwitcher";
-import SafeImage from "@/components/ui/SafeImage";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const Header = () => {
   const t = useTranslations("Navigation");
+  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isBookingOpen, setIsBookingOpen] = useState(false);
+
+  // Returns true when this link matches the current page
+  const isActive = (href: string) => {
+    if (href === "/") return pathname.split("/").length === 2;
+    return pathname.includes(href);
+  };
 
   const navLinks = [
     { href: "/story", label: t("story") },
-    { href: "/offers", label: t("offers") },
     { href: "/gallery", label: t("gallery") },
     { href: "/blog", label: t("blog") },
+    { href: "/contact", label: t("contact") },
   ];
 
   return (
     <>
       {/* Sticky Header with Advanced Glassmorphism */}
-      <header className="fixed top-0 z-50 w-full backdrop-blur-xl transition-all duration-300 group">
-        {/* Visual Layers: Background & Gradients */}
-        <div className="absolute inset-0 bg-black/60 -z-20" />
-
-        {/* Bottom Luminous Glow: Enhances separation from page content */}
-        <div className="absolute inset-x-0 bottom-0 h-[60%] bg-gradient-to-t from-white/[0.08] to-transparent pointer-events-none -z-10" />
+      <header className="fixed top-0 z-50 w-full backdrop-blur-xl transition-all duration-300">
+        {/* Visual Layers: Background */}
+        <div className="absolute inset-0 bg-black/55 -z-20" />
 
         {/* Main Header Content Container */}
         <div className="relative z-10 flex items-center justify-between py-5 px-6">
@@ -36,39 +40,49 @@ const Header = () => {
           <div className="flex items-center gap-4 md:gap-6">
             <button
               onClick={() => setIsMenuOpen(true)}
-              className="group relative h-8 w-8 shrink-0 cursor-pointer"
+              className="group/menu relative h-8 w-8 shrink-0 cursor-pointer"
               aria-label="Open Menu"
             >
-              {/* Menu Icon Transition (White to Brand) */}
-              <div className="absolute inset-0 h-full w-full transition-opacity duration-300 group-hover:opacity-0">
-                <SafeImage
-                  src="/icons/ui/menu-white.svg"
-                  alt="Menu icon"
-                  unoptimized
-                />
-              </div>
-              {/* Menu Icon: Brand Color (Hover) */}
-              <div className="absolute inset-0 h-full w-full opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <SafeImage
-                  src="/icons/ui/menu-yellow.svg"
-                  alt="Menu icon active"
-                  unoptimized
-                />
-              </div>
+              <div
+                className="w-full h-full bg-white transition-colors duration-300 group-hover/menu:bg-brand"
+                style={{
+                  WebkitMaskImage: "url(/icons/ui/menu.svg)",
+                  WebkitMaskSize: "contain",
+                  WebkitMaskRepeat: "no-repeat",
+                  WebkitMaskPosition: "center",
+                  maskImage: "url(/icons/ui/menu.svg)",
+                  maskSize: "contain",
+                  maskRepeat: "no-repeat",
+                  maskPosition: "center",
+                }}
+              />
             </button>
 
             <Link
               href="/"
-              className="group flex flex-col md:flex-row md:items-baseline md:gap-3"
+              className="group/brand flex flex-row items-end gap-2"
             >
-              {/* Main Brand with Neon Glow Effect */}
-              <h1 className="text-brand text-xl md:text-2xl font-black tracking-tighter uppercase italic transition-all duration-500 group-hover:text-brand-light group-hover:drop-shadow-[0_0_12px_rgba(254,206,0,0.5)]">
-                THE DISTRICT
-              </h1>
+              {/* Logo Image — glows when on home page as 'selected' state */}
+              <div
+                className={`relative h-8 md:h-10 aspect-square overflow-hidden rounded-lg transition-all duration-500 group-hover/brand:drop-shadow-brand ${isActive("/") ? "drop-shadow-brand" : ""}`}
+              >
+                <Image
+                  src="/images/branding/logo.jpg"
+                  alt="The District Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
 
-              {/* Subtle Identity: Minimalist yet Informative */}
-              <span className="text-[7px] md:text-[9px] font-bold tracking-[0.4em] uppercase text-white/30 transition-all duration-700 group-hover:text-brand group-hover:tracking-[0.6em] group-hover:opacity-100">
-                Hotel & Hostel
+              {/* 'Hostel' subtitle — brand color when on home page */}
+              <span
+                className={`text-[7px] md:text-[9px] font-bold tracking-[0.4em] uppercase transition-all duration-700 group-hover/brand:tracking-[0.6em] pb-0.5 ${
+                  isActive("/")
+                    ? "text-brand group-hover/brand:text-shadow-brand"
+                    : "text-white/30 group-hover/brand:text-brand"
+                }`}
+              >
+                Hostel
               </span>
             </Link>
           </div>
@@ -80,7 +94,11 @@ const Header = () => {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="font-bold hover:text-brand transition-colors duration-300"
+                  className={`font-bold transition-all duration-300 relative pb-0.5 ${
+                    isActive(link.href)
+                      ? "text-brand after:absolute after:bottom-0 after:left-0 after:w-full after:h-px after:bg-brand hover:text-shadow-brand"
+                      : "text-white hover:text-brand hover:text-shadow-brand"
+                  }`}
                 >
                   {link.label}
                 </Link>
@@ -90,36 +108,14 @@ const Header = () => {
             <div className="flex items-center gap-4 lg:gap-6 lg:border-l lg:border-white/20 lg:pl-8">
               <LocaleSwitcher />
 
-              <button
-                onClick={() =>
-                  window.open(
-                    "https://the-district-ekkamai.hotelrunner.com/bv3/search",
-                    "_blank",
-                  )
-                }
-                className="hidden sm:block border border-white text-white px-6 py-2 text-[10px] font-bold uppercase tracking-widest hover:bg-brand hover:border-brand hover:text-black transition-all duration-300 cursor-pointer"
-              >
-                {t("checkAvailability")}
-              </button>
+              <BookingButton className="hidden sm:block px-6 py-2" />
             </div>
           </div>
         </div>
       </header>
 
       {/* Navigation Modals */}
-      <MenuOverlay
-        isOpen={isMenuOpen}
-        onClose={() => setIsMenuOpen(false)}
-        onBookingClick={() => {
-          setIsMenuOpen(false);
-          setIsBookingOpen(true);
-        }}
-      />
-
-      <BookingModal
-        isOpen={isBookingOpen}
-        onClose={() => setIsBookingOpen(false)}
-      />
+      <MenuOverlay isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
     </>
   );
 };

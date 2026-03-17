@@ -1,7 +1,9 @@
+import AnimatedPostHeader from "@/components/blog/AnimatedPostHeader";
 import BlogGallery from "@/components/blog/BlogGallery";
+import PageHeader from "@/components/layout/PageHeader";
 import SafeImage from "@/components/ui/SafeImage";
 import { Link } from "@/i18n/routing";
-import { getPostBySlug } from "@/lib/markdown";
+import { getAllPosts, getPostBySlug } from "@/lib/markdown";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { notFound } from "next/navigation";
 import { ComponentPropsWithoutRef } from "react";
@@ -15,6 +17,26 @@ interface PostPageProps {
 }
 
 /**
+ * Generate static params for all posts and locales
+ */
+export async function generateStaticParams() {
+  const locales = ["en", "th", "cn"];
+  const allParams: { slug: string; locale: string }[] = [];
+
+  for (const locale of locales) {
+    const posts = await getAllPosts(locale);
+    posts.forEach((post) => {
+      allParams.push({
+        slug: post.slug,
+        locale: locale,
+      });
+    });
+  }
+
+  return allParams;
+}
+
+/**
  * MDX Components for stylized article content
  */
 const mdxComponents = {
@@ -24,11 +46,11 @@ const mdxComponents = {
       {props.caption && (
         <div className="mt-6 flex justify-center px-4">
           <div className="flex items-center gap-4">
-            <div className="h-[1px] w-8 bg-brand/30" />
+            <div className="h-px w-8 bg-brand/30" />
             <p className="text-[10px] font-medium uppercase tracking-[0.4em] text-white/40">
               {props.caption}
             </p>
-            <div className="h-[1px] w-8 bg-brand/30" />
+            <div className="h-px w-8 bg-brand/30" />
           </div>
         </div>
       )}
@@ -37,7 +59,7 @@ const mdxComponents = {
 
   SingleImage: (props: { src: string; alt?: string; caption?: string }) => (
     <div className="not-prose my-16 group">
-      <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[2rem] border border-white/5 shadow-2xl">
+      <div className="relative aspect-video w-full overflow-hidden rounded-4xl border border-white/5 shadow-2xl">
         <SafeImage
           src={props.src}
           alt={props.caption || props.alt || "The District Blog Image"}
@@ -47,11 +69,11 @@ const mdxComponents = {
       {props.caption && (
         <div className="mt-6 flex justify-center px-4">
           <div className="flex items-center gap-4">
-            <div className="h-[1px] w-8 bg-brand/30" />
+            <div className="h-px w-8 bg-brand/30" />
             <p className="text-[10px] font-medium uppercase tracking-[0.4em] text-white/40">
               {props.caption}
             </p>
-            <div className="h-[1px] w-8 bg-brand/30" />
+            <div className="h-px w-8 bg-brand/30" />
           </div>
         </div>
       )}
@@ -60,7 +82,7 @@ const mdxComponents = {
 
   img: (props: ComponentPropsWithoutRef<"img">) => (
     <div className="not-prose my-16 group">
-      <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[2rem] border border-white/5 shadow-2xl">
+      <div className="relative aspect-video w-full overflow-hidden rounded-4xl border border-white/5 shadow-2xl">
         {props.src && (
           <SafeImage
             src={props.src}
@@ -72,11 +94,11 @@ const mdxComponents = {
       {props.alt && (
         <div className="mt-6 flex justify-center px-4">
           <div className="flex items-center gap-4">
-            <div className="h-[1px] w-8 bg-brand/30" />
+            <div className="h-px w-8 bg-brand/30" />
             <p className="text-[10px] font-medium uppercase tracking-[0.4em] text-white/40">
               {props.alt}
             </p>
-            <div className="h-[1px] w-8 bg-brand/30" />
+            <div className="h-px w-8 bg-brand/30" />
           </div>
         </div>
       )}
@@ -94,13 +116,19 @@ export default async function PostPage({ params }: PostPageProps) {
   const tags = (frontmatter.tags as string[]) || [];
 
   return (
-    <article className="min-h-screen bg-neutral-950 text-white pb-32 relative">
+    <article className="min-h-screen bg-neutral-900 text-white pb-32 relative">
+      <PageHeader
+        title="STORY"
+        containerClass="max-w-7xl mx-auto px-8 md:px-20"
+        className="md:hidden pt-24 pb-10"
+      />
+
       {/* 1. Desktop Navigation: Floating side link */}
       <Link
         href="/blog"
         className="fixed top-24 left-8 z-50 hidden lg:flex items-center gap-4 group opacity-50 hover:opacity-100 transition-opacity"
       >
-        <div className="w-10 h-[1px] bg-white group-hover:w-16 transition-all" />
+        <div className="w-10 h-px bg-white group-hover:w-16 transition-all" />
         <span className="text-[10px] font-bold uppercase tracking-[0.3em]">
           Discover More Stories
         </span>
@@ -118,47 +146,30 @@ export default async function PostPage({ params }: PostPageProps) {
             preload={true}
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-black/20 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-neutral-900 via-black/20 to-transparent" />
         </div>
 
         {/* Content Overlay */}
-        <div className="relative z-10 max-w-7xl mx-auto px-8 md:px-20 w-full">
-          <div className="max-w-5xl">
-            {/* 3. Mobile Navigation: Breadcrumb style */}
-            <div className="lg:hidden mb-12">
-              <Link
-                href="/blog"
-                className="inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.3em] text-white/50"
-              >
-                <span className="text-brand">←</span> Discover More Stories
-              </Link>
-            </div>
-
-            {/* Meta Info */}
-            <div className="flex flex-wrap items-center gap-6 mb-8">
-              <p className="text-brand text-[10px] font-bold uppercase tracking-[0.5em]">
-                {frontmatter.date as string}
-              </p>
-              <div className="h-[1px] w-12 bg-white/20" />
-              <div className="flex gap-4">
-                {tags.map((tag) => (
-                  <Link
-                    key={tag}
-                    href={`/blog?tag=${tag}`}
-                    className="text-[9px] font-bold text-white/40 uppercase tracking-[0.2em] hover:text-brand transition-colors"
-                  >
-                    #{tag}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* Fluid Header Typography */}
-            <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter leading-[0.85] text-white italic drop-shadow-2xl">
-              {frontmatter.title as string}
-            </h1>
+        <AnimatedPostHeader
+          title={frontmatter.title as string}
+          date={frontmatter.date as string}
+          tags={tags}
+        >
+          {/* Mobile Navigation: Breadcrumb style */}
+          <div className="lg:hidden mb-12">
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.3em] text-white/50 group"
+            >
+              <span className="text-brand group-hover:-translate-x-1 transition-transform">
+                ←
+              </span>
+              <span className="border-b border-white/10 group-hover:border-white/30 transition-colors uppercase">
+                Discover More Stories
+              </span>
+            </Link>
           </div>
-        </div>
+        </AnimatedPostHeader>
       </div>
 
       {/* Article Body */}
@@ -176,7 +187,7 @@ export default async function PostPage({ params }: PostPageProps) {
           max-w-none
 
           /* Hierarchy & Typography */
-          prose-h2:text-white prose-h2:text-4xl prose-h2:tracking-[0.1em] prose-h2:uppercase prose-h2:font-black prose-h2:mt-32 prose-h2:mb-12
+          prose-h2:text-white prose-h2:text-4xl prose-h2:tracking-widest prose-h2:uppercase prose-h2:font-black prose-h2:mt-32 prose-h2:mb-12
           prose-h3:text-white prose-h3:text-2xl prose-h3:tracking-wide prose-h3:uppercase prose-h3:mt-20
           prose-p:text-neutral-400 prose-p:leading-relaxed prose-p:text-lg prose-p:mb-8
           prose-strong:text-brand prose-strong:font-bold

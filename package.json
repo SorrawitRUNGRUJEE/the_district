@@ -10,15 +10,12 @@
     "start-dev": "pnpm install && open-cli http://localhost:3000 & next dev"
   },
   "dependencies": {
-    "dayjs": "^1.11.19",
-    "flag-icons": "^7.5.0",
     "framer-motion": "^12.34.3",
     "gray-matter": "^4.0.3",
     "next": "16.1.6",
     "next-intl": "^4.8.3",
     "next-mdx-remote": "^6.0.0",
     "react": "19.2.4",
-    "react-day-picker": "^9.13.2",
     "react-dom": "19.2.4",
     "remark-gfm": "^4.0.1",
     "swiper": "^12.1.2"

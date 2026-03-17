@@ -5,7 +5,7 @@ excerpt: "Exploring the best of Ekkamai: Discovering Art Spaces in Sukhumvit. Ex
 coverImage: "/content/blog/0010-art-spaces-in-sukhumvit/0010-cover.jpg"
 category: "CULTURE"
 featured: false
-tags: ["Art","Gallery","Culture","Design"]
+tags: ["Lifestyle", "Story"]
 ---
 
 ## Discovering Art Spaces in Sukhumvit
