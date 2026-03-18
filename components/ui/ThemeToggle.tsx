@@ -1,19 +1,14 @@
 "use client";
 
+import { useIsClient } from "@/hooks/use-is-client";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 
 const ThemeToggle = () => {
-  const { theme, setTheme, resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const { setTheme, resolvedTheme } = useTheme();
+  const isClient = useIsClient();
 
-  // Avoid hydration mismatch
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return <div className="h-8 w-8" />;
+  if (!isClient) return <div className="h-8 w-8" />;
 
   const isDark = resolvedTheme === "dark";
 

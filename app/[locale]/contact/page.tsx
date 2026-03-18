@@ -1,23 +1,20 @@
 "use client";
 
 import PageHeader from "@/components/layout/PageHeader";
+import { useIsClient } from "@/hooks/use-is-client";
 import { BRAND_INFO } from "@/lib/constants";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function ContactPage() {
   const t = useTranslations("Contact");
   const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const isClient = useIsClient();
   const [isMapInteracted, setIsMapInteracted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
+  if (!isClient) return null;
 
   const isDark = resolvedTheme === "dark";
   const containerClass = "max-w-7xl mx-auto px-8 md:px-20";
