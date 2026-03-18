@@ -13,3 +13,5 @@ export const BRAND_INFO = {
     booking: "https://the-district-ekkamai.hotelrunner.com/bv3/search",
   },
 };
+
+// linktree: https://linktr.ee/thedistrict.ekkamai

@@ -50,7 +50,7 @@ export default function GalleryPage() {
   const allSections = [...DORM_ROOMS, ...PRIVATE_ROOMS];
 
   return (
-    <main className="bg-neutral-900 text-white min-h-screen">
+    <main className="bg-muted text-foreground min-h-screen">
       <PageHeader title={t("header")} containerClass={containerClass} />
       <GalleryNav
         activeSection={activeSection}
@@ -88,7 +88,7 @@ export default function GalleryPage() {
                       <div className="flex flex-col items-center gap-2 group/stat w-20 md:w-24 text-center shrink-0">
                         <div className="flex items-center gap-1.5 h-6">
                           <div
-                            className="w-5 h-5 bg-white/40 group-hover/stat:bg-brand transition-colors duration-300"
+                            className="w-5 h-5 bg-foreground/40 group-hover/stat:bg-brand transition-colors duration-300"
                             style={{
                               maskImage: "url(/icons/ui/users.svg)",
                               WebkitMaskImage: "url(/icons/ui/users.svg)",
@@ -100,11 +100,11 @@ export default function GalleryPage() {
                               WebkitMaskSize: "contain",
                             }}
                           />
-                          <span className="text-[10px] font-black text-white/50 group-hover/stat:text-brand transition-colors italic">
+                          <span className="text-[10px] font-black text-foreground/50 group-hover/stat:text-brand transition-colors italic">
                             x {section.capacity}
                           </span>
                         </div>
-                        <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-white/20">
+                        <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-foreground/20">
                           {tRooms("facilities.capacity")}
                         </span>
                       </div>
@@ -144,7 +144,7 @@ export default function GalleryPage() {
                           >
                             <div className="flex items-center justify-center gap-1.5 h-6">
                               <div
-                                className="w-5 h-5 bg-white/30 group-hover/icon:bg-brand transition-colors duration-300 shrink-0"
+                                className="w-5 h-5 bg-foreground/30 group-hover/icon:bg-brand transition-colors duration-300 shrink-0"
                                 style={{
                                   maskImage: `url(${facility.icon})`,
                                   WebkitMaskImage: `url(${facility.icon})`,
@@ -157,12 +157,12 @@ export default function GalleryPage() {
                                 }}
                               />
                               {value && (
-                                <span className="text-[10px] font-extrabold text-white/50 group-hover/icon:text-brand transition-all italic leading-tight uppercase tracking-tight">
+                                <span className="text-[10px] font-extrabold text-foreground/50 group-hover/icon:text-brand transition-all italic leading-tight uppercase tracking-tight">
                                   {value}
                                 </span>
                               )}
                             </div>
-                            <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-white/20 shrink-0">
+                            <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-foreground/20 shrink-0">
                               {tRooms(facility.label)}
                             </span>
                           </div>
@@ -182,8 +182,8 @@ export default function GalleryPage() {
           </div>
 
           {/* Branding Footer */}
-          <div className="mt-10 pt-10 border-t border-white/5 text-center">
-            <p className="text-[10px] font-black tracking-[0.5em] uppercase text-white/20 italic">
+          <div className="mt-10 pt-10 border-t border-border text-center">
+            <p className="text-[10px] font-black tracking-[0.5em] uppercase text-foreground/20 italic">
               The District / {t("curated")}
             </p>
           </div>

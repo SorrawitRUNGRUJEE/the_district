@@ -4,7 +4,7 @@ date: "MAR 01, 2026"
 excerpt: "Exploring the best of Ekkamai: Ekkamai After Dark: Hidden Bars Guide. Experience the neighborhood like a local at The District."
 coverImage: "/content/blog/0015-ekkamai-hidden-bars/0015-cover.jpg"
 category: "NIGHTLIFE"
-featured: true
+featured: false
 tags: ["Nightlife", "Neighbourhood"]
 ---
 

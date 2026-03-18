@@ -2,6 +2,7 @@ import "@/app/globals.css";
 import FloatingMessenger from "@/components/floating-messenger";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { routing } from "@/i18n/routing";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
@@ -48,16 +49,23 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <NextIntlClientProvider messages={messages}>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-          <FloatingMessenger />
-        </NextIntlClientProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <NextIntlClientProvider messages={messages}>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+            <FloatingMessenger />
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

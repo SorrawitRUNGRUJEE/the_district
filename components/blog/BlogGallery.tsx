@@ -40,7 +40,7 @@ export default function BlogGallery({ images }: BlogGalleryProps) {
         {imageList.map((src, index) => (
           <SwiperSlide
             key={index}
-            className="aspect-16/10 md:aspect-video bg-neutral-900"
+            className="aspect-16/10 md:aspect-video bg-background"
           >
             <div className="relative w-full h-full">
               <SafeImage

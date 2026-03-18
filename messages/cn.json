@@ -29,7 +29,14 @@
   "StoryPage": {
     "title": "品牌故事",
     "status": "即将登场",
-    "description": "在曼谷艾卡迈核心地带，打造最真诚、最贴心的青年旅舍体验。"
+    "description": "在曼谷艾卡迈核心地带，打造最真诚、最贴心的青年旅舍体验。",
+    "firstHeader":"我们为何用它",
+    "firstContent1":"如今互联网提供各种各样版本的Lorem Ipsum段落，但是大多数都多多少少出于刻意幽默或者其他随机插入的荒谬单词而被篡改过了。如果你想取用一段Lorem Ipsum，请确保段落中不含有令人尴尬的不恰当内容。所有网上的Lorem Ipsum生成器都倾向于在必要时重复预先准备的部分，然而这个生成器则是互联网上首个确切的生成器。它使用由超过200个拉丁单词所构造的词典，结合了几个模范句子结构，来生成看起来恰当的Lorem Ipsum。因此，生成出的结果无一例外免于重复，刻意的幽默，以及非典型的词汇等等",
+    "firstContent2":"如今互联网提供各种各样版本的Lorem Ipsum段落，但是大多数都多多少少出于刻意幽默或者其他随机插入的荒谬单词而被篡改过了。如果你想取用一段Lorem Ipsum，请确保段落中不含有令人尴尬的不恰当内容。所有网上的Lorem Ipsum生成器都倾向于在必要时重复预先准备的部分，然而这个生成器则是互联网上首个确切的生成器。它使用由超过200个拉丁单词所构造的词典，结合了几个模范句子结构，来生成看起来恰当的Lorem Ipsum。因此，生成出的结果无一例外免于重复，刻意的幽默，以及非典型的词汇等等",
+    "secondHeader":"我们为何用它",
+    "secondContent1":"如今互联网提供各种各样版本的Lorem Ipsum段落，但是大多数都多多少少出于刻意幽默或者其他随机插入的荒谬单词而被篡改过了。如果你想取用一段Lorem Ipsum，请确保段落中不含有令人尴尬的不恰当内容。所有网上的Lorem Ipsum生成器都倾向于在必要时重复预先准备的部分，然而这个生成器则是互联网上首个确切的生成器。它使用由超过200个拉丁单词所构造的词典，结合了几个模范句子结构，来生成看起来恰当的Lorem Ipsum。因此，生成出的结果无一例外免于重复，刻意的幽默，以及非典型的词汇等等. Vivamus non pellentesque nulla. Nam justo dolor, feugiat eget nunc eget, faucibus sagittis elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas mauris neque, hendrerit in nisl et, finibus volutpat nunc. Praesent mollis sapien ex, vitae semper dolor vestibulum vitae. Aliquam tellus massa, tempus a ante non, volutpat gravida sem. Nullam ac consectetur libero.",
+    "secondContent2":"如今互联网提供各种各样版本的Lorem Ipsum段落，但是大多数都多多少少出于刻意幽默或者其他随机插入的荒谬单词而被篡改过了。如果你想取用一段Lorem Ipsum，请确保段落中不含有令人尴尬的不恰当内容。所有网上的Lorem Ipsum生成器都倾向于在必要时重复预先准备的部分，然而这个生成器则是互联网上首个确切的生成器。它使用由超过200个拉丁单词所构造的词典，结合了几个模范句子结构，来生成看起来恰当的Lorem Ipsum。因此，生成出的结果无一例外免于重复，刻意的幽默，以及非典型的词汇等等"
+
   },
   "OffersPage": {
     "header": "特别优惠",
@@ -93,7 +100,9 @@
       "prev": "上一页",
       "next": "下一页",
       "page": "页",
-      "of": "之"
+      "of": "/",
+      "showing": "正在显示",
+      "posts": "篇文章"
     },
     "filter": {
       "all": "全部文章",

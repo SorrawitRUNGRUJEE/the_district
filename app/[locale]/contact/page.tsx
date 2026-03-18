@@ -1,14 +1,22 @@
 "use client";
 
 import PageHeader from "@/components/layout/PageHeader";
+import { useIsClient } from "@/hooks/use-is-client";
 import { BRAND_INFO } from "@/lib/constants";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { useTheme } from "next-themes";
 import { useState } from "react";
 
 export default function ContactPage() {
   const t = useTranslations("Contact");
+  const { resolvedTheme } = useTheme();
+  const isClient = useIsClient();
   const [isMapInteracted, setIsMapInteracted] = useState(false);
+
+  if (!isClient) return null;
+
+  const isDark = resolvedTheme === "dark";
   const containerClass = "max-w-7xl mx-auto px-8 md:px-20";
 
   const contactItems = [
@@ -59,7 +67,7 @@ export default function ContactPage() {
   ];
 
   return (
-    <main className="bg-neutral-900 text-white min-h-screen flex flex-col">
+    <main className="bg-muted text-foreground min-h-screen flex flex-col">
       <PageHeader title={t("header")} containerClass={containerClass} />
 
       <section className="py-24 md:py-32 grow">
@@ -84,9 +92,9 @@ export default function ContactPage() {
                   }
                   className="group flex items-start gap-8 cursor-pointer"
                 >
-                  {/* Icon with Brand Masking & Glow on Hover */}
+                  {/* Icon with Brand Masking */}
                   <div
-                    className="w-8 h-8 md:w-10 md:h-10 bg-brand shrink-0 group-hover:bg-brand-light group-hover:drop-shadow-brand transition-all duration-500"
+                    className="w-8 h-8 md:w-10 md:h-10 bg-brand shrink-0 group-hover:bg-brand-light transition-all duration-500 group-hover:drop-shadow-brand"
                     style={{
                       maskImage: `url(${item.icon})`,
                       WebkitMaskImage: `url(${item.icon})`,
@@ -105,10 +113,10 @@ export default function ContactPage() {
                     </h3>
                     <div className="space-y-2">
                       <div className="flex items-center gap-3">
-                        <p className="block text-2xl md:text-3xl font-light tracking-tight text-white group-hover:text-brand-light transition-all duration-300 uppercase border-b border-brand/10 group-hover:border-brand/60">
+                        <p className="block text-2xl md:text-3xl font-light tracking-tight text-foreground group-hover:text-brand-light transition-all duration-300 uppercase border-b border-brand/10 group-hover:border-brand/60">
                           {item.value}
                         </p>
-                        {/* Subtle Link SVG - Always visible, glows on hover */}
+                        {/* Subtle Link SVG */}
                         <div
                           className="w-3.5 h-3.5 bg-brand opacity-30 group-hover:opacity-100 group-hover:translate-x-1 group-hover:scale-110 transition-all duration-500 shrink-0"
                           style={{
@@ -125,11 +133,11 @@ export default function ContactPage() {
                       </div>
                       {item.subValue && (
                         <p
-                          className={`font-light leading-relaxed max-w-sm group-hover:text-white transition-colors ${
+                          className={`font-light leading-relaxed max-w-sm group-hover:text-brand dark:group-hover:text-brand-light transition-all duration-300 ${
                             item.label === t("inquiries") ||
                             item.label === t("phone")
-                              ? "text-[10px] font-bold text-white/30 uppercase tracking-[0.3em] pt-1"
-                              : "text-lg md:text-xl text-neutral-400"
+                              ? "text-[10px] font-bold text-foreground/30 uppercase tracking-[0.3em] pt-1"
+                              : "text-lg md:text-xl text-muted-foreground"
                           }`}
                         >
                           {item.subValue}
@@ -146,44 +154,37 @@ export default function ContactPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="space-y-10 pt-8 lg:pt-12 border-t border-white/5 order-3"
+              className="space-y-10 pt-8 lg:pt-12 border-t-2 border-foreground/10 order-3"
             >
-              <a
-                href="https://www.google.com/maps/dir/?api=1&destination=The+District+Hostel+Ekkamai"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-4 px-8 py-4 bg-white/5 hover:bg-brand text-white hover:text-neutral-900 border border-white/10 hover:border-brand rounded-full transition-all duration-500 group"
-              >
-                <span className="text-sm font-bold uppercase tracking-[0.2em]">
-                  {t("getDirections")}
-                </span>
-                <div
-                  className="w-5 h-5 bg-white group-hover:bg-neutral-900 transition-colors"
-                  style={{
-                    maskImage: `url(/icons/ui/location.svg)`,
-                    WebkitMaskImage: `url(/icons/ui/location.svg)`,
-                    maskRepeat: "no-repeat",
-                    WebkitMaskRepeat: "no-repeat",
-                    maskPosition: "center",
-                    WebkitMaskPosition: "center",
-                    maskSize: "contain",
-                    WebkitMaskSize: "contain",
-                  }}
-                />
-              </a>
+              {/* Follow Us Segment */}
+              <div className="space-y-3">
+                <div className="flex items-center gap-8 group/socials cursor-default">
+                  <div
+                    className="w-8 h-8 md:w-10 md:h-10 bg-brand group-hover/socials:bg-brand-light group-hover/socials:drop-shadow-brand transition-all duration-500"
+                    style={{
+                      maskImage: "url(/icons/ui/globe.svg)",
+                      WebkitMaskImage: "url(/icons/ui/globe.svg)",
+                      maskRepeat: "no-repeat",
+                      WebkitMaskRepeat: "no-repeat",
+                      maskPosition: "center",
+                      WebkitMaskPosition: "center",
+                      maskSize: "contain",
+                      WebkitMaskSize: "contain",
+                    }}
+                  />
+                  <h3 className="text-brand group-hover/socials:text-brand-light transition-colors text-[10px] font-black uppercase tracking-[0.5em] italic">
+                    {t("followUs")}
+                  </h3>
+                </div>
 
-              <div className="space-y-6">
-                <h3 className="text-white/30 text-[10px] font-bold uppercase tracking-[0.5em]">
-                  {t("followUs")}
-                </h3>
-                <div className="flex gap-6">
+                <div className="flex gap-8 pl-16 md:pl-18">
                   {socialItems.map((social) => (
                     <a
                       key={social.name}
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-6 h-6 bg-brand hover:bg-brand-light hover:drop-shadow-brand transition-all duration-300"
+                      className="w-8 h-8 bg-foreground hover:bg-brand hover:drop-shadow-brand transition-all duration-300"
                       style={{
                         maskImage: `url(${social.icon})`,
                         WebkitMaskImage: `url(${social.icon})`,
@@ -205,7 +206,7 @@ export default function ContactPage() {
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="space-y-4 order-2 lg:row-span-2 pt-12 border-t border-white/5 lg:pt-0 lg:border-t-0"
+              className="space-y-4 order-2 lg:row-span-2 pt-12 border-t-2 border-foreground/10 lg:pt-0 lg:border-t-0"
             >
               {/* Map Header */}
               <div className="flex items-center gap-8 group/mapheader cursor-default">
@@ -230,15 +231,15 @@ export default function ContactPage() {
               <div
                 onMouseEnter={() => setIsMapInteracted(true)}
                 onTouchStart={() => setIsMapInteracted(true)}
-                className="relative h-[500px] lg:h-[650px] w-full rounded-2xl overflow-hidden border border-white/5 group/map shadow-2xl"
+                className="relative h-[500px] lg:h-[650px] w-full rounded-2xl overflow-hidden border border-border group/map shadow-2xl"
               >
                 <AnimatePresence>
-                  {!isMapInteracted && (
+                  {isDark && !isMapInteracted && (
                     <motion.div
                       initial={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.4 }}
-                      className="absolute inset-0 z-10 bg-black/60 flex flex-col items-center justify-center cursor-pointer group/mapover pointer-events-auto"
+                      className="absolute inset-0 z-10 bg-muted/60 flex flex-col items-center justify-center cursor-pointer group/mapover pointer-events-auto"
                     >
                       {/* Centered Pin - Anchored by Tip */}
                       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-full flex items-center justify-center">
@@ -267,7 +268,7 @@ export default function ContactPage() {
                         {/* Location Card */}
                         <div className="absolute left-full flex flex-col whitespace-nowrap bg-white/5 backdrop-blur-2xl border border-white/10 p-5 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden">
                           <div className="absolute inset-0 bg-linear-to-br from-white/5 to-transparent pointer-events-none" />
-                          <p className="text-white text-[11px] md:text-xs font-bold tracking-[0.3em] uppercase mb-1">
+                          <p className="text-foreground text-[11px] md:text-xs font-bold tracking-[0.3em] uppercase mb-1">
                             The District
                           </p>
                           <p className="text-brand text-[9px] md:text-[10px] font-black tracking-[0.2em] italic uppercase">
@@ -277,7 +278,7 @@ export default function ContactPage() {
                       </div>
 
                       {/* Explore Hint - Moved to bottom */}
-                      <p className="absolute bottom-12 text-white/40 text-[9px] uppercase font-bold tracking-[0.5em] group-hover/mapover:text-brand transition-all duration-500">
+                      <p className="absolute bottom-12 text-foreground/40 text-[9px] uppercase font-bold tracking-[0.5em] group-hover/mapover:text-brand transition-all duration-500">
                         Explore Map
                       </p>
                     </motion.div>
@@ -293,12 +294,12 @@ export default function ContactPage() {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   className={`transition-all duration-500 ease-in-out ${
-                    isMapInteracted
-                      ? "grayscale-0 invert-0"
-                      : "grayscale invert"
+                    isDark && !isMapInteracted
+                      ? "grayscale invert"
+                      : "grayscale-0 invert-0"
                   }`}
                 />
-                <div className="absolute inset-0 pointer-events-none border border-white/10 rounded-2xl" />
+                <div className="absolute inset-0 pointer-events-none border border-border rounded-2xl" />
               </div>
             </motion.div>
           </div>

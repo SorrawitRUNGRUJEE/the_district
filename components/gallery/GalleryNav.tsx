@@ -49,9 +49,9 @@ export default function GalleryNav({
       <div
         className={`absolute inset-0 transition-all duration-500 ${
           isNavOpen
-            ? "bg-neutral-950/95 backdrop-blur-md opacity-100"
+            ? "bg-card/95 backdrop-blur-md opacity-100"
             : "bg-transparent opacity-0"
-        } md:bg-neutral-950/90 md:backdrop-blur-md md:opacity-100`}
+        } md:bg-card/90 md:backdrop-blur-md md:opacity-100`}
       />
 
       <div className={`${containerClass} relative z-10 py-2 md:py-4`}>
@@ -67,7 +67,7 @@ export default function GalleryNav({
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: 10 }}
-                    className="bg-brand text-black text-[9px] font-black tracking-widest uppercase px-3 py-1 italic rounded-full inline-flex items-center gap-1 shadow-lg border border-white/5"
+                    className="bg-brand text-black text-[9px] font-black tracking-widest uppercase px-3 py-1 italic rounded-full inline-flex items-center gap-1 shadow-lg border border-border/5"
                   >
                     <span className="opacity-40">#</span>
                     <span className="truncate max-w-[150px]">
@@ -82,8 +82,8 @@ export default function GalleryNav({
               onClick={() => setIsNavOpen(!isNavOpen)}
               className={`flex items-center justify-center gap-2 px-4 py-1.5 transition-all group min-w-[120px] rounded-full border ${
                 isNavOpen
-                  ? "bg-brand/20 border-brand/50 text-brand"
-                  : "bg-neutral-900/80 backdrop-blur-md border-white/10 text-white/40 hover:bg-brand/10 hover:border-brand/30 hover:text-brand"
+                  ? "bg-brand/20 border-brand/50 text-brand font-bold"
+                  : "bg-card/80 backdrop-blur-md border border-border text-foreground/40 hover:bg-brand/10 hover:border-brand/30 hover:text-brand"
               }`}
             >
               <span className="text-[10px] font-black tracking-widest uppercase italic text-center leading-none">
@@ -92,7 +92,9 @@ export default function GalleryNav({
               <motion.div
                 animate={{ rotate: isNavOpen ? 180 : 0 }}
                 className={`w-2.5 h-2.5 transition-colors ${
-                  isNavOpen ? "bg-brand" : "bg-white/30 group-hover:bg-brand"
+                  isNavOpen
+                    ? "bg-brand"
+                    : "bg-foreground/30 group-hover:bg-brand"
                 }`}
                 style={{
                   maskImage: "url(/icons/ui/chevron-down.svg)",
@@ -120,7 +122,7 @@ export default function GalleryNav({
             <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-x-8 gap-y-4 md:gap-y-6 md:gap-x-12 pt-1 pb-1 md:pt-0 md:pb-0">
               {/* Dorms Group */}
               <div className="flex flex-col md:flex-row md:items-center gap-1.5 md:gap-4 font-bold">
-                <span className="text-[10px] font-black tracking-[0.2em] uppercase text-white/10 italic select-none text-center md:text-left">
+                <span className="text-[10px] font-black tracking-[0.2em] uppercase text-foreground/10 italic select-none text-center md:text-left">
                   {t("dormLabel")}
                 </span>
                 <div className="flex flex-wrap gap-3 md:gap-6 justify-center">
@@ -131,7 +133,7 @@ export default function GalleryNav({
                       className={`text-[11px] font-bold tracking-[0.15em] uppercase transition-all duration-300 cursor-pointer whitespace-nowrap hover:text-shadow-brand ${
                         activeSection === room.id
                           ? "text-brand scale-110"
-                          : "text-neutral-500 hover:text-brand/80"
+                          : "text-muted-foreground hover:text-brand/80"
                       }`}
                     >
                       {room.label}
@@ -140,11 +142,11 @@ export default function GalleryNav({
                 </div>
               </div>
 
-              <div className="hidden lg:block h-3 w-px bg-white/5 mx-2" />
+              <div className="hidden lg:block h-3 w-px bg-border mx-2" />
 
               {/* Privates Group */}
               <div className="flex flex-col md:flex-row md:items-center gap-1.5 md:gap-4 font-bold">
-                <span className="text-[10px] font-black tracking-[0.2em] uppercase text-white/10 italic select-none text-center md:text-left">
+                <span className="text-[10px] font-black tracking-[0.2em] uppercase text-foreground/10 italic select-none text-center md:text-left">
                   {t("privateLabel")}
                 </span>
                 <div className="flex flex-wrap gap-3 md:gap-6 justify-center">
@@ -155,7 +157,7 @@ export default function GalleryNav({
                       className={`text-[11px] font-bold tracking-[0.15em] uppercase transition-all duration-300 cursor-pointer whitespace-nowrap hover:text-shadow-brand ${
                         activeSection === room.id
                           ? "text-brand scale-110"
-                          : "text-neutral-500 hover:text-brand/80"
+                          : "text-muted-foreground hover:text-brand/80"
                       }`}
                     >
                       {room.label}

@@ -39,7 +39,7 @@ export default function AnimatedPostHeader({
               <Link
                 key={tag}
                 href={`/blog?tag=${tag}`}
-                className="text-[9px] font-bold text-white/40 uppercase tracking-[0.2em] hover:text-brand transition-colors"
+                className="text-[9px] font-bold text-white/60 uppercase tracking-[0.2em] hover:text-brand transition-colors"
               >
                 #{tag}
               </Link>

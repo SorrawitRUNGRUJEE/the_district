@@ -8,7 +8,7 @@ export default function SingleImage({
   alt?: string;
 }) {
   return (
-    <div className="not-prose my-12 overflow-hidden rounded-[2rem] shadow-xl border border-white/5">
+    <div className="not-prose my-12 overflow-hidden rounded-4xl shadow-xl border border-border">
       <div className="aspect-video relative">
         <SafeImage
           src={src}

@@ -1,7 +1,7 @@
 "use client";
 
-import { Link } from "@/i18n/routing";
 import BookingButton from "@/components/ui/BookingButton";
+import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -22,14 +22,15 @@ const MenuOverlay = ({ isOpen, onClose }: MenuOverlayProps) => {
     return pathname.includes(href);
   };
 
-  const getLinkClass = (href: string, animateState: boolean, delay: string) =>
-    `w-full py-3 text-center text-base font-bold tracking-[0.25em] uppercase transition-all duration-400 relative ${
+  const getLinkClass = (href: string, animateState: boolean, delay: string) => {
+    return `w-full py-3 text-center text-base font-bold tracking-[0.25em] uppercase transition-all duration-400 relative ${
       animateState ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
     } ${delay} cursor-pointer ${
       isActive(href)
         ? "text-brand after:absolute after:bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-8 after:h-px after:bg-brand hover:text-shadow-brand"
-        : "text-white/80 hover:text-brand hover:text-shadow-brand"
+        : "text-foreground/80 hover:text-brand hover:text-shadow-brand"
     }`;
+  };
 
   // Sync animation state with visibility toggle
   if (isOpen !== prevIsOpen) {
@@ -71,15 +72,15 @@ const MenuOverlay = ({ isOpen, onClose }: MenuOverlayProps) => {
   return (
     <div
       onClick={onClose}
-      className={`fixed inset-0 z-100 flex items-center justify-center bg-black/60 backdrop-blur-xl transition-opacity duration-400 ease-out overflow-y-auto ${animate ? "opacity-100" : "opacity-0"}`}
+      className={`fixed inset-0 z-100 flex items-center justify-center bg-background/60 backdrop-blur-xl transition-opacity duration-400 ease-out overflow-y-auto ${animate ? "opacity-100" : "opacity-0"}`}
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className={`relative flex w-full flex-col bg-neutral-900/95 text-white shadow-2xl transition-all duration-400 ease-out h-full lg:h-auto lg:max-w-lg lg:border lg:border-white/5 lg:rounded-2xl ${animate ? "translate-y-0 scale-100 opacity-100" : "translate-y-4 scale-[0.98] opacity-0"}`}
+        className={`relative flex w-full flex-col bg-background/95 text-foreground shadow-2xl transition-all duration-400 ease-out h-full lg:h-auto lg:max-w-lg lg:border lg:border-border lg:rounded-2xl ${animate ? "translate-y-0 scale-100 opacity-100" : "translate-y-4 scale-[0.98] opacity-0"}`}
       >
         <button
           onClick={onClose}
-          className="fixed right-6 top-6 z-120 text-3xl font-light text-white/40 hover:text-brand hover:rotate-90 lg:absolute cursor-pointer transition-all"
+          className="fixed right-6 top-6 z-120 text-3xl font-light text-foreground/40 hover:text-brand hover:rotate-90 lg:absolute cursor-pointer transition-all"
         >
           ✕
         </button>

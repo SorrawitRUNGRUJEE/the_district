@@ -4,7 +4,7 @@ date: "FEB 28, 2026"
 excerpt: "Exploring the best of Ekkamai: The Ultimate Specialty Coffee Guide. Experience the neighborhood like a local at The District."
 coverImage: "/content/blog/0014-specialty-coffee-guide/0014-cover.jpg"
 category: "LIFESTYLE"
-featured: true
+featured: false
 tags: ["Food", "Lifestyle", "Neighbourhood"]
 ---
 

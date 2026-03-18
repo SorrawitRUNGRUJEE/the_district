@@ -3,11 +3,58 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-brand: #fece00;
-  --color-brand-light: #ffde4d;
-  --drop-shadow-brand: 0 0 20px rgba(254, 206, 0, 0.8);
+  --color-brand: var(--brand);
+  --color-brand-light: var(--brand-light);
+  --drop-shadow-brand: var(--brand-drop-shadow);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+}
+
+@layer base {
+  /* prettier-ignore */
+  :root {
+    --brand: #cbab27;                        /* Darker Yellow for better contrast */
+    --brand-light: #dfc13c;                  /* Lighter version for hover */
+    --brand-drop-shadow: 0 0 20px #cbab27cc; /* Brand color drop shadow */
+    --background: #f4f0ea;                   /* Linen - Light background */
+    --foreground: #3d3128;                   /* Espresso - Readable dark text */
+    --card: #ebe5dc;                         /* Warm Linen - Component surfaces */
+    --card-foreground: #3d3128;              /* Warm text on cards */
+    --muted: #dfd8cc;                        /* Soft Taupe - Muted areas */
+    --muted-foreground: #a39b92;             /* Muted text */
+    --border: #d1c7b8;                       /* Taupe border */
+    --border-strong: #141414;                /* Dark border for light theme */
+  }
+
+  /* prettier-ignore */
+  .dark {
+    --brand: #fece00;                        /* Pure Yellow */
+    --brand-light: #ffde4d;                  /* Pure Yellow Light */
+    --brand-drop-shadow: 0 0 20px #fece00cc; /* Brand color drop shadow */
+    --background: #000000;                   /* Pure Black */
+    --foreground: #fcfaf8;                   /* Off-white text */
+    --card: #0a0a0a;                         /* Neutral 950 */
+    --card-foreground: #fcfaf8;              /* Off-white text on cards */
+    --muted: #171717;                        /* Neutral 900 */
+    --muted-foreground: #8c8c8c;             /* Neutral grey text */
+    --border: #141414;                       /* Subtle dark border */
+    --border-strong: #d1c7b8;                /* Light border for dark theme */
+  }
+}
+
+@layer base {
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    @apply transition-colors duration-300;
+  }
 }
 
 @utility text-shadow-brand {
-  text-shadow: 0 0 12px rgba(254, 206, 0, 0.5);
+  text-shadow: 0 0 12px color-mix(in srgb, var(--brand) 50%, transparent);
 }

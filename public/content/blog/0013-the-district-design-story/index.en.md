@@ -4,7 +4,7 @@ date: "FEB 25, 2026"
 excerpt: "Exploring the best of Ekkamai: Inside The District: A Design Story. Experience the neighborhood like a local at The District."
 coverImage: "/content/blog/0013-the-district-design-story/0013-cover.jpg"
 category: "STORY"
-featured: true
+featured: false
 tags: ["Story", "Neighbourhood"]
 ---
 

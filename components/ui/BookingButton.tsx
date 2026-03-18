@@ -21,7 +21,7 @@ const BookingButton = ({ className, onClick }: BookingButtonProps) => {
   return (
     <button
       onClick={handleClick}
-      className={`border border-white text-white px-6 py-2 text-[10px] font-bold uppercase tracking-widest hover:bg-brand hover:border-brand hover:text-black transition-all duration-300 cursor-pointer ${className}`}
+      className={`border border-foreground text-foreground px-6 py-2 text-[10px] font-bold uppercase tracking-widest hover:bg-brand hover:border-brand hover:text-black transition-all duration-300 cursor-pointer ${className}`}
     >
       {t("checkAvailability")}
     </button>

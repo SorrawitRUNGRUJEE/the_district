@@ -29,7 +29,14 @@
   "StoryPage": {
     "title": "เรื่องราวของเรา",
     "status": "เร็วๆ นี้",
-    "description": "รังสรรค์มิตรภาพและความจริงใจในการพักผ่อน ใจกลางย่านเอกมัยที่เต็มไปด้วยสีสัน"
+    "description": "รังสรรค์มิตรภาพและความจริงใจในการพักผ่อน ใจกลางย่านเอกมัยที่เต็มไปด้วยสีสัน",
+    "firstHeader":"หัวข้อแรก",
+    "firstContent1":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula, felis eu vulputate tristique, velit nisl ornare enim, sit amet ullamcorper ipsum neque eu ipsum. Quisque imperdiet quis augue at finibus. Integer in ex magna. Suspendisse ipsum diam, sagittis ut tortor et, maximus rutrum nunc. Pellentesque sit amet venenatis sem. Pellentesque varius pharetra venenatis. Integer blandit porttitor nisl in ultricies. Cras ac porta mi, ac pharetra eros. Vivamus non pellentesque nulla. Nam justo dolor, feugiat eget nunc eget, faucibus sagittis elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas mauris neque, hendrerit in nisl et, finibus volutpat nunc. Praesent mollis sapien ex, vitae semper dolor vestibulum vitae. Aliquam tellus massa, tempus a ante non, volutpat gravida sem. Nullam ac consectetur libero.",
+    "firstContent2":"Aenean suscipit fringilla mattis. Duis a dui dolor. Sed eros ex, varius et tempus a, egestas et ipsum. Aliquam cursus, nunc sollicitudin lobortis placerat, felis nunc vehicula nisi, nec auctor nunc lectus sed metus.",
+    "secondHeader":"หัวข้อสอง",
+    "secondContent1":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula, felis eu vulputate tristique, velit nisl ornare enim, sit amet ullamcorper ipsum neque eu ipsum. Quisque imperdiet quis augue at finibus. Integer in ex magna. Suspendisse ipsum diam, sagittis ut tortor et, maximus rutrum nunc. Pellentesque sit amet venenatis sem. Pellentesque varius pharetra venenatis. Integer blandit porttitor nisl in ultricies. Cras ac porta mi, ac pharetra eros. Vivamus non pellentesque nulla. Nam justo dolor, feugiat eget nunc eget, faucibus sagittis elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas mauris neque, hendrerit in nisl et, finibus volutpat nunc. Praesent mollis sapien ex, vitae semper dolor vestibulum vitae. Aliquam tellus massa, tempus a ante non, volutpat gravida sem. Nullam ac consectetur libero.",
+    "secondContent2":"Aenean suscipit fringilla mattis. Duis a dui dolor. Sed eros ex, varius et tempus a, egestas et ipsum. Aliquam cursus, nunc sollicitudin lobortis placerat, felis nunc vehicula nisi, nec auctor nunc lectus sed metus."
+
   },
   "OffersPage": {
     "header": "ข้อเสนอพิเศษ",
@@ -93,7 +100,9 @@
       "prev": "ก่อนหน้า",
       "next": "ถัดไป",
       "page": "หน้า",
-      "of": "จาก"
+      "of": "จาก",
+      "showing": "กำลังแสดง",
+      "posts": "บทความ"
     },
     "filter": {
       "all": "ทั้งหมด",

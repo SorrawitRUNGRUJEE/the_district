@@ -34,7 +34,7 @@ export default function MosaicCell({
 
   return (
     <div
-      className={`relative group overflow-hidden rounded-sm bg-neutral-900 shadow-xl transition-all duration-500 hover:z-10 hover:scale-[1.02] ${className}`}
+      className={`relative group overflow-hidden rounded-xs bg-card shadow-sm transition-all duration-500 hover:z-10 hover:scale-[1.02] ${className}`}
     >
       <AnimatePresence>
         <motion.div

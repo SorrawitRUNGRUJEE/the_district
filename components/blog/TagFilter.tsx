@@ -84,13 +84,13 @@ export default function TagFilter({
         className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 flex flex-col items-center pointer-events-auto relative py-4"
       >
         {/* Floating Control Capsule */}
-        <div className="inline-flex flex-wrap justify-center items-center gap-x-6 gap-y-3 px-8 py-3 bg-neutral-950/80 backdrop-blur-xl border border-white/10 rounded-full shadow-2xl">
+        <div className="inline-flex flex-wrap justify-center items-center gap-x-6 gap-y-3 px-8 py-3 bg-card/80 backdrop-blur-xl border border-border rounded-full shadow-2xl">
           <button
             onClick={clearAll}
             className={`flex items-center gap-2 text-[10px] font-bold tracking-[0.3em] uppercase pb-1 border-b-2 transition-all ${
               selectedTags.length === 0
                 ? "border-brand text-brand"
-                : "border-transparent text-white/30 hover:text-white"
+                : "border-transparent text-muted-foreground/30 hover:text-foreground"
             }`}
           >
             {allLabel}{" "}
@@ -116,7 +116,7 @@ export default function TagFilter({
             className={`text-[9px] font-black tracking-[0.2em] uppercase px-5 py-2 transition-all rounded-full border shadow-lg ${
               isOpen
                 ? "bg-brand text-black border-brand scale-105"
-                : "bg-white/5 text-white/50 border-white/10 hover:bg-white/10 hover:text-white"
+                : "bg-background/5 text-muted-foreground/50 border-border hover:bg-background/10 hover:text-foreground"
             }`}
           >
             {isOpen ? "− CLOSE" : `+ EXPLORE TOPICS (${allTags.length})`}
@@ -125,7 +125,7 @@ export default function TagFilter({
 
         {/* Floating Library Panel (Absolute Overlay) */}
         {isOpen && (
-          <div className="absolute top-full mt-4 w-full max-w-4xl p-10 bg-neutral-900/95 backdrop-blur-2xl border border-white/10 rounded-[2.5rem] shadow-[0_30px_60px_-12px_rgba(0,0,0,0.9)] animate-in fade-in slide-in-from-top-4 duration-500 z-50">
+          <div className="absolute top-full mt-4 w-full max-w-4xl p-10 bg-background/95 backdrop-blur-2xl border border-border rounded-[2.5rem] shadow-[0_30px_60px_-12px_rgba(0,0,0,0.9)] animate-in fade-in slide-in-from-top-4 duration-500 z-50">
             <div className="flex flex-wrap justify-center gap-x-3 gap-y-3">
               {allTags.map((tag) => {
                 const isSelected = selectedTags.includes(tag.name);
@@ -136,7 +136,7 @@ export default function TagFilter({
                     className={`flex items-center gap-2 text-[9px] font-medium tracking-[0.2em] uppercase transition-all px-4 py-2.5 rounded-full border ${
                       isSelected
                         ? "bg-brand border-brand text-black font-black"
-                        : "bg-white/[0.03] border-white/5 text-white/40 hover:text-white hover:bg-white/[0.08] hover:border-white/10"
+                        : "bg-background/3 border-border text-muted-foreground/40 hover:text-foreground hover:bg-background/8 hover:border-foreground/10"
                     }`}
                   >
                     #{tag.name}{" "}

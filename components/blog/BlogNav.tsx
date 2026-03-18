@@ -54,9 +54,9 @@ export default function BlogNav({
       <div
         className={`absolute inset-0 transition-all duration-500 ${
           isNavOpen
-            ? "bg-neutral-950/95 backdrop-blur-md opacity-100"
+            ? "bg-card/95 backdrop-blur-md opacity-100"
             : "bg-transparent opacity-0"
-        } md:bg-neutral-950/90 md:backdrop-blur-md md:opacity-100`}
+        } md:bg-card/90 md:backdrop-blur-md md:opacity-100`}
       />
 
       <div className={`${containerClass} relative z-10 py-2 md:py-4`}>
@@ -80,19 +80,35 @@ export default function BlogNav({
                     </span>
                   </motion.div>
                 ) : (
-                  !isNavOpen &&
-                  selectedTag && (
+                  !isNavOpen && (
                     <motion.div
-                      key="tag"
+                      key={selectedTag || "all"}
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, x: 10 }}
                       className="bg-brand text-black text-[9px] font-black tracking-widest uppercase px-3 py-1 italic rounded-full inline-flex items-center gap-1 shadow-lg border border-white/5"
                     >
-                      <span className="opacity-40">#</span>
-                      <span className="truncate max-w-[150px]">
-                        {selectedTag}
-                      </span>
+                      {selectedTag ? (
+                        <>
+                          <span className="opacity-40">#</span>
+                          <span className="truncate max-w-[150px]">
+                            {selectedTag}{" "}
+                            <span className="opacity-50 ml-1">
+                              (
+                              {allTags.find((t) => t.name === selectedTag)
+                                ?.count || 0}
+                              )
+                            </span>
+                          </span>
+                        </>
+                      ) : (
+                        <span>
+                          {allLabel}{" "}
+                          <span className="opacity-50 ml-1">
+                            ({totalCount})
+                          </span>
+                        </span>
+                      )}
                     </motion.div>
                   )
                 )}
@@ -104,7 +120,7 @@ export default function BlogNav({
               className={`flex items-center justify-center gap-2 px-4 py-1.5 transition-all group min-w-[120px] rounded-full border ${
                 isNavOpen
                   ? "bg-brand/20 border-brand/50 text-brand"
-                  : "bg-neutral-900/80 backdrop-blur-md border-white/10 text-white/40 hover:bg-brand/10 hover:border-brand/30 hover:text-brand"
+                  : "bg-card/80 backdrop-blur-md border-border text-foreground/40 hover:bg-brand/10 hover:border-brand/30 hover:text-brand"
               }`}
             >
               <span className="text-[10px] font-black tracking-widest uppercase italic text-center leading-none">
@@ -113,7 +129,9 @@ export default function BlogNav({
               <motion.div
                 animate={{ rotate: isNavOpen ? 180 : 0 }}
                 className={`w-2.5 h-2.5 transition-colors ${
-                  isNavOpen ? "bg-brand" : "bg-white/30 group-hover:bg-brand"
+                  isNavOpen
+                    ? "bg-brand"
+                    : "bg-foreground/30 group-hover:bg-brand"
                 }`}
                 style={{
                   maskImage: "url(/icons/ui/chevron-down.svg)",
@@ -146,13 +164,13 @@ export default function BlogNav({
                 className={`text-[11px] font-bold tracking-[0.15em] uppercase transition-all duration-300 cursor-pointer whitespace-nowrap hover:text-shadow-brand disabled:opacity-50 ${
                   !selectedTag
                     ? "text-brand scale-110"
-                    : "text-neutral-500 hover:text-brand/80"
+                    : "text-muted-foreground hover:text-brand/80"
                 }`}
               >
                 {allLabel} ({totalCount})
               </button>
 
-              <div className="hidden md:block h-3 w-px bg-white/10" />
+              <div className="hidden md:block h-3 w-px bg-border" />
 
               {/* Tag List */}
               <div className="flex flex-wrap gap-x-6 gap-y-3 md:gap-x-10 justify-center">
@@ -164,7 +182,7 @@ export default function BlogNav({
                     className={`text-[11px] font-bold tracking-[0.15em] uppercase transition-all duration-300 cursor-pointer whitespace-nowrap hover:text-shadow-brand disabled:opacity-50 ${
                       selectedTag === tag.name
                         ? "text-brand scale-110"
-                        : "text-neutral-500 hover:text-brand/80"
+                        : "text-muted-foreground hover:text-brand/80"
                     }`}
                   >
                     {tag.name} ({tag.count})

@@ -33,16 +33,16 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-black text-white">
+    <footer className="relative bg-background text-foreground transition-colors duration-300">
       {/* Background with Ambient Overlay */}
-      <div className="absolute inset-0 z-0 opacity-30">
+      <div className="absolute inset-0 z-0 opacity-10 dark:opacity-30">
         <SafeImage
           src="/images/branding/cover.jpg"
           alt="Footer background"
           unoptimized
         />
       </div>
-      <div className="absolute inset-0 z-10 bg-linear-to-t from-black via-black/80 to-transparent" />
+      <div className="absolute inset-0 z-10 bg-linear-to-t from-background via-background/80 to-transparent" />
 
       {/* Main Content Container */}
       <div className="relative z-20 max-w-7xl mx-auto px-6 pt-16 pb-8 md:pt-20 md:pb-10">
@@ -79,7 +79,7 @@ const Footer = () => {
                     className="group transition-all duration-300"
                   >
                     <div
-                      className="w-5 h-5 bg-white opacity-60 group-hover:bg-brand group-hover:opacity-100 transition-all duration-300 cursor-pointer"
+                      className="w-5 h-5 bg-foreground opacity-60 group-hover:bg-brand group-hover:opacity-100 transition-all duration-300 cursor-pointer"
                       style={{
                         maskImage: `url(${item.icon})`,
                         maskRepeat: "no-repeat",
@@ -99,22 +99,22 @@ const Footer = () => {
 
           {/* 2. Branding Central */}
           <div className="flex flex-col items-center justify-center space-y-4">
-            <div className="relative w-32 md:w-44 aspect-square overflow-hidden rounded-2xl border border-white/5 shadow-lg">
+            <div className="relative w-32 md:w-44 aspect-square overflow-hidden rounded-2xl border border-foreground/5 shadow-lg">
               <SafeImage
                 src="/images/branding/logo.jpg"
                 alt="The District Logo"
               />
             </div>
-            <p className="text-[8px] tracking-[0.4em] uppercase font-bold text-white/40 text-center">
+            <p className="text-[8px] tracking-[0.4em] uppercase font-bold text-foreground/40 text-center">
               {BRAND_INFO.name}
             </p>
           </div>
 
           {/* 3. Contact Information */}
-          <div className="flex flex-col items-center md:items-end space-y-8 text-xs font-light tracking-widest text-white/80 text-center md:text-right">
+          <div className="flex flex-col items-center md:items-end space-y-8 text-xs font-light tracking-widest text-foreground/80 text-center md:text-right">
             {/* Phone */}
             <div className="space-y-2">
-              <p className="font-bold text-white uppercase tracking-widest">
+              <p className="font-bold text-foreground uppercase tracking-widest">
                 {contact("phone")}
               </p>
               <a
@@ -127,7 +127,7 @@ const Footer = () => {
 
             {/* Email */}
             <div className="space-y-2">
-              <p className="font-bold text-white uppercase tracking-widest">
+              <p className="font-bold text-foreground uppercase tracking-widest">
                 {contact("inquiries")}
               </p>
               <a
@@ -141,11 +141,11 @@ const Footer = () => {
         </div>
 
         {/* 4. Legal & Address */}
-        <div className="mt-10 pt-6 border-t border-white/10 flex flex-col items-center space-y-4">
-          <p className="text-[10px] text-center text-white/40 tracking-wide font-light italic max-w-2xl mx-auto">
+        <div className="mt-10 pt-6 border-t border-foreground/10 flex flex-col items-center space-y-4">
+          <p className="text-[10px] text-center text-foreground/40 tracking-wide font-light italic max-w-2xl mx-auto">
             📍 {contact("address")}
           </p>
-          <p className="text-[8px] text-white/30 uppercase tracking-[0.3em] font-bold">
+          <p className="text-[8px] text-foreground/30 uppercase tracking-[0.3em] font-bold">
             Copyright © {new Date().getFullYear()} THE DISTRICT. All Rights
             Reserved.
           </p>

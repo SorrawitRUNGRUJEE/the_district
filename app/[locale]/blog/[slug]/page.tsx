@@ -47,7 +47,7 @@ const mdxComponents = {
         <div className="mt-6 flex justify-center px-4">
           <div className="flex items-center gap-4">
             <div className="h-px w-8 bg-brand/30" />
-            <p className="text-[10px] font-medium uppercase tracking-[0.4em] text-white/40">
+            <p className="text-[10px] font-medium uppercase tracking-[0.4em] text-muted-foreground/40">
               {props.caption}
             </p>
             <div className="h-px w-8 bg-brand/30" />
@@ -59,7 +59,7 @@ const mdxComponents = {
 
   SingleImage: (props: { src: string; alt?: string; caption?: string }) => (
     <div className="not-prose my-16 group">
-      <div className="relative aspect-video w-full overflow-hidden rounded-4xl border border-white/5 shadow-2xl">
+      <div className="relative aspect-video w-full overflow-hidden rounded-4xl border border-border shadow-2xl">
         <SafeImage
           src={props.src}
           alt={props.caption || props.alt || "The District Blog Image"}
@@ -70,7 +70,7 @@ const mdxComponents = {
         <div className="mt-6 flex justify-center px-4">
           <div className="flex items-center gap-4">
             <div className="h-px w-8 bg-brand/30" />
-            <p className="text-[10px] font-medium uppercase tracking-[0.4em] text-white/40">
+            <p className="text-[10px] font-medium uppercase tracking-[0.4em] text-muted-foreground/40">
               {props.caption}
             </p>
             <div className="h-px w-8 bg-brand/30" />
@@ -82,7 +82,7 @@ const mdxComponents = {
 
   img: (props: ComponentPropsWithoutRef<"img">) => (
     <div className="not-prose my-16 group">
-      <div className="relative aspect-video w-full overflow-hidden rounded-4xl border border-white/5 shadow-2xl">
+      <div className="relative aspect-video w-full overflow-hidden rounded-4xl border border-border shadow-2xl">
         {props.src && (
           <SafeImage
             src={props.src}
@@ -95,7 +95,7 @@ const mdxComponents = {
         <div className="mt-6 flex justify-center px-4">
           <div className="flex items-center gap-4">
             <div className="h-px w-8 bg-brand/30" />
-            <p className="text-[10px] font-medium uppercase tracking-[0.4em] text-white/40">
+            <p className="text-[10px] font-medium uppercase tracking-[0.4em] text-muted-foreground/40">
               {props.alt}
             </p>
             <div className="h-px w-8 bg-brand/30" />
@@ -116,7 +116,7 @@ export default async function PostPage({ params }: PostPageProps) {
   const tags = (frontmatter.tags as string[]) || [];
 
   return (
-    <article className="min-h-screen bg-neutral-900 text-white pb-32 relative">
+    <article className="min-h-screen bg-background text-foreground pb-32 relative">
       <PageHeader
         title="STORY"
         containerClass="max-w-7xl mx-auto px-8 md:px-20"
@@ -126,9 +126,9 @@ export default async function PostPage({ params }: PostPageProps) {
       {/* 1. Desktop Navigation: Floating side link */}
       <Link
         href="/blog"
-        className="fixed top-24 left-8 z-50 hidden lg:flex items-center gap-4 group opacity-50 hover:opacity-100 transition-opacity"
+        className="fixed top-24 left-8 z-50 hidden lg:flex items-center gap-4 group text-muted-foreground hover:text-foreground transition-all"
       >
-        <div className="w-10 h-px bg-white group-hover:w-16 transition-all" />
+        <div className="w-10 h-px bg-foreground group-hover:w-16 transition-all" />
         <span className="text-[10px] font-bold uppercase tracking-[0.3em]">
           Discover More Stories
         </span>
@@ -146,7 +146,7 @@ export default async function PostPage({ params }: PostPageProps) {
             preload={true}
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-linear-to-t from-neutral-900 via-black/20 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
         </div>
 
         {/* Content Overlay */}
@@ -159,12 +159,12 @@ export default async function PostPage({ params }: PostPageProps) {
           <div className="lg:hidden mb-12">
             <Link
               href="/blog"
-              className="inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.3em] text-white/50 group"
+              className="inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.3em] text-muted-foreground group"
             >
               <span className="text-brand group-hover:-translate-x-1 transition-transform">
                 ←
               </span>
-              <span className="border-b border-white/10 group-hover:border-white/30 transition-colors uppercase">
+              <span className="border-b border-border group-hover:border-foreground/30 transition-colors uppercase">
                 Discover More Stories
               </span>
             </Link>
@@ -176,31 +176,31 @@ export default async function PostPage({ params }: PostPageProps) {
       <div className="max-w-3xl mx-auto px-6 mt-32">
         {/* Excerpt Block */}
         {frontmatter.excerpt && (
-          <p className="text-xl md:text-2xl font-light leading-relaxed text-white/70 italic mb-20 border-l-2 border-brand pl-8">
+          <p className="text-xl md:text-2xl font-light leading-relaxed text-foreground/70 italic mb-20 border-l-2 border-brand pl-8">
             {frontmatter.excerpt as string}
           </p>
         )}
 
         <div
           className="
-          prose prose-invert prose-white 
+          prose dark:prose-invert 
           max-w-none
 
           /* Hierarchy & Typography */
-          prose-h2:text-white prose-h2:text-4xl prose-h2:tracking-widest prose-h2:uppercase prose-h2:font-black prose-h2:mt-32 prose-h2:mb-12
-          prose-h3:text-white prose-h3:text-2xl prose-h3:tracking-wide prose-h3:uppercase prose-h3:mt-20
-          prose-p:text-neutral-400 prose-p:leading-relaxed prose-p:text-lg prose-p:mb-8
+          prose-h2:text-foreground prose-h2:text-4xl prose-h2:tracking-widest prose-h2:uppercase prose-h2:font-black prose-h2:mt-32 prose-h2:mb-12
+          prose-h3:text-foreground prose-h3:text-2xl prose-h3:tracking-wide prose-h3:uppercase prose-h3:mt-20
+          prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:text-lg prose-p:mb-8
           prose-strong:text-brand prose-strong:font-bold
 
           /* Block Elements */
-          prose-blockquote:border-l-brand prose-blockquote:bg-white/5 prose-blockquote:py-8 prose-blockquote:px-10 prose-blockquote:rounded-r-3xl
-          prose-blockquote:italic prose-blockquote:text-white prose-blockquote:text-xl prose-blockquote:leading-relaxed prose-blockquote:my-16
+          prose-blockquote:border-l-brand prose-blockquote:bg-card/30 prose-blockquote:py-8 prose-blockquote:px-10 prose-blockquote:rounded-r-3xl
+          prose-blockquote:italic prose-blockquote:text-foreground prose-blockquote:text-xl prose-blockquote:leading-relaxed prose-blockquote:my-16
 
           /* Table & List Aesthetics */
-          prose-table:border-white/10 prose-table:my-16
+          prose-table:border-border prose-table:my-16
           prose-th:text-brand prose-th:uppercase prose-th:text-[11px] prose-th:tracking-[0.3em] prose-th:py-6
-          prose-td:py-6 prose-td:text-neutral-300
-          prose-li:text-neutral-400 prose-li:marker:text-brand
+          prose-td:py-6 prose-td:text-muted-foreground
+          prose-li:text-muted-foreground prose-li:marker:text-brand
         "
         >
           {content && (

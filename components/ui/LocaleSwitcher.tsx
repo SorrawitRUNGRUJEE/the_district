@@ -81,7 +81,7 @@ export default function LocaleSwitcher() {
       {/* Language Options Dropdown */}
       <div
         className={`
-          absolute top-full mt-4 w-44 overflow-hidden rounded-2xl border border-white/10 bg-neutral-900/90 shadow-[0_20px_50px_rgba(0,0,0,0.6)] backdrop-blur-2xl z-20 transition-all duration-300 ease-out right-0 sm:right-auto sm:left-1/2 sm:-translate-x-1/2
+          absolute top-full mt-4 w-44 overflow-hidden rounded-2xl border border-border bg-card/95 shadow-xl backdrop-blur-2xl z-20 transition-all duration-300 ease-out right-0 sm:right-auto sm:left-1/2 sm:-translate-x-1/2
           
           ${
             isOpen
@@ -97,7 +97,7 @@ export default function LocaleSwitcher() {
               <button
                 key={lang.code}
                 onClick={() => onSelectChange(lang.code)}
-                className="flex w-full items-center justify-between px-5 py-3 transition-colors cursor-pointer text-left hover:bg-white/5"
+                className="flex w-full items-center justify-between px-5 py-3 transition-colors cursor-pointer text-left hover:bg-foreground/5"
               >
                 <div className="flex items-center gap-4">
                   <div className="relative h-4 w-5 shrink-0 overflow-hidden rounded-[1px] opacity-80">
@@ -110,7 +110,9 @@ export default function LocaleSwitcher() {
                   </div>
                   <span
                     className={`text-[10px] font-bold tracking-[0.2em] transition-colors ${
-                      isActive ? "text-brand" : "text-white/60 hover:text-white"
+                      isActive
+                        ? "text-brand"
+                        : "text-muted-foreground hover:text-brand"
                     }`}
                   >
                     {lang.label}

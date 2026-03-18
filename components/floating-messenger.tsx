@@ -3,6 +3,7 @@
 import { BRAND_INFO } from "@/lib/constants";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
@@ -55,7 +56,7 @@ export default function FloatingMessenger() {
     <>
       <AnimatePresence>
         {showQrModal && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+          <div className="fixed inset-0 z-100 flex items-center justify-center p-4">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -68,7 +69,7 @@ export default function FloatingMessenger() {
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="relative bg-neutral-900 border border-white/10 p-8 md:p-12 rounded-3xl shadow-2xl flex flex-col items-center max-w-sm w-full z-10"
+              className="relative bg-muted border border-white/10 p-8 md:p-12 rounded-3xl shadow-2xl flex flex-col items-center max-w-sm w-full z-10"
             >
               <button
                 onClick={() => setShowQrModal(false)}
@@ -82,15 +83,18 @@ export default function FloatingMessenger() {
                 {t("scanToChat")}
               </h3>
 
-              <div className="bg-white p-4 rounded-2xl w-full aspect-square mb-6">
-                <img
+              <div className="bg-white p-4 rounded-2xl w-full aspect-square mb-6 relative">
+                <Image
                   src="/images/social/line-qr.png"
                   alt="LINE QR Code"
+                  width={400}
+                  height={400}
                   className="w-full h-full object-contain"
+                  priority={false}
                 />
               </div>
 
-              <p className="text-neutral-400 text-sm text-center font-light leading-relaxed">
+              <p className="text-card-foreground text-sm text-center font-light leading-relaxed">
                 {t("scanInstruction")}
               </p>
             </motion.div>
@@ -111,7 +115,7 @@ export default function FloatingMessenger() {
               transition={{ type: "spring", stiffness: 260, damping: 20 }}
               className="flex flex-col gap-3 mb-3 items-end"
             >
-              <div className="bg-white px-3 py-1.5 rounded-xl shadow-xl border border-neutral-100 text-xs font-semibold text-neutral-700 whitespace-nowrap">
+              <div className="bg-white px-3 py-1.5 rounded-xl shadow-xl border border-border text-xs font-semibold text-neutral-900 whitespace-nowrap">
                 {t("tagline")}
               </div>
 
@@ -168,7 +172,7 @@ export default function FloatingMessenger() {
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center justify-center w-12 h-12 rounded-full bg-brand text-black shadow-xl hover:bg-brand-light transition-colors active:scale-95 z-50 relative cursor-pointer"
+          className="flex items-center justify-center w-12 h-12 rounded-full bg-[#fece00] text-black shadow-xl hover:bg-[#ffde4d] transition-colors active:scale-95 z-50 relative cursor-pointer"
           aria-label="Toggle Messenger"
         >
           <motion.div
