@@ -26,29 +26,35 @@ A high-level checklist of the Current State, Remaining Cleanup, and Crew Actions
 - [x] **Footer Interaction**: Added official phone number alongside inquiries; synced with branding constants and i18n.
 - [x] **Gallery Performance Optimization**: Resolved mobile flickering by removing `whileInView` animations and simplifying image crossfades.
 - [x] **Build Stabilization**: Fixed `globals.css` and dependency issues for a clean dev environment.
+- [x] **Blog Pagination & Localisation**: Implemented "Showing X-Y of Z posts" summary with full translation support (EN, TH, CN).
+- [x] **Hydration Guard Refinement**: Migrated to a modern `useIsClient` hook using `useSyncExternalStore`, resolving ESLint errors and improving hydration performance.
+- [x] **Story Page Foundation**: Implemented theme-aware layout for the Story page with developer notes for future-proofing.
 
 ---
 
-## 🛠 TECH CLEANUP (Recommended)
+## 🛠 TECH CLEANUP & FUTURE DEV
 
-- [x] **Redundant Folder Deletion**: Delete unused folders `offers`, `facilities`, and `go-green`.
-- [x] **Asset Pruning**: Removed unused images and icons (Youtube, Offers, Story covers, etc.) to reduce project size.
-- [ ] **SEO Review**: Final pass on meta-titles/descriptions for all live pages.
+- [ ] **Home Page Re-design**: Implement new design once final contents/assets are ready.
+- [ ] **New Pages Implementation**: Build out full "Stay", "Dine", "Neighbourhood", and "Privacy Policy" pages (currently placeholders).
+- [ ] **CMS Integration**: Research and implement a CMS for the blog (e.g., Decap CMS) for autonomous content management.
+- [ ] **SEO Optimization**: Final pass on meta-tags and site-wide SEO scores (aiming for 90+).
+- [ ] **Email Integration**: Hook up real email systems to contact forms and footer links.
 
 ---
 
 ## 📝 CONTENT & REVIEW (Pending)
 
-- [ ] **Story Page**: Update with final content from the Storytelling team.
-- [ ] **Stay (Accommodation)**: Finalize individual room details/pricing once available.
-- [ ] **Privacy Policy**: Add CCTV/Security policy details and legal fine print.
-- [ ] **Footer Legal**: Confirm the "Copyright © 2026 THE DISTRICT" line with the legal entity name.
+- [ ] **Story Page**: Replace placeholders with real narratives from the storytelling team.
+- [ ] **Gallery & Blog**: Update with final high-res images and actual blog posts.
+- [ ] **Stay (Accommodation)**: Finalize individual room details, pricing, and amenities.
+- [ ] **Privacy Policy**: Add actual legal requirements, including CCTV and data security policies.
+- [ ] **Real Email**: Confirm the official email address (currently using `hello@thedistrict.com` placeholder).
 
 ---
 
 ## 👥 DISTRICT CREW (Actions for Them)
 
-- [ ] **Image Upload**: Crew to upload high-res room/common-area photos to the shared Drive.
-- [ ] **Email Setup**: Create its official `hello@thedistrict.com` (currently using placeholder).
-- [ ] **Domain & Hosting**: Complete the final purchase and handover of the domain.
-- [ ] **Booking Flow**: Final review of the HotelRunner search results page styling.
+- [ ] **Content Creation**: Provide final copywriting for all pages (Home, Story, Stay, Dine, Neighbourhood).
+- [ ] **Asset Delivery**: Upload high-res photography for rooms, common areas, and blog features.
+- [ ] **Domain & Hosting**: Finalize domain/hosting setup for production deployment.
+- [ ] **Real Email Setup**: Provide the official email account credentials/address.
