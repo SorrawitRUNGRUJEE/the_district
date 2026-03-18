@@ -115,7 +115,7 @@ export default function FloatingMessenger() {
               transition={{ type: "spring", stiffness: 260, damping: 20 }}
               className="flex flex-col gap-3 mb-3 items-end"
             >
-              <div className="bg-white px-3 py-1.5 rounded-xl shadow-xl border border-border text-xs font-semibold text-foreground whitespace-nowrap">
+              <div className="bg-white px-3 py-1.5 rounded-xl shadow-xl border border-border text-xs font-semibold text-neutral-900 whitespace-nowrap">
                 {t("tagline")}
               </div>
 
