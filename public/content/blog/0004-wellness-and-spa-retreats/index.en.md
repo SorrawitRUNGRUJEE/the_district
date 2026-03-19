@@ -2,7 +2,7 @@
 title: "Wellness and Spa Retreats (EN)"
 date: "NOV 28, 2025"
 excerpt: "Exploring the best of Ekkamai: Wellness and Spa Retreats. Experience the neighborhood like a local at The District."
-coverImage: "/content/blog/0004-wellness-and-spa-retreats/0004-cover.jpg"
+coverImage: "/content/blog/0004-wellness-and-spa-retreats/0004-cover.webp"
 category: "WELLNESS"
 featured: false
 tags: ["Lifestyle"]
@@ -13,6 +13,6 @@ tags: ["Lifestyle"]
 Content placeholder for EN. Stay at **The District** to be in the center of Ekkamai's vibrant energy.
 
 <SingleImage 
-  src="/content/blog/0004-wellness-and-spa-retreats/0004-article.jpg" 
+  src="/content/blog/0004-wellness-and-spa-retreats/0004-article.webp" 
   caption="Wellness and Spa Retreats visual journey" 
 />

@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div
       className="relative flex min-h-screen flex-col items-center justify-center bg-cover bg-center bg-no-repeat px-4 text-center"
-      style={{ backgroundImage: "url('/images/home/hero-bg.jpg')" }}
+      style={{ backgroundImage: "url('/images/home/hero-bg.webp')" }}
     >
       <div className="absolute inset-0 bg-background/60 backdrop-blur-[2px]"></div>
 

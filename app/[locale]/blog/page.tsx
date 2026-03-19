@@ -99,7 +99,7 @@ export default async function BlogPage({
                         <SafeImage
                           src={
                             (coverImage as string) ||
-                            "/images/branding/cover.jpg"
+                            "/images/branding/cover.webp"
                           }
                           alt={(title as string) || "Blog cover"}
                           preload={index < 2}

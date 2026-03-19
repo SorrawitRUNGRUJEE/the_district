@@ -2,7 +2,7 @@
 title: "Ekkamai Street Photography Spots (EN)"
 date: "NOV 10, 2025"
 excerpt: "Exploring the best of Ekkamai: Ekkamai Street Photography Spots. Experience the neighborhood like a local at The District."
-coverImage: "/content/blog/0003-street-photography-spots/0003-cover.jpg"
+coverImage: "/content/blog/0003-street-photography-spots/0003-cover.webp"
 category: "CULTURE"
 featured: false
 tags: ["Neighbourhood", "Lifestyle"]
@@ -13,6 +13,6 @@ tags: ["Neighbourhood", "Lifestyle"]
 Content placeholder for EN. Stay at **The District** to be in the center of Ekkamai's vibrant energy.
 
 <SingleImage 
-  src="/content/blog/0003-street-photography-spots/0003-article.jpg" 
+  src="/content/blog/0003-street-photography-spots/0003-article.webp" 
   caption="Ekkamai Street Photography Spots visual journey" 
 />

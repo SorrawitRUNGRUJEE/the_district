@@ -2,7 +2,7 @@
 title: "The Ultimate Specialty Coffee Guide (TH)"
 date: "FEB 28, 2026"
 excerpt: "Exploring the best of Ekkamai: The Ultimate Specialty Coffee Guide. Experience the neighborhood like a local at The District."
-coverImage: "/content/blog/0014-specialty-coffee-guide/0014-cover.jpg"
+coverImage: "/content/blog/0014-specialty-coffee-guide/0014-cover.webp"
 category: "LIFESTYLE"
 featured: false
 tags: ["Food", "Lifestyle", "Neighbourhood"]
@@ -13,6 +13,6 @@ tags: ["Food", "Lifestyle", "Neighbourhood"]
 Content placeholder for TH. Stay at **The District** to be in the center of Ekkamai's vibrant energy.
 
 <SingleImage 
-  src="/content/blog/0014-specialty-coffee-guide/0014-article.jpg" 
+  src="/content/blog/0014-specialty-coffee-guide/0014-article.webp" 
   caption="The Ultimate Specialty Coffee Guide visual journey" 
 />

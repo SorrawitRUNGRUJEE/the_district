@@ -2,7 +2,7 @@
 title: "The Ekkamai Chronicles: ย่านสุดชิคที่ผสมผสานเสน่ห์วันวานกับไลฟ์สไตล์เหนือระดับ"
 date: "OCT 10, 2025"
 excerpt: "สัมผัสเสน่ห์ของเอกมัย ย่านที่รวมเอาความคลาสสิกของกรุงเทพฯ มาบรรจบกับวิถีชีวิตคนเมืองยุคใหม่อย่างลงตัว"
-coverImage: "/content/blog/0001-hello-ekkamai/0001-cover.jpg"
+coverImage: "/content/blog/0001-hello-ekkamai/0001-cover.webp"
 category: "NEIGHBOURHOOD"
 featured: true
 tags: ["Neighbourhood", "Lifestyle", "Food", "Nightlife"]
@@ -25,7 +25,7 @@ tags: ["Neighbourhood", "Lifestyle", "Food", "Nightlife"]
 - **The Commons (Thonglor-Ekkamai)**: เพียงไม่กี่ก้าวจากที่พัก คอมมูนิตี้มอลล์แบบเปิดโล่งที่เป็นแหล่งรวมตัวของเหล่าครีเอทีฟในเมือง เพื่อดื่มด่ำกับกาแฟคราฟต์และอาหารอร่อยๆ ในบรรยากาศเป็นกันเอง
 
 <SingleImage 
-  src="/content/blog/0001-hello-ekkamai/0001-cafe-vibes.jpg" 
+  src="/content/blog/0001-hello-ekkamai/0001-cafe-vibes.webp" 
   caption="บรรยากาศคาเฟ่สุดชิลล์ใจกลางย่านเอกมัย" 
 />
 
@@ -59,11 +59,11 @@ tags: ["Neighbourhood", "Lifestyle", "Food", "Nightlife"]
 
 <ImageGallery 
   images="
-    /content/blog/0001-hello-ekkamai/0001-wattana-panich.jpg,
-    /content/blog/0001-hello-ekkamai/0001-gateway-mall.jpg,
-    /content/blog/0001-hello-ekkamai/0001-donki-mall.jpg,
-    /content/blog/0001-hello-ekkamai/0001-thay-nightlife.jpg,
-    /content/blog/0001-hello-ekkamai/0001-hidden-cafe.jpg
+    /content/blog/0001-hello-ekkamai/0001-wattana-panich.webp,
+    /content/blog/0001-hello-ekkamai/0001-gateway-mall.webp,
+    /content/blog/0001-hello-ekkamai/0001-donki-mall.webp,
+    /content/blog/0001-hello-ekkamai/0001-thay-nightlife.webp,
+    /content/blog/0001-hello-ekkamai/0001-hidden-cafe.webp
   " 
   caption="รวมแลนด์มาร์คสำคัญที่น่าสนใจในย่านเอกมัย"
 />

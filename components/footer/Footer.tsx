@@ -37,7 +37,7 @@ const Footer = () => {
       {/* Background with Ambient Overlay */}
       <div className="absolute inset-0 z-0 opacity-10 dark:opacity-30">
         <SafeImage
-          src="/images/branding/cover.jpg"
+          src="/images/branding/cover.webp"
           alt="Footer background"
           unoptimized
         />
@@ -101,7 +101,7 @@ const Footer = () => {
           <div className="flex flex-col items-center justify-center space-y-4">
             <div className="relative w-32 md:w-44 aspect-square overflow-hidden rounded-2xl border border-foreground/5 shadow-lg">
               <SafeImage
-                src="/images/branding/logo.jpg"
+                src="/images/branding/logo.webp"
                 alt="The District Logo"
               />
             </div>

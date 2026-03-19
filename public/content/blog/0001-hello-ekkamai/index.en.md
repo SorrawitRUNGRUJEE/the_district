@@ -2,7 +2,7 @@
 title: "The Ekkamai Chronicles: Bangkok’s Most Sophisticated Playground"
 date: "OCT 10, 2025"
 excerpt: "Beyond the skyscrapers lies a neighborhood that perfectly blends heritage charms with high-end urban living. Welcome to the heart of Ekkamai."
-coverImage: "/content/blog/0001-hello-ekkamai/0001-cover.jpg"
+coverImage: "/content/blog/0001-hello-ekkamai/0001-cover.webp"
 category: "NEIGHBOURHOOD"
 featured: true
 tags: ["Neighbourhood", "Lifestyle", "Food", "Nightlife"]
@@ -25,7 +25,7 @@ Whether you are looking for local crafts or world-class retail therapy, Ekkamai 
 - **The Commons (Thonglor-Ekkamai)**: Just a short hop away, this vertical open-air courtyard is where the city’s creative crowd gathers for artisanal coffee and communal dining.
 
 <SingleImage 
-  src="/content/blog/0001-hello-ekkamai/0001-cafe-vibes.jpg" 
+  src="/content/blog/0001-hello-ekkamai/0001-cafe-vibes.webp" 
   caption="Sun-drenched cafe vibes in the heart of Ekkamai" 
 />
 
@@ -59,11 +59,11 @@ From century-old recipes to world-class shopping and cozy hideaways, here is a v
 
 <ImageGallery 
   images="
-    /content/blog/0001-hello-ekkamai/0001-wattana-panich.jpg,
-    /content/blog/0001-hello-ekkamai/0001-gateway-mall.jpg,
-    /content/blog/0001-hello-ekkamai/0001-donki-mall.jpg,
-    /content/blog/0001-hello-ekkamai/0001-thay-nightlife.jpg,
-    /content/blog/0001-hello-ekkamai/0001-hidden-cafe.jpg
+    /content/blog/0001-hello-ekkamai/0001-wattana-panich.webp,
+    /content/blog/0001-hello-ekkamai/0001-gateway-mall.webp,
+    /content/blog/0001-hello-ekkamai/0001-donki-mall.webp,
+    /content/blog/0001-hello-ekkamai/0001-thay-nightlife.webp,
+    /content/blog/0001-hello-ekkamai/0001-hidden-cafe.webp
   " 
   caption="A curated selection of Ekkamai's iconic landmarks"
 />

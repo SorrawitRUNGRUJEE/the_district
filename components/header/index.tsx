@@ -68,7 +68,7 @@ const Header = () => {
                 className={`relative h-8 md:h-10 aspect-square overflow-hidden rounded-lg transition-all duration-500 group-hover/brand:drop-shadow-brand ${isActive("/") ? "drop-shadow-brand" : ""}`}
               >
                 <Image
-                  src="/images/branding/logo.jpg"
+                  src="/images/branding/logo.webp"
                   alt="The District Logo"
                   fill
                   className="object-contain"

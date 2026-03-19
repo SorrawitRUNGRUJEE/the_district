@@ -140,7 +140,8 @@ export default async function PostPage({ params }: PostPageProps) {
         <div className="absolute inset-0 z-0">
           <SafeImage
             src={
-              (frontmatter.coverImage as string) || "/images/branding/cover.jpg"
+              (frontmatter.coverImage as string) ||
+              "/images/branding/cover.webp"
             }
             alt={(frontmatter.title as string) || "Blog Cover"}
             preload={true}
