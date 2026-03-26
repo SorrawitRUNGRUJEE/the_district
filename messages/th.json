@@ -257,5 +257,30 @@
       "amenity10": "แผนกต้อนรับ 24 ชั่วโมง",
       "closingText": "District G คือบ้านหลังที่สองของครอบครัวคุณ เที่ยวกรุงเทพฯ ตอนกลางวัน พักผ่อนอย่างสบายในตอนกลางคืน"
     }
-  }
+  },"BarPage": {
+  "title": "THE BAR",
+  "subtitle": "Refreshing Beverages",
+  "description": "Your description here.",
+  "menuCta": "MENU",
+  "tagline": "Ze Bar is ideal for an aperitif with its fine selection of crafted cocktails",
+  "textContent1": "First paragraph...",
+  "textContent2": "Second paragraph...",
+  "item1": { "title": "drink_1", "subtitle": "drink_1 catch phrase", "description": "drink_1 description", "menuCta": "MENU", "tagline": "drink_1 tag line", "textContent1": "drink_1 text content", "textContent2": "drink_1 text content 2" },
+  "item2": { "title": "drink_2", "subtitle": "drink_2 catch phrase", "description": "drink_2 description", "menuCta": "MENU", "tagline": "drink_2 tag line", "textContent1": "drink_2 text content", "textContent2": "drink_2 text content 2"},
+  "item3": { "title": "drink_3", "subtitle": "drink_3 catch phrase", "description": "drink_3 description", "menuCta": "MENU", "tagline": "drink_3 tag line", "textContent1": "drink_3 text content", "textContent2": "drink_3 text content 2"},
+  "item4": { "title": "drink_4", "subtitle": "drink_4 catch phrase", "description": "drink_4 description", "menuCta": "MENU", "tagline": "drink_4 tag line", "textContent1": "drink_4 text content", "textContent2": "drink_4 text content 2" }
+},
+  "RestaurantPage": {
+  "title": "THE restaurant",
+  "subtitle": "well known restaurant in the area",
+  "description": "Your description here.",
+  "menuCta": "MENU",
+  "tagline": "the restaurant is ideal for an aperitif with its fine selection of crafted cocktails",
+  "textContent1": "First paragraph...",
+  "textContent2": "Second paragraph...",
+  "item1": { "title": "restaurant_1", "subtitle": "restaurant_1 catch phrase", "description": "restaurant_1 description", "menuCta": "MENU", "tagline": "restaurant_1 tag line", "textContent1": "restaurant_1 text content", "textContent2": "restaurant_1 text content 2" },
+  "item2": { "title": "restaurant_2", "subtitle": "restaurant_2 catch phrase", "description": "restaurant_2 description", "menuCta": "MENU", "tagline": "restaurant_2 tag line", "textContent1": "restaurant_2 text content", "textContent2": "restaurant_2 text content 2"},
+  "item3": { "title": "restaurant_3", "subtitle": "restaurant_3 catch phrase", "description": "restaurant_3 description", "menuCta": "MENU", "tagline": "restaurant_3 tag line", "textContent1": "restaurant_3 text content", "textContent2": "restaurant_3 text content 2"},
+  "item4": { "title": "restaurant_4", "subtitle": "restaurant_4 catch phrase", "description": "restaurant_4 description", "menuCta": "MENU", "tagline": "restaurant_4 tag line", "textContent1": "restaurant_4 text content", "textContent2": "restaurant_4 text content 2" }
+}
 }
