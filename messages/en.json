@@ -141,7 +141,10 @@
     "getDirections": "Get Directions",
     "googleMaps": "Google Maps",
     "responseNote": "Typical response time: Within 24 hours"
-  },  "RoomPage": {
+  },  
+  "RoomPage": {
+    "dormLabel": "Dormitory",
+    "privateLabel": "Private Suites",
     "districtA": {
       "subtitle": "Shared Dormitory with 8 Bunk Beds",
       "description": "District A is our vibrant shared dormitory designed for social travellers. With 8 bunk beds, high-speed Wi-Fi, and a welcoming atmosphere, it's the perfect base to meet fellow adventurers exploring Bangkok.",

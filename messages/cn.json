@@ -143,6 +143,8 @@
     "responseNote": "通常在 24 小时内回复"
   },
   "RoomPage": {
+    "dormLabel": "Dormitory",
+    "privateLabel": "Private Suites",
     "districtA": {
       "subtitle": "8张双层床的共享宿舍",
       "description": "District A 是我们充满活力的共享宿舍，专为喜欢社交的旅行者打造。配备8张双层床、高速Wi-Fi以及友好的氛围，是在曼谷结识新朋友的理想之地。",
