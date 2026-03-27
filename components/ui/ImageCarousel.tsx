@@ -1,7 +1,7 @@
 "use client";
 
 import SafeImage from "@/components/ui/SafeImage";
-import { useEffect, useState } from "react";
+import { useIsClient } from "@/hooks/use-is-client";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
@@ -36,11 +36,7 @@ export default function ImageCarousel({
   className = "",
   rounded = "rounded-4xl",
 }: ImageCarouselProps) {
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+  const isClient = useIsClient();
 
   if (!images || images.length === 0) return null;
 
@@ -52,7 +48,9 @@ export default function ImageCarousel({
           slidesPerView={1}
           loop={loop}
           effect={effect}
-          autoplay={autoplay ? { delay: 5000, disableOnInteraction: false } : false}
+          autoplay={
+            autoplay ? { delay: 5000, disableOnInteraction: false } : false
+          }
           navigation={showNav}
           pagination={showPagination ? { clickable: true } : false}
           className={`${rounded} overflow-hidden shadow-xl`}
@@ -70,7 +68,7 @@ export default function ImageCarousel({
                     objectFit === "cover" ? "object-cover" : "object-contain"
                   }`}
                 />
-                
+
                 {/* Gradient Overlay (only for cover mode where we might have text overlay later) */}
                 {objectFit === "cover" && (
                   <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-transparent opacity-60" />
