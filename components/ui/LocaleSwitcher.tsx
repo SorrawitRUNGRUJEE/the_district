@@ -81,7 +81,7 @@ export default function LocaleSwitcher() {
       {/* Language Options Dropdown */}
       <div
         className={`
-          absolute top-full mt-4 w-44 overflow-hidden rounded-2xl border border-border bg-card/95 shadow-xl backdrop-blur-2xl z-20 transition-all duration-300 ease-out right-0 sm:right-auto sm:left-1/2 sm:-translate-x-1/2
+          absolute top-full mt-4 w-44 overflow-hidden rounded-2xl border border-border bg-surface/95 shadow-xl backdrop-blur-2xl z-20 transition-all duration-300 ease-out right-0 sm:right-auto sm:left-1/2 sm:-translate-x-1/2
           
           ${
             isOpen
@@ -112,7 +112,7 @@ export default function LocaleSwitcher() {
                     className={`text-[10px] font-bold tracking-[0.2em] transition-colors ${
                       isActive
                         ? "text-brand"
-                        : "text-muted-foreground hover:text-brand"
+                        : "text-soft-foreground hover:text-brand"
                     }`}
                   >
                     {lang.label}

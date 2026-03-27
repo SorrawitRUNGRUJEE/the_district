@@ -1,5 +1,6 @@
 "use client";
 
+import { LAYOUT_CONFIG } from "@/lib/constants";
 import { motion } from "framer-motion";
 
 interface ComingSoonProps {
@@ -13,18 +14,18 @@ export default function ComingSoon({
   statusText,
   description,
   establishmentText = "EST. 2025 — THE DISTRICT",
-  containerClass = "max-w-7xl mx-auto px-6 md:px-12 lg:px-16",
+  containerClass = LAYOUT_CONFIG.containerClass,
 }: ComingSoonProps) {
   return (
-    <section className="bg-muted py-32 grow flex flex-col items-center justify-center transition-colors duration-300">
+    <section className="bg-soft py-32 grow flex flex-col items-center justify-center transition-colors duration-300">
       <div className={containerClass}>
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative z-10 flex flex-col items-center text-center px-8 py-12 md:px-20 md:py-16 bg-card/60 dark:bg-black/40 backdrop-blur-xl border border-border rounded-sm max-w-2xl mx-auto shadow-2xl transition-colors duration-300"
+          className="relative z-10 flex flex-col items-center text-center px-8 py-12 md:px-20 md:py-16 bg-surface/60 dark:bg-black/40 backdrop-blur-xl border border-border rounded-sm max-w-2xl mx-auto shadow-2xl transition-colors duration-300"
         >
-          <div className="bg-muted px-6 py-2 border-x border-border mb-8 transition-colors duration-300">
+          <div className="bg-soft px-6 py-2 border-x border-border mb-8 transition-colors duration-300">
             <p className="text-lg md:text-xl font-light tracking-[0.4em] text-foreground uppercase italic">
               {statusText}
             </p>

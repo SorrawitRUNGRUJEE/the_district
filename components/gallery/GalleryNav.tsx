@@ -1,6 +1,7 @@
 "use client";
 
 import { DORM_ROOMS, PRIVATE_ROOMS } from "@/components/gallery/constants";
+import { LAYOUT_CONFIG } from "@/lib/constants";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
@@ -8,13 +9,13 @@ import { useEffect, useState } from "react";
 interface GalleryNavProps {
   activeSection: string;
   scrollToSection: (id: string) => void;
-  containerClass: string;
+  containerClass?: string;
 }
 
 export default function GalleryNav({
   activeSection,
   scrollToSection,
-  containerClass,
+  containerClass = LAYOUT_CONFIG.containerClass,
 }: GalleryNavProps) {
   const t = useTranslations("GalleryPage");
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -49,28 +50,30 @@ export default function GalleryNav({
       <div
         className={`absolute inset-0 transition-all duration-500 ${
           isNavOpen
-            ? "bg-card/95 backdrop-blur-md opacity-100"
-            : "bg-transparent opacity-0"
-        } md:bg-card/90 md:backdrop-blur-md md:opacity-100`}
+            ? "bg-surface/95 backdrop-blur-md opacity-100 shadow-lg"
+            : "bg-surface/10 backdrop-blur-sm opacity-100 md:bg-transparent md:backdrop-blur-none"
+        }`}
       />
 
-      <div className={`${containerClass} relative z-10 py-2 md:py-4`}>
-        <div className="flex flex-col">
-          {/* Mobile Header Row: Indicator + Toggle */}
-          <div className="md:hidden flex items-center justify-between gap-4">
-            {/* Top Left Pill Indicator */}
-            <div className="flex-1 overflow-hidden h-6 flex items-center">
-              <AnimatePresence mode="wait">
-                {!isNavOpen && activeRoom && (
+      <div className={`${containerClass} relative z-10 py-2 md:py-3`}>
+        {/* Unified Flex Container */}
+        <div className="flex items-center justify-between gap-x-6">
+          
+          {/* Left/Middle Block: Indicator + Selection Items (Absolute Overlap) */}
+          <div className="flex-1 relative min-h-[32px] flex items-center">
+            {/* Active Indicator (Cross-fades on desktop) */}
+            <div className={`transition-opacity duration-300 ${isNavOpen && isDesktop ? "opacity-0 invisible" : "opacity-100 visible"}`}>
+              <AnimatePresence>
+                {(!isNavOpen || !isDesktop) && activeRoom && (
                   <motion.div
                     key="active-room"
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: 10 }}
-                    className="bg-brand text-black text-[9px] font-black tracking-widest uppercase px-3 py-1 italic rounded-full inline-flex items-center gap-1 shadow-lg border border-border/5"
+                    className="bg-brand text-black text-[9px] font-black tracking-widest uppercase px-3 py-1 italic rounded-full inline-flex items-center gap-1 shadow-lg border border-border/10 whitespace-nowrap"
                   >
                     <span className="opacity-40">#</span>
-                    <span className="truncate max-w-[150px]">
+                    <span className="truncate max-w-[150px] md:max-w-[300px]">
                       {activeRoom.label}
                     </span>
                   </motion.div>
@@ -78,12 +81,74 @@ export default function GalleryNav({
               </AnimatePresence>
             </div>
 
+            {/* Selection Items (Overlays or follows based on breakpoint) */}
+            <AnimatePresence>
+              {isNavOpen && (
+                <motion.div
+                  initial={{ opacity: 0, x: 10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 10 }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                  className={`${isDesktop ? "absolute inset-0" : "relative w-full mt-2"} flex flex-wrap items-center gap-x-6 gap-y-2`}
+                >
+                  {/* Dorms */}
+                  <div className="flex items-center gap-3">
+                    <span className="text-[10px] font-black tracking-[0.2em] uppercase text-foreground/10 italic select-none hidden lg:block">
+                      {t("dormLabel")}
+                    </span>
+                    <div className="flex flex-wrap gap-x-3 gap-y-2">
+                      {DORM_ROOMS.map((room) => (
+                        <button
+                          key={room.id}
+                          onClick={() => handleRoomClick(room.id)}
+                          className={`text-[11px] font-bold tracking-[0.15em] uppercase transition-all duration-300 cursor-pointer whitespace-nowrap hover:text-shadow-brand ${
+                            activeSection === room.id
+                              ? "text-brand scale-110"
+                              : "text-soft-foreground hover:text-brand/80"
+                          }`}
+                        >
+                          {room.label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="hidden lg:block h-3 w-px bg-border/40" />
+
+                  {/* Privates */}
+                  <div className="flex items-center gap-3">
+                    <span className="text-[10px] font-black tracking-[0.2em] uppercase text-foreground/10 italic select-none hidden lg:block">
+                      {t("privateLabel")}
+                    </span>
+                    <div className="flex flex-wrap gap-x-3 gap-y-2">
+                      {PRIVATE_ROOMS.map((room) => (
+                        <button
+                          key={room.id}
+                          onClick={() => handleRoomClick(room.id)}
+                          className={`text-[11px] font-bold tracking-[0.15em] uppercase transition-all duration-300 cursor-pointer whitespace-nowrap hover:text-shadow-brand ${
+                            activeSection === room.id
+                              ? "text-brand scale-110"
+                              : "text-soft-foreground hover:text-brand/80"
+                          }`}
+                        >
+                          {room.label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          {/* Right Block: Toggle Button (Static Position) */}
+          <div className="flex-none">
             <button
               onClick={() => setIsNavOpen(!isNavOpen)}
-              className={`flex items-center justify-center gap-2 px-4 py-1.5 transition-all group min-w-[120px] rounded-full border ${
+              className={`flex items-center justify-center gap-2 px-4 py-1.5 transition-all group min-w-[100px] md:min-w-[120px] rounded-full border ${
                 isNavOpen
                   ? "bg-brand/20 border-brand/50 text-brand font-bold"
-                  : "bg-card/80 backdrop-blur-md border border-border text-foreground/40 hover:bg-brand/10 hover:border-brand/30 hover:text-brand"
+                  : "bg-surface/80 backdrop-blur-md border border-border text-foreground/40 hover:bg-brand/10 hover:border-brand/30 hover:text-brand"
               }`}
             >
               <span className="text-[10px] font-black tracking-widest uppercase italic text-center leading-none">
@@ -109,64 +174,6 @@ export default function GalleryNav({
               />
             </button>
           </div>
-
-          {/* Nav Content */}
-          <motion.div
-            initial={false}
-            animate={{
-              height: isDesktop || isNavOpen ? "auto" : 0,
-              opacity: isDesktop || isNavOpen ? 1 : 0,
-            }}
-            className="overflow-hidden md:opacity-100! md:height-auto!"
-          >
-            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-x-8 gap-y-4 md:gap-y-6 md:gap-x-12 pt-1 pb-1 md:pt-0 md:pb-0">
-              {/* Dorms Group */}
-              <div className="flex flex-col md:flex-row md:items-center gap-1.5 md:gap-4 font-bold">
-                <span className="text-[10px] font-black tracking-[0.2em] uppercase text-foreground/10 italic select-none text-center md:text-left">
-                  {t("dormLabel")}
-                </span>
-                <div className="flex flex-wrap gap-3 md:gap-6 justify-center">
-                  {DORM_ROOMS.map((room) => (
-                    <button
-                      key={room.id}
-                      onClick={() => handleRoomClick(room.id)}
-                      className={`text-[11px] font-bold tracking-[0.15em] uppercase transition-all duration-300 cursor-pointer whitespace-nowrap hover:text-shadow-brand ${
-                        activeSection === room.id
-                          ? "text-brand scale-110"
-                          : "text-muted-foreground hover:text-brand/80"
-                      }`}
-                    >
-                      {room.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <div className="hidden lg:block h-3 w-px bg-border mx-2" />
-
-              {/* Privates Group */}
-              <div className="flex flex-col md:flex-row md:items-center gap-1.5 md:gap-4 font-bold">
-                <span className="text-[10px] font-black tracking-[0.2em] uppercase text-foreground/10 italic select-none text-center md:text-left">
-                  {t("privateLabel")}
-                </span>
-                <div className="flex flex-wrap gap-3 md:gap-6 justify-center">
-                  {PRIVATE_ROOMS.map((room) => (
-                    <button
-                      key={room.id}
-                      onClick={() => handleRoomClick(room.id)}
-                      className={`text-[11px] font-bold tracking-[0.15em] uppercase transition-all duration-300 cursor-pointer whitespace-nowrap hover:text-shadow-brand ${
-                        activeSection === room.id
-                          ? "text-brand scale-110"
-                          : "text-muted-foreground hover:text-brand/80"
-                      }`}
-                    >
-                      {room.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </div>
     </div>

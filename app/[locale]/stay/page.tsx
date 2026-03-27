@@ -2,6 +2,8 @@
 
 import { DORM_ROOMS, PRIVATE_ROOMS } from "@/components/gallery/constants";
 import { GallerySection } from "@/components/gallery/types";
+import ImageCarousel from "@/components/ui/ImageCarousel";
+import { LAYOUT_CONFIG } from "@/lib/constants";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
@@ -32,17 +34,20 @@ const amenityKeys = [
 interface RoomNavProps {
   activeSection: string;
   scrollToSection: (id: string) => void;
-  containerClass: string;
+  containerClass?: string;
 }
 
-function RoomNav({ activeSection, scrollToSection, containerClass }: RoomNavProps) {
+function RoomNav({
+  activeSection,
+  scrollToSection,
+  containerClass = LAYOUT_CONFIG.containerClass,
+}: RoomNavProps) {
   const t = useTranslations("RoomPage");
 
   return (
-    <div className="sticky top-18 z-30 bg-card/90 backdrop-blur-md border-b border-border">
-      <div className={`${containerClass} py-6`}>
+    <div className="sticky top-18 z-30 bg-surface/90 backdrop-blur-md border-b border-border transition-colors duration-300">
+      <div className={`${containerClass} py-4 md:py-6`}>
         <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2">
-
           {/* Dorms group */}
           <div className="flex items-center gap-6">
             <span className="hidden md:block text-[10px] font-black tracking-[0.2em] uppercase text-foreground/20 italic select-none">
@@ -55,7 +60,7 @@ function RoomNav({ activeSection, scrollToSection, containerClass }: RoomNavProp
                 className={`text-[11px] cursor-pointer font-bold tracking-[0.15em] uppercase transition-all duration-300 whitespace-nowrap ${
                   activeSection === room.id
                     ? "text-brand scale-110"
-                    : "text-muted-foreground hover:text-brand/80"
+                    : "text-soft-foreground hover:text-brand/80"
                 }`}
               >
                 {room.label}
@@ -63,7 +68,7 @@ function RoomNav({ activeSection, scrollToSection, containerClass }: RoomNavProp
             ))}
           </div>
 
-          <div className="hidden lg:block h-3 w-px bg-border" />
+          <div className="hidden lg:block h-3 w-px bg-border mx-2" />
 
           {/* Privates group */}
           <div className="flex items-center gap-6">
@@ -77,14 +82,13 @@ function RoomNav({ activeSection, scrollToSection, containerClass }: RoomNavProp
                 className={`text-[11px] cursor-pointer font-bold tracking-[0.15em] uppercase transition-all duration-300 whitespace-nowrap ${
                   activeSection === room.id
                     ? "text-brand scale-110"
-                    : "text-muted-foreground hover:text-brand/80"
+                    : "text-soft-foreground hover:text-brand/80"
                 }`}
               >
                 {room.label}
               </button>
             ))}
           </div>
-
         </div>
       </div>
     </div>
@@ -105,31 +109,47 @@ function RoomBlock({ room }: { room: GallerySection }) {
           className="w-full lg:w-[55%] h-[50vh] lg:h-auto bg-cover bg-center"
           style={{ backgroundImage: `url('${room.images.featured[0]}')` }}
         />
-        <div className="w-full lg:w-[45%] bg-background flex flex-col justify-center px-8 py-12 lg:px-16 lg:py-0">
+        <div className="w-full lg:w-[45%] bg-background flex flex-col justify-center px-8 py-12 lg:px-16 lg:py-0 transition-colors duration-300">
           {room.status && (
             <p className="text-xs font-bold tracking-[0.3em] uppercase text-brand mb-4">
               {tRooms(room.status)}
             </p>
           )}
-          <h1 className="text-5xl font-bold text-brand mb-4">{room.label}</h1>
-          <p className="text-xs font-bold tracking-[0.2em] uppercase text-foreground/60 mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-brand mb-4 tracking-tight uppercase italic underline underline-offset-8 decoration-brand/20">
+            {room.label}
+          </h1>
+          <p className="text-xs font-bold tracking-[0.2em] uppercase text-foreground/60 mb-6 italic">
             {t("subtitle")}
           </p>
-          <p className="text-sm text-foreground/70 leading-relaxed max-w-md">
+          <p className="text-sm md:text-base text-foreground/70 leading-relaxed max-w-md">
             {t("description")}
           </p>
         </div>
       </section>
 
-      {/* ── GALLERY SECTION ── */}
-      <section className="flex h-[50vh] gap-5 mt-5">
-        {room.images.featured.map((src, i) => (
-          <div
-            key={i}
-            className="flex-1 bg-cover bg-center outline-2 outline-white"
-            style={{ backgroundImage: `url('${src}')` }}
+      {/* ── GALLERY SECTION (Carousel for Mobile) ── */}
+      <section className="mt-8 mb-12">
+        {/* Desktop: Grid View */}
+        <div className="hidden md:flex h-[50vh] gap-6 px-1">
+          {room.images.featured.map((src, i) => (
+            <div
+              key={i}
+              className="flex-1 bg-cover bg-center outline-2 outline-white shadow-xl rounded-xs hover:scale-[1.01] transition-transform duration-500"
+              style={{ backgroundImage: `url('${src}')` }}
+            />
+          ))}
+        </div>
+        
+        {/* Mobile: Swipe Carousel */}
+        <div className="md:hidden">
+          <ImageCarousel 
+             images={room.images.featured}
+             aspectRatio="aspect-square"
+             objectFit="cover"
+             rounded="rounded-none"
+             autoplay={false}
           />
-        ))}
+        </div>
       </section>
 
       {/* ── TEXT SECTION ── */}
@@ -143,7 +163,10 @@ function RoomBlock({ room }: { room: GallerySection }) {
           </p>
           <ul className="text-left space-y-3 mb-8">
             {amenityKeys.map((key) => (
-              <li key={key} className="flex items-start gap-3 text-sm text-foreground/70">
+              <li
+                key={key}
+                className="flex items-start gap-3 text-sm text-foreground/70"
+              >
                 <span className="text-brand mt-0.5">✓</span>
                 {t(key)}
               </li>

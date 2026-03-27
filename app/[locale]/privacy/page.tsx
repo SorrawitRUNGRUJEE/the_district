@@ -1,13 +1,14 @@
 import PageHeader from "@/components/layout/PageHeader";
 import ComingSoon from "@/components/ui/ComingSoon";
+import { LAYOUT_CONFIG } from "@/lib/constants";
 import { useTranslations } from "next-intl";
 
 export default function PrivacyPage() {
   const t = useTranslations("PrivacyPage");
-  const containerClass = "max-w-7xl mx-auto px-6 md:px-12 lg:px-16";
+  const containerClass = LAYOUT_CONFIG.containerClass;
 
   return (
-    <main className="min-h-screen bg-muted flex flex-col">
+    <main className="min-h-screen bg-soft flex flex-col">
       <PageHeader title={t("header")} containerClass={containerClass} />
       <ComingSoon
         statusText={t("status")}

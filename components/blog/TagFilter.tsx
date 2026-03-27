@@ -84,13 +84,13 @@ export default function TagFilter({
         className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 flex flex-col items-center pointer-events-auto relative py-4"
       >
         {/* Floating Control Capsule */}
-        <div className="inline-flex flex-wrap justify-center items-center gap-x-6 gap-y-3 px-8 py-3 bg-card/80 backdrop-blur-xl border border-border rounded-full shadow-2xl">
+        <div className="inline-flex flex-wrap justify-center items-center gap-x-6 gap-y-3 px-8 py-3 bg-surface/80 backdrop-blur-xl border border-border rounded-full shadow-2xl">
           <button
             onClick={clearAll}
             className={`flex items-center gap-2 text-[10px] font-bold tracking-[0.3em] uppercase pb-1 border-b-2 transition-all ${
               selectedTags.length === 0
                 ? "border-brand text-brand"
-                : "border-transparent text-muted-foreground/30 hover:text-foreground"
+                : "border-transparent text-soft-foreground/30 hover:text-foreground"
             }`}
           >
             {allLabel}{" "}
@@ -116,7 +116,7 @@ export default function TagFilter({
             className={`text-[9px] font-black tracking-[0.2em] uppercase px-5 py-2 transition-all rounded-full border shadow-lg ${
               isOpen
                 ? "bg-brand text-black border-brand scale-105"
-                : "bg-background/5 text-muted-foreground/50 border-border hover:bg-background/10 hover:text-foreground"
+                : "bg-background/5 text-soft-foreground/50 border-border hover:bg-background/10 hover:text-foreground"
             }`}
           >
             {isOpen ? "− CLOSE" : `+ EXPLORE TOPICS (${allTags.length})`}
@@ -136,7 +136,7 @@ export default function TagFilter({
                     className={`flex items-center gap-2 text-[9px] font-medium tracking-[0.2em] uppercase transition-all px-4 py-2.5 rounded-full border ${
                       isSelected
                         ? "bg-brand border-brand text-black font-black"
-                        : "bg-background/3 border-border text-muted-foreground/40 hover:text-foreground hover:bg-background/8 hover:border-foreground/10"
+                        : "bg-background/3 border-border text-soft-foreground/40 hover:text-foreground hover:bg-background/8 hover:border-foreground/10"
                     }`}
                   >
                     #{tag.name}{" "}

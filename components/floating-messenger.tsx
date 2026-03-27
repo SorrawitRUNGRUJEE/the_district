@@ -69,7 +69,7 @@ export default function FloatingMessenger() {
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="relative bg-muted border border-white/10 p-8 md:p-12 rounded-3xl shadow-2xl flex flex-col items-center max-w-sm w-full z-10"
+              className="relative bg-soft border border-white/10 p-8 md:p-12 rounded-3xl shadow-2xl flex flex-col items-center max-w-sm w-full z-10"
             >
               <button
                 onClick={() => setShowQrModal(false)}
@@ -94,7 +94,7 @@ export default function FloatingMessenger() {
                 />
               </div>
 
-              <p className="text-card-foreground text-sm text-center font-light leading-relaxed">
+              <p className="text-surface-foreground text-sm text-center font-light leading-relaxed">
                 {t("scanInstruction")}
               </p>
             </motion.div>

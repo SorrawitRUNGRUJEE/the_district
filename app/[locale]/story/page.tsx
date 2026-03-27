@@ -1,12 +1,14 @@
 import PageHeader from "@/components/layout/PageHeader";
 import { useTranslations } from "next-intl";
 
+import { LAYOUT_CONFIG } from "@/lib/constants";
+
 export default function StoryPage() {
   const t = useTranslations("StoryPage");
-  const containerClass = "max-w-7xl mx-auto px-6 md:px-12 lg:px-16";
+  const containerClass = LAYOUT_CONFIG.containerClass;
 
   return (
-    <main className="min-h-screen bg-muted lg:flex lg:flex-col transition-colors duration-300">
+    <main className="min-h-screen bg-soft lg:flex lg:flex-col transition-colors duration-300">
       <PageHeader title={t("title")} containerClass={containerClass} />
       <div className={`flex flex-wrap pb-20`}>
         <div className="order-1 lg:w-1/2 w-full min-h-[80vh] bg-[url('/images/story/top.webp')] bg-cover bg-center" />

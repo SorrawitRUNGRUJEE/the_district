@@ -8,13 +8,14 @@ import {
   PRIVATE_ROOMS,
 } from "@/components/gallery/constants";
 import PageHeader from "@/components/layout/PageHeader";
+import { LAYOUT_CONFIG } from "@/lib/constants";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
 export default function GalleryPage() {
   const t = useTranslations("GalleryPage");
   const tRooms = useTranslations("GalleryRooms"); // Added for constants translation
-  const containerClass = "max-w-7xl mx-auto px-6 md:px-12 lg:px-16";
+  const containerClass = LAYOUT_CONFIG.containerClass;
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
@@ -50,7 +51,7 @@ export default function GalleryPage() {
   const allSections = [...DORM_ROOMS, ...PRIVATE_ROOMS];
 
   return (
-    <main className="bg-muted text-foreground min-h-screen">
+    <main className="bg-soft text-foreground min-h-screen">
       <PageHeader title={t("header")} containerClass={containerClass} />
       <GalleryNav
         activeSection={activeSection}

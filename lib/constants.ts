@@ -14,4 +14,6 @@ export const BRAND_INFO = {
   },
 };
 
-// linktree: https://linktr.ee/thedistrict.ekkamai
+export const LAYOUT_CONFIG = {
+  containerClass: "max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-16",
+};

@@ -27,7 +27,7 @@ export default function MasonryGrid({
   const currentPattern = GALLERY_PATTERNS[selectedPatternKey];
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 grid-flow-dense gap-3 md:gap-4 auto-rows-[160px] md:auto-rows-[220px]">
+    <div className="grid grid-cols-2 md:grid-cols-4 grid-flow-dense gap-3 md:gap-4 auto-rows-[200px] md:auto-rows-[220px]">
       {/* 0: Featured Slot - Slides through featured images */}
       <MosaicCell
         images={images.featured}
