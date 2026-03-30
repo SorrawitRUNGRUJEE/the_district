@@ -85,7 +85,7 @@ export default function FloatingMessenger() {
 
               <div className="bg-white p-4 rounded-2xl w-full aspect-square mb-6 relative">
                 <Image
-                  src="/images/social/line-qr.png"
+                  src="/images/social/line-qr.webp"
                   alt="LINE QR Code"
                   width={400}
                   height={400}

@@ -28,69 +28,20 @@
   },
   "StoryPage": {
     "title": "เรื่องราวของเรา",
-    "status": "เร็วๆ นี้",
+    "status": "เด็กเอกมัยตัวจริง",
     "description": "รังสรรค์มิตรภาพและความจริงใจในการพักผ่อน ใจกลางย่านเอกมัยที่เต็มไปด้วยสีสัน",
-    "firstHeader":"หัวข้อแรก",
-    "firstContent1":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula, felis eu vulputate tristique, velit nisl ornare enim, sit amet ullamcorper ipsum neque eu ipsum. Quisque imperdiet quis augue at finibus. Integer in ex magna. Suspendisse ipsum diam, sagittis ut tortor et, maximus rutrum nunc. Pellentesque sit amet venenatis sem. Pellentesque varius pharetra venenatis. Integer blandit porttitor nisl in ultricies. Cras ac porta mi, ac pharetra eros. Vivamus non pellentesque nulla. Nam justo dolor, feugiat eget nunc eget, faucibus sagittis elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas mauris neque, hendrerit in nisl et, finibus volutpat nunc. Praesent mollis sapien ex, vitae semper dolor vestibulum vitae. Aliquam tellus massa, tempus a ante non, volutpat gravida sem. Nullam ac consectetur libero.",
-    "firstContent2":"Aenean suscipit fringilla mattis. Duis a dui dolor. Sed eros ex, varius et tempus a, egestas et ipsum. Aliquam cursus, nunc sollicitudin lobortis placerat, felis nunc vehicula nisi, nec auctor nunc lectus sed metus.",
-    "secondHeader":"หัวข้อสอง",
-    "secondContent1":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula, felis eu vulputate tristique, velit nisl ornare enim, sit amet ullamcorper ipsum neque eu ipsum. Quisque imperdiet quis augue at finibus. Integer in ex magna. Suspendisse ipsum diam, sagittis ut tortor et, maximus rutrum nunc. Pellentesque sit amet venenatis sem. Pellentesque varius pharetra venenatis. Integer blandit porttitor nisl in ultricies. Cras ac porta mi, ac pharetra eros. Vivamus non pellentesque nulla. Nam justo dolor, feugiat eget nunc eget, faucibus sagittis elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas mauris neque, hendrerit in nisl et, finibus volutpat nunc. Praesent mollis sapien ex, vitae semper dolor vestibulum vitae. Aliquam tellus massa, tempus a ante non, volutpat gravida sem. Nullam ac consectetur libero.",
-    "secondContent2":"Aenean suscipit fringilla mattis. Duis a dui dolor. Sed eros ex, varius et tempus a, egestas et ipsum. Aliquam cursus, nunc sollicitudin lobortis placerat, felis nunc vehicula nisi, nec auctor nunc lectus sed metus."
-
-  },
-  "OffersPage": {
-    "header": "ข้อเสนอพิเศษ",
-    "stay": {
-      "tag": "การเข้าพัก",
-      "title": "อิสระแห่งชีวิต\nในเมืองกรุง",
-      "desc": "ไม่ว่าจะพักผ่อนช่วงสั้นๆ หรือพักอาศัยระยะยาว เราคือที่พักใจที่สมบูรณ์แบบให้คุณได้สัมผัสเสน่ห์ที่ไม่มีวันหลับใหลของเอกมัย",
-      "cta": "ดูรายละเอียดเพิ่มเติม"
-    },
-    "experience": {
-      "tag": "ประสบการณ์",
-      "title": "หัวใจแห่ง\nกรุงเทพมหานคร",
-      "desc": "ดื่มด่ำไปกับย่านที่ศูนย์การค้าสุดหรูมาบรรจบกับบาร์ลับและสตรีทฟู้ดระดับตำนาน ทั้งหมดนี้อยู่ใกล้เพียงเอื้อมมือจากที่พักอันเงียบสงบของคุณ",
-      "cta": "ออกไปตะลุยเลย"
-    },
-    "dining": {
-      "tag": "อาหารและการผ่อนคลาย",
-      "title": "มรดกแห่ง\nรสชาติ",
-      "desc": "ตั้งแต่ร้านอาหารมิชลินไปจนถึงร้านสตรีทฟู้ดที่ส่งต่อกันรุ่นสู่รุ่น ค้นพบว่าเหตุใดเอกมัยจึงเป็นจุดหมายปลายทางด้านอาหารที่โด่งดังที่สุดในกรุงเทพฯ",
-      "cta": "เลือกชมรายการ"
-    }
+    "firstHeader": "จุดเริ่มต้นจากคนเอกมัย",
+    "firstContent1": "พวกเราเป็นเด็กเอกมัยมาตั้งแต่เกิดครับ ที่นี่คือบ้าน คือสนามเด็กเล่น และเป็นทุกอย่างสำหรับเรา ตลอดชีวิตที่ผ่านมาเราเห็นการเปลี่ยนแปลงของย่านนี้มาตลอด และนั่นทำให้เรารู้จักทุกซอกทุกมุมของเอกมัยเป็นอย่างดี",
+    "firstContent2": "The District เกิดจากการรวมตัวกันของเพื่อนและพี่น้อง 5 คน คือ ตุล, แตม, พิม, พริม และ มันนี่ ที่อยากจะเปลี่ยนตึกเก่าของที่บ้านให้กลายเป็นพื้นที่ที่พร้อมต้อนรับนักเดินทางจากทั่วโลก ให้ได้มาสัมผัสเสน่ห์ของเอกมัยในแบบที่พวกเรารัก",
+    "secondHeader": "ประสบการณ์ที่จริงใจ",
+    "secondContent1": "การมาพักที่นี่ไม่ใช่แค่การหาที่นอน แต่คือการมาเป็นส่วนหนึ่งของครอบครัวเรา เราพร้อมจะแนะนำทุกอย่างที่เป็น 'ของดี' ในย่านนี้ ตั้งแต่ร้านลับไปจนถึงจุดเช็คอินเท่ๆ เพื่อให้คุณได้รับประสบการณ์การท่องเที่ยวที่ดีที่สุด",
+    "secondContent2": "พวกเราตั้งใจกับโปรเจกต์นี้มากในทุกรายละเอียด เพื่อเปลี่ยนอาคารที่มีเรื่องราวของครอบครัวให้กลายเป็น Hostel ใจกลางเอกมัยที่พร้อมให้ทุกคนมาสนุกด้วยกัน... ยินดีต้อนรับสู่ The District ครับ"
   },
   "GalleryPage": {
     "header": "แกลเลอรี",
     "dormLabel": "ห้องดอร์ม",
     "privateLabel": "ห้องส่วนตัว",
     "curated": "ช่วงเวลาแห่งความประทับใจ ณ เดอะ ดิสทริค"
-  },
-  "GalleryRooms": {
-    "facilities": {
-      "capacity": "จำนวนผู้เข้าพัก",
-      "beds": "ประเภทเตียง",
-      "restroom": "ห้องน้ำ",
-      "wifi": "ไวไฟ",
-      "tv": "สมาร์ททีวี"
-    },
-    "status": {
-      "sharedDormitory": "ห้องพักรวม",
-      "privateLargeRoom": "ห้องส่วนตัวขนาดใหญ่",
-      "privateCompactRoom": "ห้องส่วนตัวกะทัดรัด",
-      "privateFamilyRoom": "ห้องพักครอบครัว"
-    },
-    "info": {
-      "beds8": "เตียงสองชั้น 8 เตียง",
-      "beds4Plus1": "เตียงสองชั้น 4 เตียง + เตียงควีนไซส์ 1 เตียง",
-      "beds3": "เตียงสองชั้น 3 เตียง",
-      "beds2Plus1": "เตียงสองชั้น 2 เตียง + เตียงควีนไซส์ 1 เตียง",
-      "sharedRestroom": "ห้องน้ำรวม",
-      "privateBathroom": "ห้องน้ำส่วนตัว"
-    },
-    "extras": {
-      "wifi": "ฟรีไวไฟความเร็วสูง",
-      "tv": "สมาร์ททีวี"
-    }
   },
   "BlogPage": {
     "header": "บล็อก",
@@ -107,13 +58,107 @@
     "filter": {
       "all": "ทั้งหมด",
       "search": "ค้นหาบทความ...",
-      "noResults": "ไม่พบบทความที่ค้นหา"
+      "noResults": "ไม่พบบทความที่ค้นหา",
+      "explore": "สัมผัส",
+      "close": "ปิด",
+      "updating": "กำลังอัปเดต..."
     }
   },
   "StayPage": {
-    "header": "ที่พัก",
+    "header": "ห้องพักและดอร์ม",
     "status": "ประสบการณ์การพักผ่อนเหนือระดับ เร็วๆ นี้",
-    "description": "สัมผัสประสบการณ์การพักผ่อนที่เหนือระดับ ใจกลางย่านเอกมัยที่กำลังเตรียมพร้อมรอต้อนรับคุณ"
+    "description": "สัมผัสประสบการณ์การพักผ่อนที่เหนือระดับ ใจกลางย่านเอกมัยที่กำลังเตรียมพร้อมรอต้อนรับคุณ",
+    "dormLabel": "ห้องดอร์ม",
+    "privateLabel": "ห้องส่วนตัว",
+    "explore": "สัมผัส",
+    "exploreRooms": "เลือกชมห้องพัก",
+    "close": "ปิด",
+    "facilities": {
+      "capacity": "จำนวนผู้เข้าพัก",
+      "beds": "ประเภทเตียง",
+      "restroom": "ห้องน้ำ",
+      "wifi": "ไวไฟ",
+      "tv": "สมาร์ททีวี"
+    },
+    "roomStatuses": {
+      "sharedDormitory": "ห้องพักรวม",
+      "privateLargeRoom": "ห้องส่วนตัวขนาดใหญ่",
+      "privateCompactRoom": "ห้องส่วนตัวกะทัดรัด",
+      "privateFamilyRoom": "ห้องพักครอบครัว"
+    },
+    "roomInfo": {
+      "beds8": "เตียงสองชั้น 8 เตียง",
+      "beds4Plus1": "เตียงสองชั้น 4 เตียง + เตียงควีนไซส์ 1 เตียง",
+      "beds3": "เตียงสองชั้น 3 เตียง",
+      "beds2Plus1": "เตียงสองชั้น 2 เตียง + เตียงควีนไซส์ 1 เตียง",
+      "sharedRestroom": "ห้องน้ำรวม",
+      "privateBathroom": "ห้องน้ำส่วนตัว"
+    },
+    "roomExtras": {
+      "wifi": "ฟรีไวไฟความเร็วสูง",
+      "tv": "สมาร์ททีวี"
+    },
+    "commonAmenities": {
+      "bunk8": "เตียงสองชั้น 8 เตียง พร้อมผ้าม่านส่วนตัว",
+      "readingLight": "ไฟอ่านหนังสือส่วนตัวทุกเตียง",
+      "powerOutlet": "ปลั๊กไฟและพอร์ต USB ส่วนตัว",
+      "wifi": "Wi-Fi ความเร็วสูง ฟรี",
+      "sharedBathroom": "ห้องน้ำรวม",
+      "locker": "ล็อกเกอร์ส่วนตัวปลอดภัย",
+      "ac": "เครื่องปรับอากาศ",
+      "facilitiesAccess": "ใช้สิ่งอำนวยความสะดวกของโฮสเทลได้ฟรี",
+      "shuttle": "บริการรถรับส่งฟรีไปสถานี BTS เอกมัย ตามรอบเวลา",
+      "frontDesk": "แผนกต้อนรับ 24 ชั่วโมง",
+      "bunk4Queen1": "เตียงสองชั้น 4 เตียง + เตียงควีนไซส์ 1 เตียง",
+      "privateBathroom": "ห้องน้ำส่วนตัว",
+      "tv": "Smart TV พร้อมเคเบิลและสตรีมมิ่ง",
+      "safetyBox": "ตู้นิรภัยในห้อง",
+      "miniFridge": "ตู้เย็นขนาดเล็ก",
+      "bunk3": "เตียงสองชั้น 3 เตียง",
+      "bunk2Queen1": "เตียงสองชั้น 2 เตียง + เตียงควีนไซส์ 1 เตียง"
+    },
+    "districtA": {
+      "subtitle": "ห้องพักรวมพร้อมเตียงสองชั้น 8 เตียง",
+      "description": "District A คือห้องพักรวมที่มีชีวิตชีวาของเรา ออกแบบมาสำหรับนักเดินทางสายสังคม ด้วยเตียงสองชั้น 8 เตียง อินเทอร์เน็ต Wi-Fi ความเร็วสูง และบรรยากาศที่เป็นกันเอง เหมาะอย่างยิ่งสำหรับการพบปะเพื่อนใหม่ที่มาเที่ยวกรุงเทพฯ",
+      "detailDescription": "District A มาพร้อมเตียงสองชั้นที่ออกแบบอย่างพิถีพิถัน มีผ้าม่านเพื่อความเป็นส่วนตัว ไฟอ่านหนังสือส่วนตัว และปลั๊กไฟส่วนตัว ห้องน้ำรวมได้รับการดูแลรักษาความสะอาดอย่างดีที่สุด",
+      "closingText": "District A คือจุดเริ่มต้นของมิตรภาพ มาร่วมเป็นส่วนหนึ่งของชุมชนนักเดินทางและสร้างความทรงจำที่น่าประทับใจในกรุงเทพฯ"
+    },
+    "districtB": {
+      "subtitle": "ห้องพักรวมพร้อมเตียงสองชั้น 8 เตียง",
+      "description": "District B มอบประสบการณ์ห้องพักรวมที่มีชีวิตชีวาเช่นเดียวกับ District A ด้วยเตียงสองชั้น 8 เตียง และบรรยากาศสนุกสนาน เหมาะสำหรับนักเดินทางที่ต้องการประหยัดงบแต่ยังคงความสะดวกสบาย",
+      "detailDescription": "District B มาพร้อมเตียงสองชั้นคุณภาพสูงแบบเดียวกัน พร้อมผ้าม่าน ไฟส่วนตัว และล็อกเกอร์ปลอดภัย ใกล้กับพื้นที่ส่วนกลางของโฮสเทล",
+      "closingText": "District B คือบ้านราคาคุ้มค่าในเอกมัย บรรยากาศดี ราคาดี"
+    },
+    "districtC": {
+      "subtitle": "ห้องส่วนตัวขนาดใหญ่ สำหรับสูงสุด 6 ท่าน",
+      "description": "District C คือห้องส่วนตัวขนาดใหญ่ เหมาะสำหรับกลุ่มเพื่อนหรือครอบครัว มีเตียงสองชั้น 4 เตียง และเตียงควีนไซส์ พร้อมห้องน้ำส่วนตัว Smart TV และ Wi-Fi ความเร็วสูง มอบทั้งความสะดวกสบายและความเป็นส่วนตัว",
+      "detailDescription": "District C มีพื้นที่กว้างขวาง พร้อมเตียงสองชั้น 4 เตียง และเตียงควีนไซส์ 1 เตียง ห้องน้ำในตัว Smart TV พร้อมเคเบิลและสตรีมมิ่ง และสิ่งอำนวยความสะดวกครบครัน",
+      "closingText": "District C คือที่พักสำหรับกลุ่มที่สมบูรณ์แบบ ทั้งเป็นส่วนตัว กว้างขวาง และออกแบบมาเพื่อการเดินทางร่วมกัน"
+    },
+    "districtD": {
+      "subtitle": "ห้องส่วนตัวขนาดกะทัดรัด สำหรับสูงสุด 3 ท่าน",
+      "description": "District D คือห้องส่วนตัวขนาดกะทัดรัด พร้อมเตียงสองชั้น 3 เตียง และห้องน้ำส่วนตัว เหมาะสำหรับกลุ่มเล็กหรือเพื่อนที่ต้องการพื้นที่ส่วนตัวในราคาคุ้มค่า",
+      "detailDescription": "District D ออกแบบอย่างชาญฉลาดในพื้นที่กะทัดรัด พร้อมเตียงสองชั้น 3 เตียง ห้องน้ำส่วนตัว และสิ่งจำเป็นครบครันสำหรับการพักผ่อนในกรุงเทพฯ",
+      "closingText": "District D พิสูจน์ว่าของดีไม่จำเป็นต้องใหญ่ พื้นที่ส่วนตัวของคุณรออยู่ที่ The District"
+    },
+    "districtE": {
+      "subtitle": "ห้องครอบครัวส่วนตัว สำหรับสูงสุด 4 ท่าน",
+      "description": "District E คือห้องครอบครัวที่อบอุ่น รองรับได้สูงสุด 4 ท่าน พร้อมเตียงสองชั้น 2 เตียง และเตียงควีนไซส์ ห้องน้ำส่วนตัว และ Smart TV เหมาะสำหรับการพักผ่อนของครอบครัว",
+      "detailDescription": "District E ออกแบบมาเพื่อครอบครัวโดยเฉพาะ พร้อมเตียงสองชั้น 2 เตียง และเตียงควีนไซส์ 1 เตียง ห้องน้ำส่วนตัว Smart TV และพื้นที่กว้างขวาง",
+      "closingText": "District E คือที่ที่ความทรงจำของครอบครัวถูกสร้างขึ้น สะดวกสบาย เป็นส่วนตัว และตั้งอยู่ในเอกมัย"
+    },
+    "districtF": {
+      "subtitle": "ห้องส่วนตัวขนาดกะทัดรัด สำหรับสูงสุด 3 ท่าน",
+      "description": "District F มีเสน่ห์แบบเดียวกับ District D ด้วยห้องขนาดกะทัดรัด เตียงสองชั้น 3 เตียง ห้องน้ำส่วนตัว และสิ่งอำนวยความสะดวกครบครัน",
+      "detailDescription": "District F คือห้องส่วนตัวที่ออกแบบอย่างมีประสิทธิภาพ พร้อมเตียงสองชั้น 3 เตียง ห้องน้ำส่วนตัว เหมาะสำหรับกลุ่มเล็กที่ต้องการความคุ้มค่า",
+      "closingText": "District F คือการเดินทางอย่างชาญฉลาด พร้อมพื้นที่ส่วนตัวในราคาที่คุ้มค่าในเอกมัย"
+    },
+    "districtG": {
+      "subtitle": "ห้องครอบครัวส่วนตัว สำหรับสูงสุด 4 ท่าน",
+      "description": "District G คือห้องครอบครัวอีกหนึ่งตัวเลือก พร้อมรูปแบบเดียวกับ District E มีเตียงสองชั้น 2 เตียง เตียงควีนไซส์ ห้องน้ำส่วนตัว และ Smart TV เหมาะสำหรับครอบครัวที่มาเที่ยวกรุงเทพฯ",
+      "detailDescription": "District G มอบบรรยากาศอบอุ่นและเป็นส่วนตัว พร้อมเตียงสองชั้น 2 เตียง เตียงควีนไซส์ 1 เตียง ห้องน้ำส่วนตัว Smart TV และสิ่งอำนวยความสะดวกครบครัน",
+      "closingText": "District G คือบ้านหลังที่สองของครอบครัวคุณ เที่ยวกรุงเทพฯ ตอนกลางวัน พักผ่อนอย่างสบายในตอนกลางคืน"
+    }
   },
   "DinePage": {
     "header": "ห้องอาหาร",
@@ -142,145 +187,94 @@
     "googleMaps": "กูเกิล แมพส์",
     "responseNote": "โดยปกติเราจะตอบกลับภายใน 24 ชั่วโมง"
   },
-    "RoomPage": {
-    "dormLabel": "ห้องดอร์ม",
-    "privateLabel": "ห้องส่วนตัว",
-    "districtA": {
-      "subtitle": "ห้องพักรวมพร้อมเตียงสองชั้น 8 เตียง",
-      "description": "District A คือห้องพักรวมที่มีชีวิตชีวาของเรา ออกแบบมาสำหรับนักเดินทางสายสังคม ด้วยเตียงสองชั้น 8 เตียง อินเทอร์เน็ต Wi-Fi ความเร็วสูง และบรรยากาศที่เป็นกันเอง เหมาะอย่างยิ่งสำหรับการพบปะเพื่อนใหม่ที่มาเที่ยวกรุงเทพฯ",
-      "detailDescription": "District A มาพร้อมเตียงสองชั้นที่ออกแบบอย่างพิถีพิถัน มีผ้าม่านเพื่อความเป็นส่วนตัว ไฟอ่านหนังสือส่วนตัว และปลั๊กไฟส่วนตัว ห้องน้ำรวมได้รับการดูแลรักษาความสะอาดอย่างดีที่สุด",
-      "amenity1": "เตียงสองชั้น 8 เตียง พร้อมผ้าม่านส่วนตัว",
-      "amenity2": "ไฟอ่านหนังสือส่วนตัวทุกเตียง",
-      "amenity3": "ปลั๊กไฟและพอร์ต USB ส่วนตัว",
-      "amenity4": "Wi-Fi ความเร็วสูง ฟรี",
-      "amenity5": "ห้องน้ำรวม",
-      "amenity6": "ล็อกเกอร์ส่วนตัวปลอดภัย",
-      "amenity7": "เครื่องปรับอากาศ",
-      "amenity8": "ใช้สิ่งอำนวยความสะดวกของโฮสเทลได้ฟรี",
-      "amenity9": "บริการรถรับส่งฟรีไปสถานี BTS เอกมัย ตามรอบเวลา",
-      "amenity10": "แผนกต้อนรับ 24 ชั่วโมง",
-      "closingText": "District A คือจุดเริ่มต้นของมิตรภาพ มาร่วมเป็นส่วนหนึ่งของชุมชนนักเดินทางและสร้างความทรงจำที่น่าประทับใจในกรุงเทพฯ"
+  "BarPage": {
+    "title": "บาร์",
+    "subtitle": "เครื่องดื่มเย็นชื่นใจ",
+    "description": "พบกับเครื่องดื่มที่คัดสรรมาอย่างดี เพื่อความสดชื่นในทุกช่วงเวลา",
+    "menuCta": "เมนู",
+    "tagline": "The Bar คือสถานที่พักผ่อนที่สมบูรณ์แบบ พร้อมเครื่องดื่มซิกเนเจอร์มากมาย",
+    "textContent1": "สูตรพิเศษที่คัดสรรมาอย่างดี...",
+    "textContent2": "พักผ่อนในบรรยากาศที่เป็นกันเอง...",
+    "item1": {
+      "title": "เครื่องดื่ม 1",
+      "subtitle": "เมนูซิกเนเจอร์",
+      "description": "คำอธิบายรสชาติที่เป็นเอกลักษณ์",
+      "menuCta": "เมนู",
+      "tagline": "แนะนำเป็นพิเศษ",
+      "textContent1": "รายละเอียดเนื้อหา",
+      "textContent2": "เนื้อหาเพิ่มเติม"
     },
-    "districtB": {
-      "subtitle": "ห้องพักรวมพร้อมเตียงสองชั้น 8 เตียง",
-      "description": "District B มอบประสบการณ์ห้องพักรวมที่มีชีวิตชีวาเช่นเดียวกับ District A ด้วยเตียงสองชั้น 8 เตียง และบรรยากาศสนุกสนาน เหมาะสำหรับนักเดินทางที่ต้องการประหยัดงบแต่ยังคงความสะดวกสบาย",
-      "detailDescription": "District B มาพร้อมเตียงสองชั้นคุณภาพสูงแบบเดียวกัน พร้อมผ้าม่าน ไฟส่วนตัว และล็อกเกอร์ปลอดภัย ใกล้กับพื้นที่ส่วนกลางของโฮสเทล",
-      "amenity1": "เตียงสองชั้น 8 เตียง พร้อมผ้าม่านส่วนตัว",
-      "amenity2": "ไฟอ่านหนังสือส่วนตัวทุกเตียง",
-      "amenity3": "ปลั๊กไฟและพอร์ต USB ส่วนตัว",
-      "amenity4": "Wi-Fi ความเร็วสูง ฟรี",
-      "amenity5": "ห้องน้ำรวม",
-      "amenity6": "ล็อกเกอร์ส่วนตัวปลอดภัย",
-      "amenity7": "เครื่องปรับอากาศ",
-      "amenity8": "ใช้สิ่งอำนวยความสะดวกของโฮสเทลได้ฟรี",
-      "amenity9": "บริการรถรับส่งฟรีไปสถานี BTS เอกมัย ตามรอบเวลา",
-      "amenity10": "แผนกต้อนรับ 24 ชั่วโมง",
-      "closingText": "District B คือบ้านราคาคุ้มค่าในเอกมัย บรรยากาศดี ราคาดี"
+    "item2": {
+      "title": "เครื่องดื่ม 2",
+      "subtitle": "ความสดชื่นยามบ่าย",
+      "description": "คำอธิบายรสชาติที่กลมกล่อม",
+      "menuCta": "เมนู",
+      "tagline": "เมนูแนะนำโดยบาร์เทนเดอร์",
+      "textContent1": "รายละเอียดเนื้อหา",
+      "textContent2": "เนื้อหาเพิ่มเติม"
     },
-    "districtC": {
-      "subtitle": "ห้องส่วนตัวขนาดใหญ่ สำหรับสูงสุด 6 ท่าน",
-      "description": "District C คือห้องส่วนตัวขนาดใหญ่ เหมาะสำหรับกลุ่มเพื่อนหรือครอบครัว มีเตียงสองชั้น 4 เตียง และเตียงควีนไซส์ พร้อมห้องน้ำส่วนตัว Smart TV และ Wi-Fi ความเร็วสูง มอบทั้งความสะดวกสบายและความเป็นส่วนตัว",
-      "detailDescription": "District C มีพื้นที่กว้างขวาง พร้อมเตียงสองชั้น 4 เตียง และเตียงควีนไซส์ 1 เตียง ห้องน้ำในตัว Smart TV พร้อมเคเบิลและสตรีมมิ่ง และสิ่งอำนวยความสะดวกครบครัน",
-      "amenity1": "เตียงสองชั้น 4 เตียง + เตียงควีนไซส์ 1 เตียง",
-      "amenity2": "ห้องน้ำส่วนตัว",
-      "amenity3": "Smart TV พร้อมเคเบิลและสตรีมมิ่ง",
-      "amenity4": "Wi-Fi ความเร็วสูง ฟรี",
-      "amenity5": "เครื่องปรับอากาศ",
-      "amenity6": "ตู้นิรภัยในห้อง",
-      "amenity7": "ตู้เย็นขนาดเล็ก",
-      "amenity8": "ใช้สิ่งอำนวยความสะดวกของโฮสเทลได้ฟรี",
-      "amenity9": "บริการรถรับส่งฟรีไปสถานี BTS เอกมัย ตามรอบเวลา",
-      "amenity10": "แผนกต้อนรับ 24 ชั่วโมง",
-      "closingText": "District C คือที่พักสำหรับกลุ่มที่สมบูรณ์แบบ ทั้งเป็นส่วนตัว กว้างขวาง และออกแบบมาเพื่อการเดินทางร่วมกัน"
+    "item3": {
+      "title": "เครื่องดื่ม 3",
+      "subtitle": "เมนูคลายร้อน",
+      "description": "คำอธิบายรสชาติที่เย็นสดชื่น",
+      "menuCta": "เมนู",
+      "tagline": "เมนูยอดนิยม",
+      "textContent1": "รายละเอียดเนื้อหา",
+      "textContent2": "เนื้อหาเพิ่มเติม"
     },
-    "districtD": {
-      "subtitle": "ห้องส่วนตัวขนาดกะทัดรัด สำหรับสูงสุด 3 ท่าน",
-      "description": "District D คือห้องส่วนตัวขนาดกะทัดรัด พร้อมเตียงสองชั้น 3 เตียง และห้องน้ำส่วนตัว เหมาะสำหรับกลุ่มเล็กหรือเพื่อนที่ต้องการพื้นที่ส่วนตัวในราคาคุ้มค่า",
-      "detailDescription": "District D ออกแบบอย่างชาญฉลาดในพื้นที่กะทัดรัด พร้อมเตียงสองชั้น 3 เตียง ห้องน้ำส่วนตัว และสิ่งจำเป็นครบครันสำหรับการพักผ่อนในกรุงเทพฯ",
-      "amenity1": "เตียงสองชั้น 3 เตียง",
-      "amenity2": "ห้องน้ำส่วนตัว",
-      "amenity3": "Wi-Fi ความเร็วสูง ฟรี",
-      "amenity4": "เครื่องปรับอากาศ",
-      "amenity5": "ตู้นิรภัยในห้อง",
-      "amenity6": "ล็อกเกอร์ส่วนตัวปลอดภัย",
-      "amenity7": "ไฟอ่านหนังสือส่วนตัว",
-      "amenity8": "ใช้สิ่งอำนวยความสะดวกของโฮสเทลได้ฟรี",
-      "amenity9": "บริการรถรับส่งฟรีไปสถานี BTS เอกมัย ตามรอบเวลา",
-      "amenity10": "แผนกต้อนรับ 24 ชั่วโมง",
-      "closingText": "District D พิสูจน์ว่าของดีไม่จำเป็นต้องใหญ่ พื้นที่ส่วนตัวของคุณรออยู่ที่ The District"
-    },
-    "districtE": {
-      "subtitle": "ห้องครอบครัวส่วนตัว สำหรับสูงสุด 4 ท่าน",
-      "description": "District E คือห้องครอบครัวที่อบอุ่น รองรับได้สูงสุด 4 ท่าน พร้อมเตียงสองชั้น 2 เตียง และเตียงควีนไซส์ ห้องน้ำส่วนตัว และ Smart TV เหมาะสำหรับการพักผ่อนของครอบครัว",
-      "detailDescription": "District E ออกแบบมาเพื่อครอบครัวโดยเฉพาะ พร้อมเตียงสองชั้น 2 เตียง และเตียงควีนไซส์ 1 เตียง ห้องน้ำส่วนตัว Smart TV และพื้นที่กว้างขวาง",
-      "amenity1": "เตียงสองชั้น 2 เตียง + เตียงควีนไซส์ 1 เตียง",
-      "amenity2": "ห้องน้ำส่วนตัว",
-      "amenity3": "Smart TV พร้อมเคเบิลและสตรีมมิ่ง",
-      "amenity4": "Wi-Fi ความเร็วสูง ฟรี",
-      "amenity5": "เครื่องปรับอากาศ",
-      "amenity6": "ตู้นิรภัยในห้อง",
-      "amenity7": "ตู้เย็นขนาดเล็ก",
-      "amenity8": "ใช้สิ่งอำนวยความสะดวกของโฮสเทลได้ฟรี",
-      "amenity9": "บริการรถรับส่งฟรีไปสถานี BTS เอกมัย ตามรอบเวลา",
-      "amenity10": "แผนกต้อนรับ 24 ชั่วโมง",
-      "closingText": "District E คือที่ที่ความทรงจำของครอบครัวถูกสร้างขึ้น สะดวกสบาย เป็นส่วนตัว และตั้งอยู่ในเอกมัย"
-    },
-    "districtF": {
-      "subtitle": "ห้องส่วนตัวขนาดกะทัดรัด สำหรับสูงสุด 3 ท่าน",
-      "description": "District F มีเสน่ห์แบบเดียวกับ District D ด้วยห้องขนาดกะทัดรัด เตียงสองชั้น 3 เตียง ห้องน้ำส่วนตัว และสิ่งอำนวยความสะดวกครบครัน",
-      "detailDescription": "District F คือห้องส่วนตัวที่ออกแบบอย่างมีประสิทธิภาพ พร้อมเตียงสองชั้น 3 เตียง ห้องน้ำส่วนตัว เหมาะสำหรับกลุ่มเล็กที่ต้องการความคุ้มค่า",
-      "amenity1": "เตียงสองชั้น 3 เตียง",
-      "amenity2": "ห้องน้ำส่วนตัว",
-      "amenity3": "Wi-Fi ความเร็วสูง ฟรี",
-      "amenity4": "เครื่องปรับอากาศ",
-      "amenity5": "ตู้นิรภัยในห้อง",
-      "amenity6": "ล็อกเกอร์ส่วนตัวปลอดภัย",
-      "amenity7": "ไฟอ่านหนังสือส่วนตัว",
-      "amenity8": "ใช้สิ่งอำนวยความสะดวกของโฮสเทลได้ฟรี",
-      "amenity9": "บริการรถรับส่งฟรีไปสถานี BTS เอกมัย ตามรอบเวลา",
-      "amenity10": "แผนกต้อนรับ 24 ชั่วโมง",
-      "closingText": "District F คือการเดินทางอย่างชาญฉลาด พร้อมพื้นที่ส่วนตัวในราคาที่คุ้มค่าในเอกมัย"
-    },
-    "districtG": {
-      "subtitle": "ห้องครอบครัวส่วนตัว สำหรับสูงสุด 4 ท่าน",
-      "description": "District G คือห้องครอบครัวอีกหนึ่งตัวเลือก พร้อมรูปแบบเดียวกับ District E มีเตียงสองชั้น 2 เตียง เตียงควีนไซส์ ห้องน้ำส่วนตัว และ Smart TV เหมาะสำหรับครอบครัวที่มาเที่ยวกรุงเทพฯ",
-      "detailDescription": "District G มอบบรรยากาศอบอุ่นและเป็นส่วนตัว พร้อมเตียงสองชั้น 2 เตียง เตียงควีนไซส์ 1 เตียง ห้องน้ำส่วนตัว Smart TV และสิ่งอำนวยความสะดวกครบครัน",
-      "amenity1": "เตียงสองชั้น 2 เตียง + เตียงควีนไซส์ 1 เตียง",
-      "amenity2": "ห้องน้ำส่วนตัว",
-      "amenity3": "Smart TV พร้อมเคเบิลและสตรีมมิ่ง",
-      "amenity4": "Wi-Fi ความเร็วสูง ฟรี",
-      "amenity5": "เครื่องปรับอากาศ",
-      "amenity6": "ตู้นิรภัยในห้อง",
-      "amenity7": "ตู้เย็นขนาดเล็ก",
-      "amenity8": "ใช้สิ่งอำนวยความสะดวกของโฮสเทลได้ฟรี",
-      "amenity9": "บริการรถรับส่งฟรีไปสถานี BTS เอกมัย ตามรอบเวลา",
-      "amenity10": "แผนกต้อนรับ 24 ชั่วโมง",
-      "closingText": "District G คือบ้านหลังที่สองของครอบครัวคุณ เที่ยวกรุงเทพฯ ตอนกลางวัน พักผ่อนอย่างสบายในตอนกลางคืน"
+    "item4": {
+      "title": "เครื่องดื่ม 4",
+      "subtitle": "เมนูคลาสสิก",
+      "description": "คำอธิบายรสชาติดั้งเดิม",
+      "menuCta": "เมนู",
+      "tagline": "พิถีพิถันทุกขั้นตอน",
+      "textContent1": "รายละเอียดเนื้อหา",
+      "textContent2": "เนื้อหาเพิ่มเติม"
     }
-  },"BarPage": {
-  "title": "THE BAR",
-  "subtitle": "Refreshing Beverages",
-  "description": "Your description here.",
-  "menuCta": "MENU",
-  "tagline": "Ze Bar is ideal for an aperitif with its fine selection of crafted cocktails",
-  "textContent1": "First paragraph...",
-  "textContent2": "Second paragraph...",
-  "item1": { "title": "drink_1", "subtitle": "drink_1 catch phrase", "description": "drink_1 description", "menuCta": "MENU", "tagline": "drink_1 tag line", "textContent1": "drink_1 text content", "textContent2": "drink_1 text content 2" },
-  "item2": { "title": "drink_2", "subtitle": "drink_2 catch phrase", "description": "drink_2 description", "menuCta": "MENU", "tagline": "drink_2 tag line", "textContent1": "drink_2 text content", "textContent2": "drink_2 text content 2"},
-  "item3": { "title": "drink_3", "subtitle": "drink_3 catch phrase", "description": "drink_3 description", "menuCta": "MENU", "tagline": "drink_3 tag line", "textContent1": "drink_3 text content", "textContent2": "drink_3 text content 2"},
-  "item4": { "title": "drink_4", "subtitle": "drink_4 catch phrase", "description": "drink_4 description", "menuCta": "MENU", "tagline": "drink_4 tag line", "textContent1": "drink_4 text content", "textContent2": "drink_4 text content 2" }
-},
+  },
   "RestaurantPage": {
-  "title": "THE restaurant",
-  "subtitle": "well known restaurant in the area",
-  "description": "Your description here.",
-  "menuCta": "MENU",
-  "tagline": "the restaurant is ideal for an aperitif with its fine selection of crafted cocktails",
-  "textContent1": "First paragraph...",
-  "textContent2": "Second paragraph...",
-  "item1": { "title": "restaurant_1", "subtitle": "restaurant_1 catch phrase", "description": "restaurant_1 description", "menuCta": "MENU", "tagline": "restaurant_1 tag line", "textContent1": "restaurant_1 text content", "textContent2": "restaurant_1 text content 2" },
-  "item2": { "title": "restaurant_2", "subtitle": "restaurant_2 catch phrase", "description": "restaurant_2 description", "menuCta": "MENU", "tagline": "restaurant_2 tag line", "textContent1": "restaurant_2 text content", "textContent2": "restaurant_2 text content 2"},
-  "item3": { "title": "restaurant_3", "subtitle": "restaurant_3 catch phrase", "description": "restaurant_3 description", "menuCta": "MENU", "tagline": "restaurant_3 tag line", "textContent1": "restaurant_3 text content", "textContent2": "restaurant_3 text content 2"},
-  "item4": { "title": "restaurant_4", "subtitle": "restaurant_4 catch phrase", "description": "restaurant_4 description", "menuCta": "MENU", "tagline": "restaurant_4 tag line", "textContent1": "restaurant_4 text content", "textContent2": "restaurant_4 text content 2" }
-}
+    "title": "ห้องอาหาร",
+    "subtitle": "ร้านอาหารชื่อดังในย่านเอกมัย",
+    "description": "สัมผัสรสชาติอาหารที่เป็นเอกลักษณ์ พร้อมบรรยากาศที่อบอุ่น",
+    "menuCta": "เมนู",
+    "tagline": "ห้องอาหารของเราพร้อมต้อนรับคุณด้วยเมนูที่หลากหลายและรสชาติที่ลงตัว",
+    "textContent1": "เมนูพิเศษจากเชฟ...",
+    "textContent2": "วัตถุดิบสดใหม่ทุกวัน...",
+    "item1": {
+      "title": "เมนูอาหาร 1",
+      "subtitle": "ความอร่อยที่เป็นเอกลักษณ์",
+      "description": "คำอธิบายรสชาติที่น่าหลงใหล",
+      "menuCta": "เมนู",
+      "tagline": "ต้องลอง!",
+      "textContent1": "รายละเอียดเนื้อหา",
+      "textContent2": "เนื้อหาเพิ่มเติม"
+    },
+    "item2": {
+      "title": "เมนูอาหาร 2",
+      "subtitle": "รสชาติต้นตำรับ",
+      "description": "คำอธิบายรสชาติแบบดั้งเดิม",
+      "menuCta": "เมนู",
+      "tagline": "แนะนำโดยเชฟ",
+      "textContent1": "รายละเอียดเนื้อหา",
+      "textContent2": "เนื้อหาเพิ่มเติม"
+    },
+    "item3": {
+      "title": "เมนูอาหาร 3",
+      "subtitle": "เมนูสร้างสรรค์",
+      "description": "คำอธิบายรสชาติที่แปลกใหม่",
+      "menuCta": "เมนู",
+      "tagline": "เซอร์ไพรส์ที่ไม่ควรพลาด",
+      "textContent1": "รายละเอียดเนื้อหา",
+      "textContent2": "เนื้อหาเพิ่มเติม"
+    },
+    "item4": {
+      "title": "เมนูอาหาร 4",
+      "subtitle": "ของหวานแสนอร่อย",
+      "description": "คำอธิบายความหวานที่ลงตัว",
+      "menuCta": "เมนู",
+      "tagline": "ปิดท้ายมื้ออาหารอย่างสมบูรณ์แบบ",
+      "textContent1": "รายละเอียดเนื้อหา",
+      "textContent2": "เนื้อหาเพิ่มเติม"
+    }
+  }
 }

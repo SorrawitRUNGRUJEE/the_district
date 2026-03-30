@@ -28,69 +28,20 @@
   },
   "StoryPage": {
     "title": "Our Story",
-    "status": "Coming Soon",
+    "status": "Authentic Ekkamai",
     "description": "Crafting genuine hostel hospitality in the vibrant heart of Ekkamai district.",
-    "firstHeader": "First Header",
-    "firstContent1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula, felis eu vulputate tristique, velit nisl ornare enim, sit amet ullamcorper ipsum neque eu ipsum. Quisque imperdiet quis augue at finibus. Integer in ex magna. Suspendisse ipsum diam, sagittis ut tortor et, maximus rutrum nunc. Pellentesque sit amet venenatis sem. Pellentesque varius pharetra venenatis. Integer blandit porttitor nisl in ultricies. Cras ac porta mi, ac pharetra eros. Vivamus non pellentesque nulla. Nam justo dolor, feugiat eget nunc eget, faucibus sagittis elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas mauris neque, hendrerit in nisl et, finibus volutpat nunc. Praesent mollis sapien ex, vitae semper dolor vestibulum vitae. Aliquam tellus massa, tempus a ante non, volutpat gravida sem. Nullam ac consectetur libero.",
-    "firstContent2": "Aenean suscipit fringilla mattis. Duis a dui dolor. Sed eros ex, varius et tempus a, egestas et ipsum. Aliquam cursus, nunc sollicitudin lobortis placerat, felis nunc vehicula nisi, nec auctor nunc lectus sed metus.",
-    "secondHeader": "Second Header",
-    "secondContent1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula, felis eu vulputate tristique, velit nisl ornare enim, sit amet ullamcorper ipsum neque eu ipsum. Quisque imperdiet quis augue at finibus. Integer in ex magna. Suspendisse ipsum diam, sagittis ut tortor et, maximus rutrum nunc. Pellentesque sit amet venenatis sem. Pellentesque varius pharetra venenatis. Integer blandit porttitor nisl in ultricies. Cras ac porta mi, ac pharetra eros. Vivamus non pellentesque nulla. Nam justo dolor, feugiat eget nunc eget, faucibus sagittis elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas mauris neque, hendrerit in nisl et, finibus volutpat nunc. Praesent mollis sapien ex, vitae semper dolor vestibulum vitae. Aliquam tellus massa, tempus a ante non, volutpat gravida sem. Nullam ac consectetur libero.",
-    "secondContent2": "Aenean suscipit fringilla mattis. Duis a dui dolor. Sed eros ex, varius et tempus a, egestas et ipsum. Aliquam cursus, nunc sollicitudin lobortis placerat, felis nunc vehicula nisi, nec auctor nunc lectus sed metus."
-  },
-
-  "OffersPage": {
-    "header": "Offers",
-    "stay": {
-      "tag": "Stay",
-      "title": "Flexible\nUrban Living",
-      "desc": "Whether for a quick getaway or an extended residence, we provide the perfect sanctuary for you to explore the vibrant soul of Ekkamai.",
-      "cta": "Discover More"
-    },
-    "experience": {
-      "tag": "Experience",
-      "title": "The Heart\nof Bangkok",
-      "desc": "Immerse yourself in a district where luxury malls meet hidden bars and legendary street food—all within reach of your peaceful retreat.",
-      "cta": "Explore Now"
-    },
-    "dining": {
-      "tag": "Dine & Unwind",
-      "title": "A Flavorful\nHeritage",
-      "desc": "From Michelin-starred fine dining to generational street food stalls, discover why Ekkamai is Bangkok's most celebrated culinary destination.",
-      "cta": "View Selection"
-    }
+    "firstHeader": "Born & Raised in Ekkamai",
+    "firstContent1": "We didn't just choose Ekkamai; we were born here. This neighborhood is our backyard, our playground, and our home. Having lived here our entire lives, we know every hidden shortcut, every aroma of street food, and the pulse of every street corner.",
+    "firstContent2": "The District was born from a shared dream among five close friends: Tul, Tam, Pim, Prim, and Money. We came together with a single mission: to transform a piece of our family heritage—an old family building—into a sanctuary for travelers who crave an authentic connection to our neighborhood.",
+    "secondHeader": "Genuine Local Spirit",
+    "secondContent1": "When you stay with us, you're staying with locals who truly care. Our team is a small, tight-knit circle of family and friends dedicated to providing a high-vibe, genuine hostel experience. Whether you need a recommendation for the best local coffee or a guide to Ekkamai's nightlife, we’ve got you covered.",
+    "secondContent2": "We’ve poured our hearts into every detail of this project, turning a storied building into a modern hub for explorers. We can’t wait to share our Ekkamai with you. Welcome to the family. Welcome to The District."
   },
   "GalleryPage": {
     "header": "Gallery",
     "dormLabel": "Dormitory",
     "privateLabel": "Private Suites",
     "curated": "Curated Moments at the District"
-  },
-  "GalleryRooms": {
-    "facilities": {
-      "capacity": "Capacity",
-      "beds": "Bed Type",
-      "restroom": "Restroom",
-      "wifi": "Wifi",
-      "tv": "Smart TV"
-    },
-    "status": {
-      "sharedDormitory": "SHARED DORMITORY",
-      "privateLargeRoom": "PRIVATE LARGE ROOM",
-      "privateCompactRoom": "PRIVATE COMPACT ROOM",
-      "privateFamilyRoom": "PRIVATE FAMILY ROOM"
-    },
-    "info": {
-      "beds8": "8 BUNK BEDS",
-      "beds4Plus1": "4 BUNKS + 1 QUEEN BED",
-      "beds3": "3 BUNK BEDS",
-      "beds2Plus1": "2 BUNKS + 1 QUEEN BED",
-      "sharedRestroom": "SHARED RESTROOM",
-      "privateBathroom": "PRIVATE BATHROOM"
-    },
-    "extras": {
-      "wifi": "HIGH-SPEED WIFI",
-      "tv": "SMART TV"
-    }
   },
   "BlogPage": {
     "header": "Blog",
@@ -107,13 +58,107 @@
     "filter": {
       "all": "All Stories",
       "search": "Search articles...",
-      "noResults": "No articles found matching your search."
+      "noResults": "No articles found matching your search.",
+      "explore": "Explore",
+      "close": "Close",
+      "updating": "Updating..."
     }
   },
   "StayPage": {
-    "header": "Stay",
+    "header": "Rooms & Dorms",
     "status": "Refined Living Experience Coming Soon",
-    "description": "Our luxury stays are currently being prepared to offer you the ultimate Ekkamai experience."
+    "description": "Our luxury stays are currently being prepared to offer you the ultimate Ekkamai experience.",
+    "dormLabel": "Dormitory",
+    "privateLabel": "Private Suites",
+    "explore": "Explore",
+    "exploreRooms": "Explore Rooms",
+    "close": "Close",
+    "facilities": {
+      "capacity": "Capacity",
+      "beds": "Bed Type",
+      "restroom": "Restroom",
+      "wifi": "Wifi",
+      "tv": "Smart TV"
+    },
+    "roomStatuses": {
+      "sharedDormitory": "SHARED DORMITORY",
+      "privateLargeRoom": "PRIVATE LARGE ROOM",
+      "privateCompactRoom": "PRIVATE COMPACT ROOM",
+      "privateFamilyRoom": "PRIVATE FAMILY ROOM"
+    },
+    "roomInfo": {
+      "beds8": "8 BUNK BEDS",
+      "beds4Plus1": "4 BUNKS + 1 QUEEN BED",
+      "beds3": "3 BUNK BEDS",
+      "beds2Plus1": "2 BUNKS + 1 QUEEN BED",
+      "sharedRestroom": "SHARED RESTROOM",
+      "privateBathroom": "PRIVATE BATHROOM"
+    },
+    "roomExtras": {
+      "wifi": "HIGH-SPEED WIFI",
+      "tv": "SMART TV"
+    },
+    "commonAmenities": {
+      "bunk8": "8 bunk beds with privacy curtains",
+      "readingLight": "Individual reading light per bed",
+      "powerOutlet": "Personal power outlet and USB port",
+      "wifi": "Complimentary high-speed Wi-Fi",
+      "sharedBathroom": "Shared bathrooms",
+      "locker": "Secure personal locker",
+      "ac": "Air conditioning",
+      "facilitiesAccess": "Free access to all hostel facilities",
+      "shuttle": "Scheduled free shuttle to Ekkamai BTS station",
+      "frontDesk": "24-hour front desk service",
+      "bunk4Queen1": "4 bunk beds + 1 queen bed",
+      "privateBathroom": "Private en-suite bathroom",
+      "tv": "Smart TV with cable and streaming",
+      "safetyBox": "In-room safety box",
+      "miniFridge": "Mini fridge",
+      "bunk3": "3 bunk beds",
+      "bunk2Queen1": "2 bunk beds + 1 queen bed"
+    },
+    "districtA": {
+      "subtitle": "Shared Dormitory with 8 Bunk Beds",
+      "description": "District A is our vibrant shared dormitory designed for social travellers. With 8 bunk beds, high-speed Wi-Fi, and a welcoming atmosphere, it's the perfect base to meet fellow adventurers exploring Bangkok.",
+      "detailDescription": "District A features thoughtfully designed bunk beds with personal privacy curtains, individual reading lights, and personal power outlets. Shared bathrooms are maintained to the highest standards of cleanliness.",
+      "closingText": "District A is where friendships begin. Join our community of travellers and make your Bangkok stay unforgettable."
+    },
+    "districtB": {
+      "subtitle": "Shared Dormitory with 8 Bunk Beds",
+      "description": "District B offers the same vibrant dormitory experience as District A, with 8 bunk beds and a lively communal energy. Ideal for budget-conscious travellers who don't want to compromise on comfort.",
+      "detailDescription": "District B features the same premium bunk bed setup with privacy curtains, individual lighting, and secure lockers — all within easy reach of the hostel's shared facilities.",
+      "closingText": "District B is your affordable home in the heart of Ekkamai. Great value, great vibes."
+    },
+    "districtC": {
+      "subtitle": "Private Large Room for up to 6 Guests",
+      "description": "District C is our spacious private large room, perfect for groups or families. With 4 bunk beds plus a queen bed, a private bathroom, Smart TV, and high-speed Wi-Fi, it delivers comfort and privacy in one.",
+      "detailDescription": "District C features a generous layout with 4 bunk beds and 1 queen bed, a private en-suite bathroom, Smart TV with cable and streaming, and premium amenities throughout.",
+      "closingText": "District C is the ultimate group retreat — private, spacious, and designed for those who travel together."
+    },
+    "districtD": {
+      "subtitle": "Private Compact Room for up to 3 Guests",
+      "description": "District D is our cosy private compact room with 3 bunk beds and a private bathroom. Ideal for small groups or friends looking for their own space without breaking the budget.",
+      "detailDescription": "District D packs smart design into a compact footprint — 3 bunk beds, a private bathroom, and all the essentials you need for a comfortable stay in Bangkok.",
+      "closingText": "District D proves that great things come in small packages. Your own private corner of The District awaits."
+    },
+    "districtE": {
+      "subtitle": "Private Family Room for up to 4 Guests",
+      "description": "District E is our warm and welcoming family room, sleeping up to 4 guests with 2 bunk beds and a queen bed. Complete with a private bathroom and Smart TV, it's the perfect family getaway.",
+      "detailDescription": "District E is thoughtfully designed for families, offering 2 bunk beds and 1 queen bed, a private en-suite bathroom, Smart TV, and ample space for everyone to feel at home.",
+      "closingText": "District E is where family memories are made. Comfortable, private, and perfectly placed in Ekkamai."
+    },
+    "districtF": {
+      "subtitle": "Private Compact Room for up to 3 Guests",
+      "description": "District F mirrors District D's compact charm — 3 bunk beds, a private bathroom, and everything you need for a smart, comfortable stay in Bangkok's most exciting neighbourhood.",
+      "detailDescription": "District F is an efficiently designed private room with 3 bunk beds and a private bathroom, offering the perfect balance of privacy and value for small groups.",
+      "closingText": "District F is smart travel done right — your own private space at an unbeatable price in Ekkamai."
+    },
+    "districtG": {
+      "subtitle": "Private Family Room for up to 4 Guests",
+      "description": "District G is our second family room, offering the same generous layout as District E — 2 bunk beds, a queen bed, private bathroom, and Smart TV. A perfect home base for families visiting Bangkok.",
+      "detailDescription": "District G provides a warm, private setting for families with 2 bunk beds and 1 queen bed, a private en-suite bathroom, Smart TV, and all the comforts of home in the heart of Ekkamai.",
+      "closingText": "District G is your family's home away from home. Explore Bangkok by day, retreat in comfort by night."
+    }
   },
   "DinePage": {
     "header": "Dine",
@@ -141,147 +186,95 @@
     "getDirections": "Get Directions",
     "googleMaps": "Google Maps",
     "responseNote": "Typical response time: Within 24 hours"
-  },  
-  "RoomPage": {
-    "dormLabel": "Dormitory",
-    "privateLabel": "Private Suites",
-    "districtA": {
-      "subtitle": "Shared Dormitory with 8 Bunk Beds",
-      "description": "District A is our vibrant shared dormitory designed for social travellers. With 8 bunk beds, high-speed Wi-Fi, and a welcoming atmosphere, it's the perfect base to meet fellow adventurers exploring Bangkok.",
-      "detailDescription": "District A features thoughtfully designed bunk beds with personal privacy curtains, individual reading lights, and personal power outlets. Shared bathrooms are maintained to the highest standards of cleanliness.",
-      "amenity1": "8 bunk beds with privacy curtains",
-      "amenity2": "Individual reading light per bed",
-      "amenity3": "Personal power outlet and USB port",
-      "amenity4": "Complimentary high-speed Wi-Fi",
-      "amenity5": "Shared bathrooms",
-      "amenity6": "Secure personal locker",
-      "amenity7": "Air conditioning",
-      "amenity8": "Free access to all hostel facilities",
-      "amenity9": "Scheduled free shuttle to Ekkamai BTS station",
-      "amenity10": "24-hour front desk service",
-      "closingText": "District A is where friendships begin. Join our community of travellers and make your Bangkok stay unforgettable."
-    },
-    "districtB": {
-      "subtitle": "Shared Dormitory with 8 Bunk Beds",
-      "description": "District B offers the same vibrant dormitory experience as District A, with 8 bunk beds and a lively communal energy. Ideal for budget-conscious travellers who don't want to compromise on comfort.",
-      "detailDescription": "District B features the same premium bunk bed setup with privacy curtains, individual lighting, and secure lockers — all within easy reach of the hostel's shared facilities.",
-      "amenity1": "8 bunk beds with privacy curtains",
-      "amenity2": "Individual reading light per bed",
-      "amenity3": "Personal power outlet and USB port",
-      "amenity4": "Complimentary high-speed Wi-Fi",
-      "amenity5": "Shared bathrooms",
-      "amenity6": "Secure personal locker",
-      "amenity7": "Air conditioning",
-      "amenity8": "Free access to all hostel facilities",
-      "amenity9": "Scheduled free shuttle to Ekkamai BTS station",
-      "amenity10": "24-hour front desk service",
-      "closingText": "District B is your affordable home in the heart of Ekkamai. Great value, great vibes."
-    },
-    "districtC": {
-      "subtitle": "Private Large Room for up to 6 Guests",
-      "description": "District C is our spacious private large room, perfect for groups or families. With 4 bunk beds plus a queen bed, a private bathroom, Smart TV, and high-speed Wi-Fi, it delivers comfort and privacy in one.",
-      "detailDescription": "District C features a generous layout with 4 bunk beds and 1 queen bed, a private en-suite bathroom, Smart TV with cable and streaming, and premium amenities throughout.",
-      "amenity1": "4 bunk beds + 1 queen bed",
-      "amenity2": "Private en-suite bathroom",
-      "amenity3": "Smart TV with cable and streaming",
-      "amenity4": "Complimentary high-speed Wi-Fi",
-      "amenity5": "Air conditioning",
-      "amenity6": "In-room safety box",
-      "amenity7": "Mini fridge",
-      "amenity8": "Free access to all hostel facilities",
-      "amenity9": "Scheduled free shuttle to Ekkamai BTS station",
-      "amenity10": "24-hour front desk service",
-      "closingText": "District C is the ultimate group retreat — private, spacious, and designed for those who travel together."
-    },
-    "districtD": {
-      "subtitle": "Private Compact Room for up to 3 Guests",
-      "description": "District D is our cosy private compact room with 3 bunk beds and a private bathroom. Ideal for small groups or friends looking for their own space without breaking the budget.",
-      "detailDescription": "District D packs smart design into a compact footprint — 3 bunk beds, a private bathroom, and all the essentials you need for a comfortable stay in Bangkok.",
-      "amenity1": "3 bunk beds",
-      "amenity2": "Private en-suite bathroom",
-      "amenity3": "Complimentary high-speed Wi-Fi",
-      "amenity4": "Air conditioning",
-      "amenity5": "In-room safety box",
-      "amenity6": "Secure personal lockers",
-      "amenity7": "Individual reading lights",
-      "amenity8": "Free access to all hostel facilities",
-      "amenity9": "Scheduled free shuttle to Ekkamai BTS station",
-      "amenity10": "24-hour front desk service",
-      "closingText": "District D proves that great things come in small packages. Your own private corner of The District awaits."
-    },
-    "districtE": {
-      "subtitle": "Private Family Room for up to 4 Guests",
-      "description": "District E is our warm and welcoming family room, sleeping up to 4 guests with 2 bunk beds and a queen bed. Complete with a private bathroom and Smart TV, it's the perfect family getaway.",
-      "detailDescription": "District E is thoughtfully designed for families, offering 2 bunk beds and 1 queen bed, a private en-suite bathroom, Smart TV, and ample space for everyone to feel at home.",
-      "amenity1": "2 bunk beds + 1 queen bed",
-      "amenity2": "Private en-suite bathroom",
-      "amenity3": "Smart TV with cable and streaming",
-      "amenity4": "Complimentary high-speed Wi-Fi",
-      "amenity5": "Air conditioning",
-      "amenity6": "In-room safety box",
-      "amenity7": "Mini fridge",
-      "amenity8": "Free access to all hostel facilities",
-      "amenity9": "Scheduled free shuttle to Ekkamai BTS station",
-      "amenity10": "24-hour front desk service",
-      "closingText": "District E is where family memories are made. Comfortable, private, and perfectly placed in Ekkamai."
-    },
-    "districtF": {
-      "subtitle": "Private Compact Room for up to 3 Guests",
-      "description": "District F mirrors District D's compact charm — 3 bunk beds, a private bathroom, and everything you need for a smart, comfortable stay in Bangkok's most exciting neighbourhood.",
-      "detailDescription": "District F is an efficiently designed private room with 3 bunk beds and a private bathroom, offering the perfect balance of privacy and value for small groups.",
-      "amenity1": "3 bunk beds",
-      "amenity2": "Private en-suite bathroom",
-      "amenity3": "Complimentary high-speed Wi-Fi",
-      "amenity4": "Air conditioning",
-      "amenity5": "In-room safety box",
-      "amenity6": "Secure personal lockers",
-      "amenity7": "Individual reading lights",
-      "amenity8": "Free access to all hostel facilities",
-      "amenity9": "Scheduled free shuttle to Ekkamai BTS station",
-      "amenity10": "24-hour front desk service",
-      "closingText": "District F is smart travel done right — your own private space at an unbeatable price in Ekkamai."
-    },
-    "districtG": {
-      "subtitle": "Private Family Room for up to 4 Guests",
-      "description": "District G is our second family room, offering the same generous layout as District E — 2 bunk beds, a queen bed, private bathroom, and Smart TV. A perfect home base for families visiting Bangkok.",
-      "detailDescription": "District G provides a warm, private setting for families with 2 bunk beds and 1 queen bed, a private en-suite bathroom, Smart TV, and all the comforts of home in the heart of Ekkamai.",
-      "amenity1": "2 bunk beds + 1 queen bed",
-      "amenity2": "Private en-suite bathroom",
-      "amenity3": "Smart TV with cable and streaming",
-      "amenity4": "Complimentary high-speed Wi-Fi",
-      "amenity5": "Air conditioning",
-      "amenity6": "In-room safety box",
-      "amenity7": "Mini fridge",
-      "amenity8": "Free access to all hostel facilities",
-      "amenity9": "Scheduled free shuttle to Ekkamai BTS station",
-      "amenity10": "24-hour front desk service",
-      "closingText": "District G is your family's home away from home. Explore Bangkok by day, retreat in comfort by night."
-    }
   },
   "BarPage": {
-  "title": "THE BAR",
-  "subtitle": "Refreshing Beverages",
-  "description": "Your description here.",
-  "menuCta": "MENU",
-  "tagline": "Ze Bar is ideal for an aperitif with its fine selection of crafted cocktails",
-  "textContent1": "First paragraph...",
-  "textContent2": "Second paragraph...",
-  "item1": { "title": "drink_1", "subtitle": "drink_1 catch phrase", "description": "drink_1 description", "menuCta": "MENU", "tagline": "drink_1 tag line", "textContent1": "drink_1 text content", "textContent2": "drink_1 text content 2" },
-  "item2": { "title": "drink_2", "subtitle": "drink_2 catch phrase", "description": "drink_2 description", "menuCta": "MENU", "tagline": "drink_2 tag line", "textContent1": "drink_2 text content", "textContent2": "drink_2 text content 2"},
-  "item3": { "title": "drink_3", "subtitle": "drink_3 catch phrase", "description": "drink_3 description", "menuCta": "MENU", "tagline": "drink_3 tag line", "textContent1": "drink_3 text content", "textContent2": "drink_3 text content 2"},
-  "item4": { "title": "drink_4", "subtitle": "drink_4 catch phrase", "description": "drink_4 description", "menuCta": "MENU", "tagline": "drink_4 tag line", "textContent1": "drink_4 text content", "textContent2": "drink_4 text content 2" }
-},
+    "title": "THE BAR",
+    "subtitle": "Refreshing Beverages",
+    "description": "Your description here.",
+    "menuCta": "MENU",
+    "tagline": "Ze Bar is ideal for an aperitif with its fine selection of crafted cocktails",
+    "textContent1": "First paragraph...",
+    "textContent2": "Second paragraph...",
+    "item1": {
+      "title": "drink_1",
+      "subtitle": "drink_1 catch phrase",
+      "description": "drink_1 description",
+      "menuCta": "MENU",
+      "tagline": "drink_1 tag line",
+      "textContent1": "drink_1 text content",
+      "textContent2": "drink_1 text content 2"
+    },
+    "item2": {
+      "title": "drink_2",
+      "subtitle": "drink_2 catch phrase",
+      "description": "drink_2 description",
+      "menuCta": "MENU",
+      "tagline": "drink_2 tag line",
+      "textContent1": "drink_2 text content",
+      "textContent2": "drink_2 text content 2"
+    },
+    "item3": {
+      "title": "drink_3",
+      "subtitle": "drink_3 catch phrase",
+      "description": "drink_3 description",
+      "menuCta": "MENU",
+      "tagline": "drink_3 tag line",
+      "textContent1": "drink_3 text content",
+      "textContent2": "drink_3 text content 2"
+    },
+    "item4": {
+      "title": "drink_4",
+      "subtitle": "drink_4 catch phrase",
+      "description": "drink_4 description",
+      "menuCta": "MENU",
+      "tagline": "drink_4 tag line",
+      "textContent1": "drink_4 text content",
+      "textContent2": "drink_4 text content 2"
+    }
+  },
   "RestaurantPage": {
-  "title": "THE restaurant",
-  "subtitle": "well known restaurant in the area",
-  "description": "Your description here.",
-  "menuCta": "MENU",
-  "tagline": "the restaurant is ideal for an aperitif with its fine selection of crafted cocktails",
-  "textContent1": "First paragraph...",
-  "textContent2": "Second paragraph...",
-  "item1": { "title": "restaurant_1", "subtitle": "restaurant_1 catch phrase", "description": "restaurant_1 description", "menuCta": "MENU", "tagline": "restaurant_1 tag line", "textContent1": "restaurant_1 text content", "textContent2": "restaurant_1 text content 2" },
-  "item2": { "title": "restaurant_2", "subtitle": "restaurant_2 catch phrase", "description": "restaurant_2 description", "menuCta": "MENU", "tagline": "restaurant_2 tag line", "textContent1": "restaurant_2 text content", "textContent2": "restaurant_2 text content 2"},
-  "item3": { "title": "restaurant_3", "subtitle": "restaurant_3 catch phrase", "description": "restaurant_3 description", "menuCta": "MENU", "tagline": "restaurant_3 tag line", "textContent1": "restaurant_3 text content", "textContent2": "restaurant_3 text content 2"},
-  "item4": { "title": "restaurant_4", "subtitle": "restaurant_4 catch phrase", "description": "restaurant_4 description", "menuCta": "MENU", "tagline": "restaurant_4 tag line", "textContent1": "restaurant_4 text content", "textContent2": "restaurant_4 text content 2" }
-}
+    "title": "THE restaurant",
+    "subtitle": "well known restaurant in the area",
+    "description": "Your description here.",
+    "menuCta": "MENU",
+    "tagline": "the restaurant is ideal for an aperitif with its fine selection of crafted cocktails",
+    "textContent1": "First paragraph...",
+    "textContent2": "Second paragraph...",
+    "item1": {
+      "title": "restaurant_1",
+      "subtitle": "restaurant_1 catch phrase",
+      "description": "restaurant_1 description",
+      "menuCta": "MENU",
+      "tagline": "restaurant_1 tag line",
+      "textContent1": "restaurant_1 text content",
+      "textContent2": "restaurant_1 text content 2"
+    },
+    "item2": {
+      "title": "restaurant_2",
+      "subtitle": "restaurant_2 catch phrase",
+      "description": "restaurant_2 description",
+      "menuCta": "MENU",
+      "tagline": "restaurant_2 tag line",
+      "textContent1": "restaurant_2 text content",
+      "textContent2": "restaurant_2 text content 2"
+    },
+    "item3": {
+      "title": "restaurant_3",
+      "subtitle": "restaurant_3 catch phrase",
+      "description": "restaurant_3 description",
+      "menuCta": "MENU",
+      "tagline": "restaurant_3 tag line",
+      "textContent1": "restaurant_3 text content",
+      "textContent2": "restaurant_3 text content 2"
+    },
+    "item4": {
+      "title": "restaurant_4",
+      "subtitle": "restaurant_4 catch phrase",
+      "description": "restaurant_4 description",
+      "menuCta": "MENU",
+      "tagline": "restaurant_4 tag line",
+      "textContent1": "restaurant_4 text content",
+      "textContent2": "restaurant_4 text content 2"
+    }
+  }
 }

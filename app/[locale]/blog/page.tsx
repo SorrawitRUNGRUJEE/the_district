@@ -79,7 +79,7 @@ export default async function BlogPage({
         containerClass={containerClass}
       />
 
-      <section className="pb-20 border-b border-border grow pt-10 md:pt-16">
+      <section className="pb-20 border-b border-border grow">
         <div className={containerClass}>
           {paginatedPosts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">

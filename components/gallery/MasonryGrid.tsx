@@ -1,58 +1,61 @@
 "use client";
 
+import { GalleryGroup, GalleryImage } from "@/components/gallery/gallery-data";
 import MosaicCell from "@/components/gallery/MosaicCell";
 import {
   GALLERY_PATTERNS,
-  GalleryImages,
   PATTERN_SEQUENCE,
   PatternKey,
 } from "@/components/gallery/types";
 
 interface MasonryGridProps {
-  images: GalleryImages;
+  /** Groups assigned to THIS specific grid block (max 6 typically) */
+  groups: GalleryGroup[];
   label: string;
   pattern?: PatternKey;
-  index?: number; // Used to auto-select pattern if 'pattern' is not provided
+  index?: number;
+  /** The full list of all images on the page for the lightbox */
+  allSlides: GalleryImage[];
+  /** The global index start for the FIRST group in this grid */
+  startOffset: number;
 }
 
 export default function MasonryGrid({
-  images,
+  groups,
   label,
   pattern,
   index = 0,
+  allSlides,
+  startOffset,
 }: MasonryGridProps) {
-  // Use provided pattern or cycle through the sequence
+  // Cycle through patterns if none explicitly provided
   const selectedPatternKey =
     pattern || PATTERN_SEQUENCE[index % PATTERN_SEQUENCE.length];
   const currentPattern = GALLERY_PATTERNS[selectedPatternKey];
 
+  // Calculate absolute offsets for each group within this grid block
+  const groupOffsets = groups.reduce((acc, group, i) => {
+    const prevOffset =
+      i === 0 ? startOffset : acc[i - 1] + groups[i - 1].images.length;
+    acc.push(prevOffset);
+    return acc;
+  }, [] as number[]);
+
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 grid-flow-dense gap-3 md:gap-4 auto-rows-[200px] md:auto-rows-[220px]">
-      {/* 0: Featured Slot - Slides through featured images */}
-      <MosaicCell
-        images={images.featured}
-        label={label}
-        className={currentPattern[0]}
-        delay={0}
-      />
-
-      {/* 1-5: Gallery Slots - Each slot rotates through a UNIQUE subset of gallery images */}
-      {Array.from({ length: 5 }).map((_, i) => {
-        // Partition the 10 gallery images: 2 uniquely assigned per slot
-        const startIdx = i * 2;
-        const slotImages = images.gallery.slice(startIdx, startIdx + 2);
+      {groups.map((group, i) => {
+        const cellOffset = groupOffsets[i];
 
         return (
           <MosaicCell
-            key={i}
-            images={
-              slotImages.length > 0
-                ? slotImages
-                : [images.gallery[i % images.gallery.length]]
-            }
+            key={group.id}
+            images={group.images}
             label={label}
-            className={currentPattern[i + 1]}
-            delay={(i + 1) * 1200}
+            className={currentPattern[i % currentPattern.length]}
+            delay={i * 1200}
+            allSlides={allSlides}
+            globalOffset={cellOffset}
+            groupLabel={group.label}
           />
         );
       })}

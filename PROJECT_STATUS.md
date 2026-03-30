@@ -33,24 +33,28 @@ A high-level checklist of the Current State, Remaining Cleanup, and Crew Actions
 - [x] **Blog Pagination & Localisation**: Implemented "Showing X-Y of Z posts" summary with full translation support (EN, TH, CN).
 - [x] **Hydration Guard Refinement**: Migrated to a modern `useIsClient` hook using `useSyncExternalStore`, resolving ESLint errors and improving hydration performance.
 - [x] **Story Page Foundation**: Implemented theme-aware layout for the Story page with developer notes for future-proofing.
+- [x] **Stay Page Transformation**: Overhauled the Stay page into a premium, streamlined layout focusing on two categories (Dormitories & Private Suites).
+- [x] **Deep Floating Navigation**: Developed a unified "Deep Floating" navigation architecture for Blog and Stay. Features include centered expansion menus, scroll-threshold auto-close, and "Click Outside" to dismiss.
+- [x] **UX Perfection (Flicker & Layering)**: Resolved initial state flickers for active indices and boosted `z-index` to `z-60` to ensure floating elements sit above all header layers.
+- [x] **Global Background Harmony**: Synchronized the `bg-soft` theme across Story, Stay, and Blog for a consistent, airy feel.
 
 ---
 
 ## 🛠 TECH CLEANUP & ACTIVE TASKS
 
-### 🖼 Gallery & Visuals
+### 🖼 Gallery & Visuals (Active: `features/gallery-revamp-lightbox`)
 
-- [ ] **Gallery Big Update**: Revert to image mosaic (randomized "vibe" show like Muu).
-- [ ] **Modal Image Viewer**: On click image, open a modal to see full picture (with next/previous/zoom).
-- [ ] **Image Descriptions**: Display specific image description on bottom right of the modal/image.
-- [ ] **Gallery Vibe Logic**: Show other places than dorm and suite first (prioritize common areas/vibe).
-- [ ] **Tick-based Transitions**: Implement image changing by time tick where applicable.
+- [ ] **Full-Page Mosaic**: Implement a continuous, high-vibe mosaic grid across the entire Gallery page.
+- [ ] **Group-Based Image Cycling**: Split large room sets (e.g. District G) and interleave them with facility vibe shots.
+- [ ] **Global Lightbox System**: Premium image viewer with Zoom, Thumbnails, and Next/Prev navigation.
+- [ ] **Next.js Image Optimization**: Custom wrapper for `next/image` integration in the lightbox.
+- [ ] **Conditional Image Descriptions**: Display room info in brand color (`#fece00`) at bottom right of the lightbox.
+- [ ] **Performance Polish**: Pause off-screen image rotations to optimize battery and CPU usage.
 
 ### 📱 Responsive & Layout
 
 - [x] **Container Expansion**: Implement a larger `containerClass` for all pages to better utilize screen real estate (`max-w-screen-2xl`).
-- [ ] **Modal Image Viewer**: On click image, open a modal to see full picture (with next/previous/zoom).
-- [ ] **Gallery Big Update**: Revert to image mosaic (randomized "vibe" show like Muu).
+- [ ] **Stay Page Refactor**: Move room-specific details and navigation to the Stay page (Handled by another branch).
 
 ### 🎨 Theme & Typography
 

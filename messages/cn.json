@@ -27,70 +27,21 @@
     "cta": "探索我们的客房"
   },
   "StoryPage": {
-    "title": "品牌故事",
-    "status": "即将登场",
-    "description": "在曼谷艾卡迈核心地带，打造最真诚、最贴心的青年旅舍体验。",
-    "firstHeader":"我们为何用它",
-    "firstContent1":"如今互联网提供各种各样版本的Lorem Ipsum段落，但是大多数都多多少少出于刻意幽默或者其他随机插入的荒谬单词而被篡改过了。如果你想取用一段Lorem Ipsum，请确保段落中不含有令人尴尬的不恰当内容。所有网上的Lorem Ipsum生成器都倾向于在必要时重复预先准备的部分，然而这个生成器则是互联网上首个确切的生成器。它使用由超过200个拉丁单词所构造的词典，结合了几个模范句子结构，来生成看起来恰当的Lorem Ipsum。因此，生成出的结果无一例外免于重复，刻意的幽默，以及非典型的词汇等等",
-    "firstContent2":"如今互联网提供各种各样版本的Lorem Ipsum段落，但是大多数都多多少少出于刻意幽默或者其他随机插入的荒谬单词而被篡改过了。如果你想取用一段Lorem Ipsum，请确保段落中不含有令人尴尬的不恰当内容。所有网上的Lorem Ipsum生成器都倾向于在必要时重复预先准备的部分，然而这个生成器则是互联网上首个确切的生成器。它使用由超过200个拉丁单词所构造的词典，结合了几个模范句子结构，来生成看起来恰当的Lorem Ipsum。因此，生成出的结果无一例外免于重复，刻意的幽默，以及非典型的词汇等等",
-    "secondHeader":"我们为何用它",
-    "secondContent1":"如今互联网提供各种各样版本的Lorem Ipsum段落，但是大多数都多多少少出于刻意幽默或者其他随机插入的荒谬单词而被篡改过了。如果你想取用一段Lorem Ipsum，请确保段落中不含有令人尴尬的不恰当内容。所有网上的Lorem Ipsum生成器都倾向于在必要时重复预先准备的部分，然而这个生成器则是互联网上首个确切的生成器。它使用由超过200个拉丁单词所构造的词典，结合了几个模范句子结构，来生成看起来恰当的Lorem Ipsum。因此，生成出的结果无一例外免于重复，刻意的幽默，以及非典型的词汇等等. Vivamus non pellentesque nulla. Nam justo dolor, feugiat eget nunc eget, faucibus sagittis elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas mauris neque, hendrerit in nisl et, finibus volutpat nunc. Praesent mollis sapien ex, vitae semper dolor vestibulum vitae. Aliquam tellus massa, tempus a ante non, volutpat gravida sem. Nullam ac consectetur libero.",
-    "secondContent2":"如今互联网提供各种各样版本的Lorem Ipsum段落，但是大多数都多多少少出于刻意幽默或者其他随机插入的荒谬单词而被篡改过了。如果你想取用一段Lorem Ipsum，请确保段落中不含有令人尴尬的不恰当内容。所有网上的Lorem Ipsum生成器都倾向于在必要时重复预先准备的部分，然而这个生成器则是互联网上首个确切的生成器。它使用由超过200个拉丁单词所构造的词典，结合了几个模范句子结构，来生成看起来恰当的Lorem Ipsum。因此，生成出的结果无一例外免于重复，刻意的幽默，以及非典型的词汇等等"
-
-  },
-  "OffersPage": {
-    "header": "特别优惠",
-    "stay": {
-      "tag": "住宿体验",
-      "title": "随心而居\n悦享城市生活",
-      "desc": "无论是短暂的度假还是长期的居所，我们都为您提供完美的避风港，让您尽情探索艾卡迈 (Ekkamai) 的活力灵魂。",
-      "cta": "了解更多"
-    },
-    "experience": {
-      "tag": "在地体验",
-      "title": "曼谷\n活力之心",
-      "desc": "沉浸在豪华商场、隐藏酒吧与传奇路边摊交织的独特街区——这一切都近在咫尺，静候您的光临。",
-      "cta": "立即探索"
-    },
-    "dining": {
-      "tag": "美食与休闲",
-      "title": "韵味深长的\n美食传承",
-      "desc": "从米其林星级餐厅到传承数代的街头摊位，探索为什么艾卡迈是曼谷最负盛名的美食天堂。",
-      "cta": "查看详情"
-    }
+    "title": "我们的故事",
+    "status": "伊卡迈本地人",
+    "description": "在活力四射的伊卡迈中心，打造真正的青旅待客之道。",
+    "firstHeader": "扎根于伊卡迈的初心",
+    "firstContent1": "我们不仅仅是选择了伊卡迈，我们是在这里长大的。这里是我们的家园，也有我们的乐园。作为土生土长的本地人，我们熟悉伊卡迈的每一个角落，从巷弄里的美食香气到每个街道的独特韵律。",
+    "firstContent2": "The District 诞生于五个好朋友——Tul、Tam、Pim、Prim 和 Money 的共同梦想。我们聚在一起，怀揣着一个简单的使命：将我们家族传承的一座旧建筑，打造成一个充满活力的旅店，让每一位旅行者都能真正感受到我们社区的热情。",
+    "secondHeader": "最真诚的本地体验",
+    "secondContent1": "住在这里，你就像是和本地朋友住在一起。我们的团队是由家人和真诚的朋友组成的紧密圈子，致力于为你提供最真实的青旅体验。无论是寻找最好喝的本地咖啡，还是探索伊卡迈的精彩夜生活，我们随时为你导航。",
+    "secondContent2": "我们倾注了全部心血在每一个细节中，将一座充满回忆的家传建筑变成了现代探险者的港湾。我们迫不及待想与你分享我们眼中的伊卡迈。欢迎加入我们的大家庭，欢迎来到 The District。"
   },
   "GalleryPage": {
     "header": "画廊",
     "dormLabel": "宿舍",
     "privateLabel": "私人套房",
     "curated": "The District 精选瞬间"
-  },
-  "GalleryRooms": {
-    "facilities": {
-      "capacity": "可容纳人数",
-      "beds": "床型",
-      "restroom": "洗手间",
-      "wifi": "无线网络",
-      "tv": "智能电视"
-    },
-    "status": {
-      "sharedDormitory": "多人混合宿舍",
-      "privateLargeRoom": "大型私人客房",
-      "privateCompactRoom": "紧凑型私人客房",
-      "privateFamilyRoom": "家庭客房"
-    },
-    "info": {
-      "beds8": "8张上下铺",
-      "beds4Plus1": "4张上下铺 + 1张双人床",
-      "beds3": "3张上下铺",
-      "beds2Plus1": "2张上下铺 + 1张双人床",
-      "sharedRestroom": "公共卫浴",
-      "privateBathroom": "独立卫浴"
-    },
-    "extras": {
-      "wifi": "高速无线网络",
-      "tv": "智能电视"
-    }
   },
   "BlogPage": {
     "header": "部落格",
@@ -107,13 +58,100 @@
     "filter": {
       "all": "全部文章",
       "search": "搜索文章...",
-      "noResults": "未找到相关文章"
+      "noResults": "未找到相关文章",
+      "explore": "探索",
+      "close": "关闭",
+      "updating": "更新中..."
     }
   },
   "StayPage": {
     "header": "住宿",
     "status": "精致居住体验 即将登场",
-    "description": "我们正在精心打造更高品质的住宿空间，为您提供极致的艾卡迈 (Ekkamai) 居住体验。"
+    "description": "我们正在精心打造更高品质的住宿空间，为您提供极致的艾卡迈 (Ekkamai) 居住体验。",
+    "dormLabel": "宿舍",
+    "privateLabel": "私人套房",
+    "explore": "探索",
+    "exploreRooms": "探索客房",
+    "close": "关闭",
+    "roomStatuses": {
+      "sharedDormitory": "共享旅舍",
+      "privateLargeRoom": "大型私人客房",
+      "privateCompactRoom": "精简私人客房",
+      "privateFamilyRoom": "家庭私人客房"
+    },
+    "roomInfo": {
+      "beds8": "8张双层床",
+      "beds4Plus1": "4张双层床 + 1张大床",
+      "beds3": "3张双层床",
+      "beds2Plus1": "2张双层床 + 1张大床",
+      "sharedRestroom": "公共卫生间",
+      "privateBathroom": "独立卫浴"
+    },
+    "roomExtras": {
+      "wifi": "高速无线网络",
+      "tv": "智能电视"
+    },
+    "commonAmenities": {
+      "bunk8": "8张带隐私帘的双层床",
+      "readingLight": "每张床配有独立阅读灯",
+      "powerOutlet": "个人电源插座及USB接口",
+      "wifi": "免费高速Wi-Fi",
+      "sharedBathroom": "高标准公共卫生间",
+      "locker": "安全个人储物柜",
+      "ac": "全屋空调",
+      "facilitiesAccess": "免费使用旅舍所有设施",
+      "shuttle": "按点免费班车前往Ekkamai BTS站",
+      "frontDesk": "24小时前台服务",
+      "bunk4Queen1": "4张双层床 + 1张大床",
+      "privateBathroom": "独立套内卫浴",
+      "tv": "带电缆及流媒体功能的智能电视",
+      "safetyBox": "房内安全保险箱",
+      "miniFridge": "迷你冰箱",
+      "bunk3": "3张双层床",
+      "bunk2Queen1": "2张双层床 + 1张大床"
+    },
+    "districtA": {
+      "subtitle": "带8张双层床的共享宿舍",
+      "description": "District A 是专为社交型旅行者设计的活力宿舍。拥有8张双层床和高速Wi-Fi，是结识探索曼谷旅伴的理想起点。",
+      "detailDescription": "District A 配有精心设计的隐私帘、独立照明及充电插座。公共卫生间保持最高清洁标准。",
+      "closingText": "District A 是友谊开始的地方。加入我们的社区，开启难忘的曼谷之旅。"
+    },
+    "districtB": {
+      "subtitle": "带8张双层床的共享宿舍",
+      "description": "District B 提供与 A 同样的活力体验。适合预算有限但追求品质的旅行者。",
+      "detailDescription": "District B 采用高级双层床配置，配有隐私帘、独立灯光和安全柜，靠近旅舍公共区域。",
+      "closingText": "District B 是您在艾卡迈核心地带的高性价比住所。超值体验，氛围一流。"
+    },
+    "districtC": {
+      "subtitle": "可容纳6人的大型私人客房",
+      "description": "District C 空间宽敞，适合团体或家庭。配备4张双层床、1张大床及独立卫浴，集舒适与隐私于一体。",
+      "detailDescription": "District C 布局阔绰，拥有宽敞的私人卫浴、智能电视及全套高端设施。",
+      "closingText": "District C 是完美的团体归宿——私人、宽敞，为您量身定制。"
+    },
+    "districtD": {
+      "subtitle": "可容纳3人的精简私人客房",
+      "description": "District D 是温馨的精简套房，配有3张双层床和独立卫浴。非常适合小团体或追求独立空间的朋友。",
+      "detailDescription": "District D 采用灵巧设计，将3张床位、独立卫浴及所有必需品完美融合。",
+      "closingText": "District D 证明了伟大的体验不一定需要巨大的空间。您的专属角落在此等候。"
+    },
+    "districtE": {
+      "subtitle": "可容纳4人的家庭私人客房",
+      "description": "District E 是温馨的家庭房，拥有2张双层床和1张大床，配备独立卫浴和智能电视，是完美的家庭避风港。",
+      "detailDescription": "District E 专为家庭设计，布局周到，让每一位成员都能感受到宾至如归的舒适。",
+      "closingText": "District E 是家庭回忆诞生的地方。私密舒适，位置优越。"
+    },
+    "districtF": {
+      "subtitle": "可容纳3人的精简私人客房",
+      "description": "District F 具备 D 的精简魅力。位于曼谷最激动人心的街区，提供聪明、舒适的住宿选择。",
+      "detailDescription": "District F 是高效设计的私人房间，配备3张双层床和独立卫浴，平衡了隐私与价值。",
+      "closingText": "District F 让智慧旅行变得简单——以极具竞争力的价格拥有专属私人空间。"
+    },
+    "districtG": {
+      "subtitle": "可容纳4人的家庭私人客房",
+      "description": "District G 作为第二个家庭房，提供与 E 相同的宽敞布局。是家庭探访曼谷的理想基地。",
+      "detailDescription": "District G 为家庭提供温馨的私密环境，配备独立套内卫浴及一应俱全的家庭设施。",
+      "closingText": "District G 是您在异乡的家。白天探索曼谷，夜晚舒适回归。"
+    }
   },
   "DinePage": {
     "header": "餐饮",
@@ -142,145 +180,94 @@
     "googleMaps": "谷歌地图",
     "responseNote": "通常在 24 小时内回复"
   },
-  "RoomPage": {
-    "dormLabel": "Dormitory",
-    "privateLabel": "Private Suites",
-    "districtA": {
-      "subtitle": "8张双层床的共享宿舍",
-      "description": "District A 是我们充满活力的共享宿舍，专为喜欢社交的旅行者打造。配备8张双层床、高速Wi-Fi以及友好的氛围，是在曼谷结识新朋友的理想之地。",
-      "detailDescription": "District A 提供精心设计的双层床，配有隐私帘、独立阅读灯和个人电源插座。共享浴室始终保持最高标准的清洁。",
-      "amenity1": "8张带隐私帘的双层床",
-      "amenity2": "每张床配有独立阅读灯",
-      "amenity3": "个人电源插座和USB接口",
-      "amenity4": "免费高速Wi-Fi",
-      "amenity5": "共享浴室",
-      "amenity6": "安全个人储物柜",
-      "amenity7": "空调",
-      "amenity8": "免费使用所有旅舍设施",
-      "amenity9": "定时免费班车前往Ekkamai BTS站",
-      "amenity10": "24小时前台服务",
-      "closingText": "District A 是友谊开始的地方。加入我们的旅行者社区，让您的曼谷之旅难以忘怀。"
+  "BarPage": {
+    "title": "酒吧",
+    "subtitle": "清爽饮品",
+    "description": "精心调制的饮品，为您带来愉悦体验。",
+    "menuCta": "菜单",
+    "tagline": "这里的特色鸡尾酒是您餐前小酌的理想选择。",
+    "textContent1": "精心挑选的配方...",
+    "textContent2": "享受宁静时光...",
+    "item1": {
+      "title": "饮品 1",
+      "subtitle": "清爽特调",
+      "description": "独特风味描述",
+      "menuCta": "菜单",
+      "tagline": "特选推荐",
+      "textContent1": "详细介绍内容",
+      "textContent2": "更多互动内容"
     },
-    "districtB": {
-      "subtitle": "8张双层床的共享宿舍",
-      "description": "District B 提供与 District A 相同的活力宿舍体验，拥有8张双层床和热闹的社交氛围。非常适合预算有限但不愿牺牲舒适度的旅行者。",
-      "detailDescription": "District B 配备同样高品质的双层床，带有隐私帘、独立照明和安全储物柜，并且靠近旅舍的公共设施。",
-      "amenity1": "8张带隐私帘的双层床",
-      "amenity2": "每张床配有独立阅读灯",
-      "amenity3": "个人电源插座和USB接口",
-      "amenity4": "免费高速Wi-Fi",
-      "amenity5": "共享浴室",
-      "amenity6": "安全个人储物柜",
-      "amenity7": "空调",
-      "amenity8": "免费使用所有旅舍设施",
-      "amenity9": "定时免费班车前往Ekkamai BTS站",
-      "amenity10": "24小时前台服务",
-      "closingText": "District B 是您在Ekkamai的高性价比之选。价格实惠，氛围出色。"
+    "item2": {
+      "title": "饮品 2",
+      "subtitle": "午后微醺",
+      "description": "醇厚口感描述",
+      "menuCta": "菜单",
+      "tagline": "主理人推荐",
+      "textContent1": "详细介绍内容",
+      "textContent2": "更多互动内容"
     },
-    "districtC": {
-      "subtitle": "最多可容纳6人的大型私人房",
-      "description": "District C 是我们宽敞的私人房，非常适合团体或家庭入住。配有4张双层床和1张大床、独立浴室、智能电视和高速Wi-Fi，兼具舒适与私密。",
-      "detailDescription": "District C 提供宽敞布局，包含4张双层床和1张大床，独立卫浴，配有有线电视和流媒体的智能电视，以及高品质设施。",
-      "amenity1": "4张双层床 + 1张大床",
-      "amenity2": "独立卫浴",
-      "amenity3": "智能电视（含有线和流媒体）",
-      "amenity4": "免费高速Wi-Fi",
-      "amenity5": "空调",
-      "amenity6": "房内保险箱",
-      "amenity7": "迷你冰箱",
-      "amenity8": "免费使用所有旅舍设施",
-      "amenity9": "定时免费班车前往Ekkamai BTS站",
-      "amenity10": "24小时前台服务",
-      "closingText": "District C 是团体出行的理想之选——私密、宽敞，专为一起旅行的人打造。"
+    "item3": {
+      "title": "饮品 3",
+      "subtitle": "夏日冰凉",
+      "description": "冰镇爽口描述",
+      "menuCta": "菜单",
+      "tagline": "人气之选",
+      "textContent1": "详细介绍内容",
+      "textContent2": "更多互动内容"
     },
-    "districtD": {
-      "subtitle": "最多可容纳3人的紧凑型私人房",
-      "description": "District D 是我们温馨紧凑的私人房，配有3张双层床和独立浴室。非常适合小团体或朋友，既能享受私人空间又不超预算。",
-      "detailDescription": "District D 在紧凑空间中实现高效设计，配有3张双层床、独立浴室，以及您在曼谷舒适入住所需的一切。",
-      "amenity1": "3张双层床",
-      "amenity2": "独立卫浴",
-      "amenity3": "免费高速Wi-Fi",
-      "amenity4": "空调",
-      "amenity5": "房内保险箱",
-      "amenity6": "安全个人储物柜",
-      "amenity7": "独立阅读灯",
-      "amenity8": "免费使用所有旅舍设施",
-      "amenity9": "定时免费班车前往Ekkamai BTS站",
-      "amenity10": "24小时前台服务",
-      "closingText": "District D 证明好东西不一定要大。属于您的私人空间就在这里。"
-    },
-    "districtE": {
-      "subtitle": "最多可容纳4人的家庭私人房",
-      "description": "District E 是温馨的家庭房，可容纳最多4位客人，配有2张双层床和1张大床，带独立浴室和智能电视，是家庭出行的理想选择。",
-      "detailDescription": "District E 专为家庭设计，配有2张双层床和1张大床，独立卫浴、智能电视以及充足的空间，让每位成员都能放松。",
-      "amenity1": "2张双层床 + 1张大床",
-      "amenity2": "独立卫浴",
-      "amenity3": "智能电视（含有线和流媒体）",
-      "amenity4": "免费高速Wi-Fi",
-      "amenity5": "空调",
-      "amenity6": "房内保险箱",
-      "amenity7": "迷你冰箱",
-      "amenity8": "免费使用所有旅舍设施",
-      "amenity9": "定时免费班车前往Ekkamai BTS站",
-      "amenity10": "24小时前台服务",
-      "closingText": "District E 是家庭回忆诞生的地方。舒适、私密，并位于Ekkamai核心地段。"
-    },
-    "districtF": {
-      "subtitle": "最多可容纳3人的紧凑型私人房",
-      "description": "District F 与 District D 一样拥有紧凑魅力——3张双层床、独立浴室，以及在曼谷舒适入住所需的一切。",
-      "detailDescription": "District F 是高效设计的私人房，配有3张双层床和独立浴室，非常适合寻求性价比的小团体。",
-      "amenity1": "3张双层床",
-      "amenity2": "独立卫浴",
-      "amenity3": "免费高速Wi-Fi",
-      "amenity4": "空调",
-      "amenity5": "房内保险箱",
-      "amenity6": "安全个人储物柜",
-      "amenity7": "独立阅读灯",
-      "amenity8": "免费使用所有旅舍设施",
-      "amenity9": "定时免费班车前往Ekkamai BTS站",
-      "amenity10": "24小时前台服务",
-      "closingText": "District F 是精明出行的选择——在Ekkamai享受高性价比的私人空间。"
-    },
-    "districtG": {
-      "subtitle": "最多可容纳4人的家庭私人房",
-      "description": "District G 是我们的第二间家庭房，布局与 District E 相同——2张双层床、1张大床、独立浴室和智能电视，是家庭游览曼谷的理想据点。",
-      "detailDescription": "District G 提供温馨私密的环境，配有2张双层床和1张大床、独立卫浴、智能电视以及居家般的舒适设施。",
-      "amenity1": "2张双层床 + 1张大床",
-      "amenity2": "独立卫浴",
-      "amenity3": "智能电视（含有线和流媒体）",
-      "amenity4": "免费高速Wi-Fi",
-      "amenity5": "空调",
-      "amenity6": "房内保险箱",
-      "amenity7": "迷你冰箱",
-      "amenity8": "免费使用所有旅舍设施",
-      "amenity9": "定时免费班车前往Ekkamai BTS站",
-      "amenity10": "24小时前台服务",
-      "closingText": "District G 是您家庭的第二个家。白天探索曼谷，夜晚舒适休息。"
+    "item4": {
+      "title": "饮品 4",
+      "subtitle": "经典重现",
+      "description": "传统工艺描述",
+      "menuCta": "菜单",
+      "tagline": "匠心制作",
+      "textContent1": "详细介绍内容",
+      "textContent2": "更多互动内容"
     }
-  },"BarPage": {
-  "title": "THE BAR",
-  "subtitle": "Refreshing Beverages",
-  "description": "Your description here.",
-  "menuCta": "MENU",
-  "tagline": "Ze Bar is ideal for an aperitif with its fine selection of crafted cocktails",
-  "textContent1": "First paragraph...",
-  "textContent2": "Second paragraph...",
-  "item1": { "title": "drink_1", "subtitle": "drink_1 catch phrase", "description": "drink_1 description", "menuCta": "MENU", "tagline": "drink_1 tag line", "textContent1": "drink_1 text content", "textContent2": "drink_1 text content 2" },
-  "item2": { "title": "drink_2", "subtitle": "drink_2 catch phrase", "description": "drink_2 description", "menuCta": "MENU", "tagline": "drink_2 tag line", "textContent1": "drink_2 text content", "textContent2": "drink_2 text content 2"},
-  "item3": { "title": "drink_3", "subtitle": "drink_3 catch phrase", "description": "drink_3 description", "menuCta": "MENU", "tagline": "drink_3 tag line", "textContent1": "drink_3 text content", "textContent2": "drink_3 text content 2"},
-  "item4": { "title": "drink_4", "subtitle": "drink_4 catch phrase", "description": "drink_4 description", "menuCta": "MENU", "tagline": "drink_4 tag line", "textContent1": "drink_4 text content", "textContent2": "drink_4 text content 2" }
-},
+  },
   "RestaurantPage": {
-  "title": "THE restaurant",
-  "subtitle": "well known restaurant in the area",
-  "description": "Your description here.",
-  "menuCta": "MENU",
-  "tagline": "the restaurant is ideal for an aperitif with its fine selection of crafted cocktails",
-  "textContent1": "First paragraph...",
-  "textContent2": "Second paragraph...",
-  "item1": { "title": "restaurant_1", "subtitle": "restaurant_1 catch phrase", "description": "restaurant_1 description", "menuCta": "MENU", "tagline": "restaurant_1 tag line", "textContent1": "restaurant_1 text content", "textContent2": "restaurant_1 text content 2" },
-  "item2": { "title": "restaurant_2", "subtitle": "restaurant_2 catch phrase", "description": "restaurant_2 description", "menuCta": "MENU", "tagline": "restaurant_2 tag line", "textContent1": "restaurant_2 text content", "textContent2": "restaurant_2 text content 2"},
-  "item3": { "title": "restaurant_3", "subtitle": "restaurant_3 catch phrase", "description": "restaurant_3 description", "menuCta": "MENU", "tagline": "restaurant_3 tag line", "textContent1": "restaurant_3 text content", "textContent2": "restaurant_3 text content 2"},
-  "item4": { "title": "restaurant_4", "subtitle": "restaurant_4 catch phrase", "description": "restaurant_4 description", "menuCta": "MENU", "tagline": "restaurant_4 tag line", "textContent1": "restaurant_4 text content", "textContent2": "restaurant_4 text content 2" }
-}
+    "title": "餐厅",
+    "subtitle": "当地知名美食",
+    "description": "地道风味，带您探索舌尖上的艾卡迈。",
+    "menuCta": "菜单",
+    "tagline": "这里是享受美食与社交的最佳场所。",
+    "textContent1": "主厨特供...",
+    "textContent2": "新鲜食材...",
+    "item1": {
+      "title": "菜品 1",
+      "subtitle": "招牌美味",
+      "description": "独特口感描述",
+      "menuCta": "菜单",
+      "tagline": "必点之选",
+      "textContent1": "详细介绍内容",
+      "textContent2": "更多互动内容"
+    },
+    "item2": {
+      "title": "菜品 2",
+      "subtitle": "泰式风味",
+      "description": "正宗调味描述",
+      "menuCta": "菜单",
+      "tagline": "地道推荐",
+      "textContent1": "详细介绍内容",
+      "textContent2": "更多互动内容"
+    },
+    "item3": {
+      "title": "菜品 3",
+      "subtitle": "创意料理",
+      "description": "视觉盛宴描述",
+      "menuCta": "菜单",
+      "tagline": "惊喜连连",
+      "textContent1": "详细介绍内容",
+      "textContent2": "更多互动内容"
+    },
+    "item4": {
+      "title": "菜品 4",
+      "subtitle": "精致甜点",
+      "description": "甜蜜收尾描述",
+      "menuCta": "菜单",
+      "tagline": "完美结束",
+      "textContent1": "详细介绍内容",
+      "textContent2": "更多互动内容"
+    }
+  }
 }
