@@ -188,6 +188,7 @@
     "responseNote": "Typical response time: Within 24 hours"
   },
   "BarPage": {
+    "header": "House Special",
     "title": "THE BAR",
     "subtitle": "Refreshing Beverages",
     "description": "Your description here.",

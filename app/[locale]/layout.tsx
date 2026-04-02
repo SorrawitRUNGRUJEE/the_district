@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import FloatingMessenger from "@/components/ui/FloatingMessenger";
 import { LightboxProvider } from "@/components/ui/LightboxProvider";
 import { routing } from "@/i18n/routing";
+import { Analytics } from "@vercel/analytics/next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -64,6 +65,7 @@ export default async function RootLayout({
             <LightboxProvider>
               <Header />
               <main>{children}</main>
+              <Analytics />
               <Footer />
               <FloatingMessenger />
             </LightboxProvider>
