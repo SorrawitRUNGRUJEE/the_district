@@ -1,9 +1,11 @@
 import "@/app/globals.css";
-import FloatingMessenger from "@/components/floating-messenger";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import FloatingMessenger from "@/components/ui/FloatingMessenger";
+import { LightboxProvider } from "@/components/ui/LightboxProvider";
 import { routing } from "@/i18n/routing";
+import { Analytics } from "@vercel/analytics/next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -60,10 +62,13 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider messages={messages}>
-            <Header />
-            <main>{children}</main>
-            <Footer />
-            <FloatingMessenger />
+            <LightboxProvider>
+              <Header />
+              <main>{children}</main>
+              <Analytics />
+              <Footer />
+              <FloatingMessenger />
+            </LightboxProvider>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

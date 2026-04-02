@@ -23,6 +23,7 @@ const Header = () => {
 
   const navLinks = [
     { href: "/story", label: t("story") },
+    { href: "/stay", label: t("stay") },
     { href: "/gallery", label: t("gallery") },
     { href: "/blog", label: t("blog") },
     { href: "/contact", label: t("contact") },

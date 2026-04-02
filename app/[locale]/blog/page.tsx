@@ -2,6 +2,7 @@ import BlogNav from "@/components/blog/BlogNav";
 import PageHeader from "@/components/layout/PageHeader";
 import SafeImage from "@/components/ui/SafeImage";
 import { Link } from "@/i18n/routing";
+import { LAYOUT_CONFIG } from "@/lib/constants";
 import { getAllPosts, getAllTagsWithCount } from "@/lib/markdown";
 import { getTranslations } from "next-intl/server";
 
@@ -17,7 +18,7 @@ export default async function BlogPage({
   const { locale } = await params;
   const { page, tag } = await searchParams;
   const t = await getTranslations("BlogPage");
-  const containerClass = "max-w-7xl mx-auto px-6 md:px-12 lg:px-16";
+  const containerClass = LAYOUT_CONFIG.containerClass;
 
   // --- Filter Logic ---
   const selectedTag = tag || null;
@@ -67,7 +68,7 @@ export default async function BlogPage({
   };
 
   return (
-    <main className="bg-muted text-foreground min-h-screen flex flex-col">
+    <main className="bg-soft text-foreground min-h-screen flex flex-col">
       <PageHeader title={t("header")} containerClass={containerClass} />
 
       <BlogNav
@@ -78,7 +79,7 @@ export default async function BlogPage({
         containerClass={containerClass}
       />
 
-      <section className="pb-20 border-b border-border grow pt-10 md:pt-16">
+      <section className="pb-20 border-b border-border grow">
         <div className={containerClass}>
           {paginatedPosts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
@@ -91,7 +92,7 @@ export default async function BlogPage({
                     key={blog.slug}
                     className="group flex flex-col space-y-6"
                   >
-                    <div className="w-full overflow-hidden shadow-2xl bg-card rounded-sm">
+                    <div className="w-full overflow-hidden shadow-2xl bg-surface rounded-sm">
                       <Link
                         href={`/blog/${blog.slug}`}
                         className="block relative aspect-video cursor-pointer"
@@ -117,7 +118,7 @@ export default async function BlogPage({
                       <div className="flex items-center gap-4 text-[10px] font-bold tracking-[0.2em] text-brand uppercase">
                         <span>{(category as string) || "JOURNAL"}</span>
                         <span className="w-8 h-px bg-border"></span>
-                        <span className="text-muted-foreground">
+                        <span className="text-soft-foreground">
                           {date as string}
                         </span>
                       </div>
@@ -128,7 +129,7 @@ export default async function BlogPage({
                         </h2>
                       </Link>
 
-                      <p className="text-muted-foreground font-light leading-relaxed tracking-wide text-sm line-clamp-3">
+                      <p className="text-soft-foreground font-light leading-relaxed tracking-wide text-sm line-clamp-3">
                         {(excerpt as string) || ""}
                       </p>
 
@@ -149,7 +150,7 @@ export default async function BlogPage({
               })}
             </div>
           ) : (
-            <div className="py-20 text-center text-muted-foreground/50 text-xs tracking-widest uppercase italic">
+            <div className="py-20 text-center text-soft-foreground/50 text-xs tracking-widest uppercase italic">
               {t("filter.noResults")}
             </div>
           )}
@@ -158,7 +159,7 @@ export default async function BlogPage({
           {totalPages > 1 && (
             <nav className="mt-32 w-full flex flex-col items-center">
               <div className="w-full flex justify-center mb-10">
-                <p className="text-[9px] font-bold tracking-[0.5em] uppercase text-muted-foreground/50 italic text-center translate-x-[0.25em]">
+                <p className="text-[9px] font-bold tracking-[0.5em] uppercase text-soft-foreground/50 italic text-center translate-x-[0.25em]">
                   {t("pagination.showing")} {startCount}–{endCount}{" "}
                   {t("pagination.of")} {totalItems} {t("pagination.posts")}
                 </p>
@@ -168,7 +169,7 @@ export default async function BlogPage({
                 <div className="flex justify-end">
                   <Link
                     href={getPageLink(Math.max(1, currentPage - 1))}
-                    className={`text-[10px] font-bold tracking-[0.2em] uppercase px-6 py-2 transition-all ${currentPage === 1 ? "opacity-0 pointer-events-none" : "text-muted-foreground hover:text-brand"}`}
+                    className={`text-[10px] font-bold tracking-[0.2em] uppercase px-6 py-2 transition-all ${currentPage === 1 ? "opacity-0 pointer-events-none" : "text-soft-foreground hover:text-brand"}`}
                   >
                     {t("pagination.prev")}
                   </Link>
@@ -178,13 +179,13 @@ export default async function BlogPage({
                   {getPageRange().map((p, i) => (
                     <div key={i} className="flex items-center justify-center">
                       {p === "..." ? (
-                        <span className="w-10 h-10 flex items-center justify-center text-muted-foreground/20 text-[10px]">
+                        <span className="w-10 h-10 flex items-center justify-center text-soft-foreground/20 text-[10px]">
                           ...
                         </span>
                       ) : (
                         <Link
                           href={getPageLink(p as number)}
-                          className={`w-10 h-10 flex items-center justify-center text-[10px] font-bold transition-all border border-transparent ${p === currentPage ? "bg-brand text-black italic scale-110 shadow-lg" : "text-muted-foreground hover:text-foreground hover:border-border"}`}
+                          className={`w-10 h-10 flex items-center justify-center text-[10px] font-bold transition-all border border-transparent ${p === currentPage ? "bg-brand text-black italic scale-110 shadow-lg" : "text-soft-foreground hover:text-foreground hover:border-border"}`}
                         >
                           {(p as number).toString().padStart(2, "0")}
                         </Link>
@@ -196,7 +197,7 @@ export default async function BlogPage({
                 <div className="flex justify-start">
                   <Link
                     href={getPageLink(Math.min(totalPages, currentPage + 1))}
-                    className={`text-[10px] font-bold tracking-[0.2em] uppercase px-6 py-2 transition-all ${currentPage === totalPages ? "opacity-0 pointer-events-none" : "text-muted-foreground hover:text-brand"}`}
+                    className={`text-[10px] font-bold tracking-[0.2em] uppercase px-6 py-2 transition-all ${currentPage === totalPages ? "opacity-0 pointer-events-none" : "text-soft-foreground hover:text-brand"}`}
                   >
                     {t("pagination.next")}
                   </Link>
@@ -208,9 +209,9 @@ export default async function BlogPage({
       </section>
 
       {/* Footer Branding */}
-      <footer className="py-12 bg-card border-t border-border">
+      <footer className="py-12 bg-surface border-t border-border">
         <div className={`${containerClass} text-center`}>
-          <p className="text-[10px] font-bold tracking-[0.4em] uppercase text-muted-foreground/30">
+          <p className="text-[10px] font-bold tracking-[0.4em] uppercase text-soft-foreground/30">
             {t("footerBranding")}
           </p>
         </div>

@@ -18,8 +18,12 @@ A high-level checklist of the Current State, Remaining Cleanup, and Crew Actions
 - [x] **Theme-Aware Typography & UX**: All text, borders, and complex UI elements (including Home hero, Contact map, and Gallery navigation) now automatically adapt to the current theme for maximum readability and brand alignment.
 - [x] **UX Polish**: Consistent `PageHeader` standard and premium transitions across all pages.
 - [x] **Universal Theme Harmony**: Applied comprehensive "Plynn House" light/dark mode support across all core pages, including Gallery filtering, Contact maps, and Blog navigation.
+- [x] **Mobile-First Carousels**: Transitioned static image lists on Stay and Dine pages to high-performance Swiper-based carousels for an ultra-premium mobile experience.
+- [x] **Collapsible Navigation (Universal)**: Implemented a refined single-row "Command Bar" layout for Gallery and Blog. Navbars are now fully collapsible on all devices with a 100% stable, non-bouncing transition using absolute overlays on desktop.
+- [x] **Responsive Image Integrity**: Standardized aspect ratios and object-fit properties across all masonry grids and carousels to ensure images are never compressed or distorted on mobile.
 - [x] **Blog Hero Contrast**: Refined `AnimatedPostHeader` with consistent white text and dark gradient overlays to maintain readability on diverse imagery.
-- [x] **UI Unit Consistency**: Synchronized backgrounds (`bg-muted`, `bg-card`) across ComingSoon placeholders and functional pages for a seamless navigation experience.
+- [x] **UI Unit Consistency**: Synchronized backgrounds (`bg-soft`, `bg-surface`) across ComingSoon placeholders and functional pages for a seamless navigation experience.
+- [x] **Theme Refactor**: Renamed core CSS variables (`card` -> `surface`, `muted` -> `soft`) for more semantic and maintainable naming across the application.
 - [x] **Contact Social Polish**: Redesigned social icons with increased size (`w-8 h-8`), theme-aware default colors, and premium `globe.svg` branding.
 - [x] **Gallery Nav Modernization**: Implemented 'Status Indicator' (yellow pill) and refined toggle for mobile; auto-closing behavior for smoother UX.
 - [x] **Dynamic Scroll Positioning**: Precision landing (180px mobile / 140px desktop).
@@ -29,32 +33,53 @@ A high-level checklist of the Current State, Remaining Cleanup, and Crew Actions
 - [x] **Blog Pagination & Localisation**: Implemented "Showing X-Y of Z posts" summary with full translation support (EN, TH, CN).
 - [x] **Hydration Guard Refinement**: Migrated to a modern `useIsClient` hook using `useSyncExternalStore`, resolving ESLint errors and improving hydration performance.
 - [x] **Story Page Foundation**: Implemented theme-aware layout for the Story page with developer notes for future-proofing.
+- [x] **Stay Page Transformation**: Overhauled the Stay page into a premium, streamlined layout focusing on two categories (Dormitories & Private Suites).
+- [x] **Deep Floating Navigation**: Developed a unified "Deep Floating" navigation architecture for Blog and Stay. Features include centered expansion menus, scroll-threshold auto-close, and "Click Outside" to dismiss.
+- [x] **UX Perfection (Flicker & Layering)**: Resolved initial state flickers for active indices and boosted `z-index` to `z-60` to ensure floating elements sit above all header layers.
+- [x] **Global Background Harmony**: Synchronized the `bg-soft` theme across Story, Stay, and Blog for a consistent, airy feel.
 
 ---
 
-## 🛠 TECH CLEANUP & FUTURE DEV
+## 🛠 TECH CLEANUP & ACTIVE TASKS
 
+### 🖼 Gallery & Visuals (Active: `features/gallery-revamp-lightbox`)
+
+- [ ] **Full-Page Mosaic**: Implement a continuous, high-vibe mosaic grid across the entire Gallery page.
+- [ ] **Group-Based Image Cycling**: Split large room sets (e.g. District G) and interleave them with facility vibe shots.
+- [ ] **Global Lightbox System**: Premium image viewer with Zoom, Thumbnails, and Next/Prev navigation.
+- [ ] **Next.js Image Optimization**: Custom wrapper for `next/image` integration in the lightbox.
+- [ ] **Conditional Image Descriptions**: Display room info in brand color (`#fece00`) at bottom right of the lightbox.
+- [ ] **Performance Polish**: Pause off-screen image rotations to optimize battery and CPU usage.
+
+### 📱 Responsive & Layout
+
+- [x] **Container Expansion**: Implement a larger `containerClass` for all pages to better utilize screen real estate (`max-w-screen-2xl`).
+- [ ] **Stay Page Refactor**: Move room-specific details and navigation to the Stay page (Handled by another branch).
+
+### 🎨 Theme & Typography
+
+- [x] **Light Mode Contrast**: Use darker gold and darker characters for high contrast in light theme.
+
+### 🏨 Pages & Content
+
+- [ ] **Stay Page Refactor**: Simplify "Stay" to only two pages, similar to the Gallery structure.
+- [ ] **Dine Content**: Add Thai beers and other items (toggle OFF for legal reasons for now).
 - [ ] **Home Page Re-design**: Implement new design once final contents/assets are ready.
-- [ ] **New Pages Implementation**: Build out full "Stay", "Dine", "Neighbourhood", and "Privacy Policy" pages (currently placeholders).
-- [ ] **CMS Integration**: Research and implement a CMS for the blog (e.g., Decap CMS) for autonomous content management.
-- [ ] **SEO Optimization**: Final pass on meta-tags and site-wide SEO scores (aiming for 90+).
-- [ ] **Email Integration**: Hook up real email systems to contact forms and footer links.
+- [ ] **Content Verification**: Confirm wording like "bunk bed", "เตียงสองชั้น", etc.
+- [x] **Remove Linktree**: Cleanup obsolete linktree references.
 
----
+### 🔍 SEO, Tracking & Bugs
 
-## 📝 CONTENT & REVIEW (Pending)
-
-- [ ] **Story Page**: Replace placeholders with real narratives from the storytelling team.
-- [ ] **Gallery & Blog**: Update with final high-res images and actual blog posts.
-- [ ] **Stay (Accommodation)**: Finalize individual room details, pricing, and amenities.
-- [ ] **Privacy Policy**: Add actual legal requirements, including CCTV and data security policies.
-- [ ] **Real Email**: Confirm the official email address (currently using `hello@thedistrict.com` placeholder).
+- [ ] **Bug Investigation**: FB Messenger redirect issue on iOS mobile (opening new chats).
+- [ ] **SEO & Visibility**: Final SEO score check (90+) and ensure Google Maps visibility for "hostel/hotel".
+- [ ] **Analytics & Tracking**: Evaluate and implement tracking (Options: Vercel Tracking, Cookies, or UTM).
+- [ ] **CMS**: No CMS for now (postponed until content volume increases).
 
 ---
 
 ## 👥 DISTRICT CREW (Actions for Them)
 
-- [ ] **Content Creation**: Provide final copywriting for all pages (Home, Story, Stay, Dine, Neighbourhood).
-- [ ] **Asset Delivery**: Upload high-res photography for rooms, common areas, and blog features.
-- [ ] **Domain & Hosting**: Finalize domain/hosting setup for production deployment.
-- [ ] **Real Email Setup**: Provide the official email account credentials/address.
+- [ ] **Content Creation**: Provide final copywriting for all pages; confirm important wording.
+- [ ] **Asset Delivery**: Upload high-res photography (priority: non-room "vibe" shots for gallery).
+- [ ] **Domain & Session**: Schedule a session to finalize domain and hosting setup.
+- [ ] **Legal Review**: Confirm "Dine" legal requirements for beer/alcohol display.

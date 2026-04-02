@@ -2,7 +2,7 @@
 
 import PageHeader from "@/components/layout/PageHeader";
 import { useIsClient } from "@/hooks/use-is-client";
-import { BRAND_INFO } from "@/lib/constants";
+import { BRAND_INFO, LAYOUT_CONFIG } from "@/lib/constants";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
@@ -17,7 +17,7 @@ export default function ContactPage() {
   if (!isClient) return null;
 
   const isDark = resolvedTheme === "dark";
-  const containerClass = "max-w-7xl mx-auto px-8 md:px-20";
+  const containerClass = LAYOUT_CONFIG.containerClass;
 
   const contactItems = [
     {
@@ -67,7 +67,7 @@ export default function ContactPage() {
   ];
 
   return (
-    <main className="bg-muted text-foreground min-h-screen flex flex-col">
+    <main className="bg-soft text-foreground min-h-screen flex flex-col">
       <PageHeader title={t("header")} containerClass={containerClass} />
 
       <section className="py-24 md:py-32 grow">
@@ -239,7 +239,7 @@ export default function ContactPage() {
                       initial={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.4 }}
-                      className="absolute inset-0 z-10 bg-muted/60 flex flex-col items-center justify-center cursor-pointer group/mapover pointer-events-auto"
+                      className="absolute inset-0 z-10 bg-soft/60 flex flex-col items-center justify-center cursor-pointer group/mapover pointer-events-auto"
                     >
                       {/* Centered Pin - Anchored by Tip */}
                       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-full flex items-center justify-center">

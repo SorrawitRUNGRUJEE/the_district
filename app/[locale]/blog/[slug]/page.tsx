@@ -3,6 +3,7 @@ import BlogGallery from "@/components/blog/BlogGallery";
 import PageHeader from "@/components/layout/PageHeader";
 import SafeImage from "@/components/ui/SafeImage";
 import { Link } from "@/i18n/routing";
+import { LAYOUT_CONFIG } from "@/lib/constants";
 import { getAllPosts, getPostBySlug } from "@/lib/markdown";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { notFound } from "next/navigation";
@@ -47,7 +48,7 @@ const mdxComponents = {
         <div className="mt-6 flex justify-center px-4">
           <div className="flex items-center gap-4">
             <div className="h-px w-8 bg-brand/30" />
-            <p className="text-[10px] font-medium uppercase tracking-[0.4em] text-muted-foreground/40">
+            <p className="text-[10px] font-medium uppercase tracking-[0.4em] text-soft-foreground/40">
               {props.caption}
             </p>
             <div className="h-px w-8 bg-brand/30" />
@@ -70,7 +71,7 @@ const mdxComponents = {
         <div className="mt-6 flex justify-center px-4">
           <div className="flex items-center gap-4">
             <div className="h-px w-8 bg-brand/30" />
-            <p className="text-[10px] font-medium uppercase tracking-[0.4em] text-muted-foreground/40">
+            <p className="text-[10px] font-medium uppercase tracking-[0.4em] text-soft-foreground/40">
               {props.caption}
             </p>
             <div className="h-px w-8 bg-brand/30" />
@@ -95,7 +96,7 @@ const mdxComponents = {
         <div className="mt-6 flex justify-center px-4">
           <div className="flex items-center gap-4">
             <div className="h-px w-8 bg-brand/30" />
-            <p className="text-[10px] font-medium uppercase tracking-[0.4em] text-muted-foreground/40">
+            <p className="text-[10px] font-medium uppercase tracking-[0.4em] text-soft-foreground/40">
               {props.alt}
             </p>
             <div className="h-px w-8 bg-brand/30" />
@@ -119,14 +120,14 @@ export default async function PostPage({ params }: PostPageProps) {
     <article className="min-h-screen bg-background text-foreground pb-32 relative">
       <PageHeader
         title="STORY"
-        containerClass="max-w-7xl mx-auto px-8 md:px-20"
+        containerClass={LAYOUT_CONFIG.containerClass}
         className="md:hidden pt-24 pb-10"
       />
 
       {/* 1. Desktop Navigation: Floating side link */}
       <Link
         href="/blog"
-        className="fixed top-24 left-8 z-50 hidden lg:flex items-center gap-4 group text-muted-foreground hover:text-foreground transition-all"
+        className="fixed top-24 left-8 z-50 hidden lg:flex items-center gap-4 group text-soft-foreground hover:text-foreground transition-all"
       >
         <div className="w-10 h-px bg-foreground group-hover:w-16 transition-all" />
         <span className="text-[10px] font-bold uppercase tracking-[0.3em]">
@@ -160,7 +161,7 @@ export default async function PostPage({ params }: PostPageProps) {
           <div className="lg:hidden mb-12">
             <Link
               href="/blog"
-              className="inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.3em] text-muted-foreground group"
+              className="inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.3em] text-soft-foreground group"
             >
               <span className="text-brand group-hover:-translate-x-1 transition-transform">
                 ←
@@ -190,18 +191,18 @@ export default async function PostPage({ params }: PostPageProps) {
           /* Hierarchy & Typography */
           prose-h2:text-foreground prose-h2:text-4xl prose-h2:tracking-widest prose-h2:uppercase prose-h2:font-black prose-h2:mt-32 prose-h2:mb-12
           prose-h3:text-foreground prose-h3:text-2xl prose-h3:tracking-wide prose-h3:uppercase prose-h3:mt-20
-          prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:text-lg prose-p:mb-8
+          prose-p:text-soft-foreground prose-p:leading-relaxed prose-p:text-lg prose-p:mb-8
           prose-strong:text-brand prose-strong:font-bold
 
           /* Block Elements */
-          prose-blockquote:border-l-brand prose-blockquote:bg-card/30 prose-blockquote:py-8 prose-blockquote:px-10 prose-blockquote:rounded-r-3xl
+          prose-blockquote:border-l-brand prose-blockquote:bg-surface/30 prose-blockquote:py-8 prose-blockquote:px-10 prose-blockquote:rounded-r-3xl
           prose-blockquote:italic prose-blockquote:text-foreground prose-blockquote:text-xl prose-blockquote:leading-relaxed prose-blockquote:my-16
 
           /* Table & List Aesthetics */
           prose-table:border-border prose-table:my-16
           prose-th:text-brand prose-th:uppercase prose-th:text-[11px] prose-th:tracking-[0.3em] prose-th:py-6
-          prose-td:py-6 prose-td:text-muted-foreground
-          prose-li:text-muted-foreground prose-li:marker:text-brand
+          prose-td:py-6 prose-td:text-soft-foreground
+          prose-li:text-soft-foreground prose-li:marker:text-brand
         "
         >
           {content && (

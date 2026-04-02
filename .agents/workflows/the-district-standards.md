@@ -33,3 +33,7 @@ When developing, refactoring, or adding features to this project, adhere strictl
 
 - **English Only:** All code comments, variable names, branch names, and documentation must be strictly in English.
 - **Minimal Comments:** Only leave short, essential comments that explain the "why" and "context" behind complex logic, rather than describing "what" the code does.
+
+## 6. Communication Standards
+
+- **Thai Summary Indicator:** At the end of every response, provide a brief summary in **Thai** (สรุปสั้นๆ). This allows for a quick review of the main points or actions taken.

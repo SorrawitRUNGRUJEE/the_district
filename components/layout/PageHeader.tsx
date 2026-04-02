@@ -1,5 +1,6 @@
 "use client";
 
+import { LAYOUT_CONFIG } from "@/lib/constants";
 import { motion } from "framer-motion";
 
 interface PageHeaderProps {
@@ -12,12 +13,12 @@ interface PageHeaderProps {
 export default function PageHeader({
   title,
   description,
-  containerClass = "max-w-7xl mx-auto px-6 md:px-12 lg:px-16",
+  containerClass = LAYOUT_CONFIG.containerClass,
   className = "",
 }: PageHeaderProps) {
   return (
     <div
-      className={`pt-32 pb-16 text-center bg-card border-b border-border transition-colors duration-300 ${className}`}
+      className={`pt-32 pb-16 text-center bg-surface border-b border-border transition-colors duration-300 ${className}`}
     >
       <div className={containerClass}>
         <motion.div

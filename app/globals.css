@@ -8,25 +8,25 @@
   --drop-shadow-brand: var(--brand-drop-shadow);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
+  --color-surface: var(--surface);
+  --color-surface-foreground: var(--surface-foreground);
+  --color-soft: var(--soft);
+  --color-soft-foreground: var(--soft-foreground);
   --color-border: var(--border);
 }
 
 @layer base {
   /* prettier-ignore */
   :root {
-    --brand: #cbab27;                        /* Darker Yellow for better contrast */
-    --brand-light: #dfc13c;                  /* Lighter version for hover */
-    --brand-drop-shadow: 0 0 20px #cbab27cc; /* Brand color drop shadow */
+    --brand: #a38615;                        /* Darker Gold for better contrast */
+    --brand-light: #c2a01a;                  /* Darker gold highlight */
+    --brand-drop-shadow: 0 0 20px #a38615cc; /* Darker brand drop shadow */
     --background: #f4f0ea;                   /* Linen - Light background */
-    --foreground: #3d3128;                   /* Espresso - Readable dark text */
-    --card: #ebe5dc;                         /* Warm Linen - Component surfaces */
-    --card-foreground: #3d3128;              /* Warm text on cards */
-    --muted: #dfd8cc;                        /* Soft Taupe - Muted areas */
-    --muted-foreground: #a39b92;             /* Muted text */
+    --foreground: #1a1614;                   /* Charcoal Espresso - Higher contrast dark text */
+    --surface: #ebe5dc;                      /* Warm Linen - Component surfaces */
+    --surface-foreground: #3d3128;           /* Warm text on cards */
+    --soft: #dfd8cc;                         /* Soft Taupe - Muted areas */
+    --soft-foreground: #a39b92;              /* Muted text */
     --border: #d1c7b8;                       /* Taupe border */
     --border-strong: #141414;                /* Dark border for light theme */
   }
@@ -38,10 +38,10 @@
     --brand-drop-shadow: 0 0 20px #fece00cc; /* Brand color drop shadow */
     --background: #000000;                   /* Pure Black */
     --foreground: #fcfaf8;                   /* Off-white text */
-    --card: #0a0a0a;                         /* Neutral 950 */
-    --card-foreground: #fcfaf8;              /* Off-white text on cards */
-    --muted: #171717;                        /* Neutral 900 */
-    --muted-foreground: #8c8c8c;             /* Neutral grey text */
+    --surface: #0a0a0a;                      /* Neutral 950 */
+    --surface-foreground: #fcfaf8;           /* Off-white text on cards */
+    --soft: #171717;                         /* Neutral 900 */
+    --soft-foreground: #8c8c8c;              /* Neutral grey text */
     --border: #141414;                       /* Subtle dark border */
     --border-strong: #d1c7b8;                /* Light border for dark theme */
   }
