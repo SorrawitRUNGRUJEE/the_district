@@ -18,9 +18,10 @@ export default function PrivacyPage() {
 
         {/* Intro */}
         <p className="text-sm text-foreground/70 leading-relaxed mb-4">
-          Urban Nest Asset Co., Ltd. ("we", "us", "our") respects your privacy
-          and is committed to protecting your personal data in accordance with
-          the Personal Data Protection Act (PDPA).
+          Urban Nest Asset Co., Ltd. (&ldquo;we&rdquo;, &ldquo;us&rdquo;,
+          &ldquo;our&rdquo;) respects your privacy and is committed to
+          protecting your personal data in accordance with the Personal Data
+          Protection Act (PDPA).
         </p>
         <p className="text-sm text-foreground/70 leading-relaxed mb-16">
           This Privacy Policy explains how we collect, use, and protect your
