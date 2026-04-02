@@ -1,6 +1,8 @@
 "use client";
 
+import PageHeader from "@/components/layout/PageHeader";
 import ImageCarousel from "@/components/ui/ImageCarousel";
+import { LAYOUT_CONFIG } from "@/lib/constants";
 import { useTranslations } from "next-intl";
 
 const BAR_ITEMS = [
@@ -44,9 +46,11 @@ const BAR_ITEMS = [
 
 export default function BarPage() {
   const t = useTranslations("BarPage");
+  const containerClass = LAYOUT_CONFIG.containerClass;
 
   return (
     <main className="pt-18 bg-soft transition-colors duration-300">
+      <PageHeader title={t("header")} />
       {BAR_ITEMS.map((item) => {
         const image = (
           <div
@@ -72,15 +76,17 @@ export default function BarPage() {
         return (
           <div key={item.key}>
             {/* ── SPLIT SECTION ── */}
-            <section className="flex flex-col lg:flex-row min-h-[calc(100vh-72px)]">
+            <section
+              className={`${containerClass} flex flex-col lg:flex-row min-h-[calc(100vh-72px)]`}
+            >
               {image}
               {content}
             </section>
 
             {/* ── GALLERY SECTION (Carousel for Mobile) ── */}
-            <section className="mt-8 mb-12">
+            <section className={`${containerClass} mt-8 mb-12`}>
               {/* Desktop: Grid View */}
-              <div className="hidden md:flex flex-wrap lg:flex-nowrap h-[50vh] gap-6 px-1">
+              <div className="hidden md:flex flex-wrap lg:flex-nowrap h-[50vh] gap-6">
                 {item.gallery.map((src, i) => (
                   <div
                     key={i}
@@ -107,7 +113,9 @@ export default function BarPage() {
             </section>
 
             {/* ── TEXT SECTION ── */}
-            <section className="flex flex-col items-center py-20 px-6">
+            <section
+              className={`${containerClass} flex flex-col items-center py-20`}
+            >
               <div className="max-w-2xl w-full text-center">
                 <h2 className="text-xl font-bold tracking-[0.2em] uppercase text-brand mb-8 italic underline underline-offset-4 decoration-brand/20">
                   {t(`${item.key}.tagline`)}
