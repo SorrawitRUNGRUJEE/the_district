@@ -197,31 +197,31 @@
     "textContent1": "First paragraph...",
     "textContent2": "Second paragraph...",
     "item1": {
-      "title": "drink_1",
-      "subtitle": "drink_1 catch phrase",
-      "description": "drink_1 description",
+      "title": "MAKEUP CRAFT BEER",
+      "subtitle": "BY BEAUTY BREWS",
+      "description": "Makeup Craft Beer is where high-end aesthetics meet the grit of traditional brewing. It’s a curated experience for those who value detail, designed to be the perfect companion for a lifestyle that’s always camera-ready.",
       "menuCta": "MENU",
-      "tagline": "drink_1 tag line",
-      "textContent1": "drink_1 text content",
-      "textContent2": "drink_1 text content 2"
+      "tagline": "UNAPOLOGETICALLY YOU",
+      "textContent1": "Precision in every drop. A curated experience where high-end aesthetics meet traditional brewing.",
+      "textContent2": "Crafted for the spotlight. A luminous profile with a smooth finish that serves as the final touch to your evening"
     },
     "item2": {
-      "title": "drink_2",
-      "subtitle": "drink_2 catch phrase",
-      "description": "drink_2 description",
+      "title": "AMALFI COAST SPRITZ",
+      "subtitle": "MADE WITH LOCAL LIMONCELLO",
+      "description": "Amalfi Coast Spritz captures the vibrant energy of Sorrento in a single bottle. Blending the sharp, zesty brightness of local lemons with a crisp, sparkling finish, this drink is an invitation to slow down and soak in the Mediterranean sun.",
       "menuCta": "MENU",
-      "tagline": "drink_2 tag line",
-      "textContent1": "drink_2 text content",
-      "textContent2": "drink_2 text content 2"
+      "tagline": "BOTTLED SUNSHINE",
+      "textContent1": "A vibrant tribute to the Italian summer, blending the sharp, zesty brightness of Sorrento lemons with a crisp, sparkling finish. It is the essence of the Mediterranean in every drop.",
+      "textContent2": "Designed for the golden hour, this spritz offers a refreshing wave of citrus and botanicals. Whether you're seaside or simply dreaming of the coast, it’s your ultimate sun-drenched escape."
     },
     "item3": {
-      "title": "drink_3",
-      "subtitle": "drink_3 catch phrase",
-      "description": "drink_3 description",
+      "title": "VINTAGE COSMETICS ALE",
+      "subtitle": "CRAFTED BY BEAUTY BREWS",
+      "description": "Inspired by the glamour of a bygone era, Vintage Cosmetics Ale is a tribute to sophisticated taste. This brew combines traditional techniques with a polished, modern finish, creating a flavor profile that is as balanced and enduring as a classic red lip.",
       "menuCta": "MENU",
-      "tagline": "drink_3 tag line",
-      "textContent1": "drink_3 text content",
-      "textContent2": "drink_3 text content 2"
+      "tagline": "Timeless Elegance.",
+      "textContent1": "Classic beauty redefined, combining traditional brewing techniques with a polished, modern finish.",
+      "textContent2": "A rich, warm profile with notes of toasted malt, crafted for those who appreciate the heritage of style."
     },
     "item4": {
       "title": "drink_4",
