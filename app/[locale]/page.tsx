@@ -25,7 +25,7 @@ export default function Home() {
 
         <div className="pt-10">
           <Link
-            href="/gallery"
+            href="/stay"
             className="inline-block border border-foreground px-10 py-3 text-[10px] font-bold uppercase tracking-[0.2em] text-foreground hover:bg-brand hover:border-brand hover:text-black transition-all duration-300"
           >
             {t("cta")}
