@@ -48,7 +48,7 @@ export default function GalleryPage() {
           </div>
 
           {/* Branding Footer */}
-          <div className="mt-20 pt-10 border-t border-border/50 text-center">
+          <div className="pt-10 md:pt-16 border-t border-border/50 text-center">
             <p className="text-[10px] font-black tracking-[0.5em] uppercase text-foreground/20 italic">
               The District / {t("curated")}
             </p>

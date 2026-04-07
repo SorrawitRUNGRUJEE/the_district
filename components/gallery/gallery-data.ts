@@ -25,12 +25,15 @@ export const GALLERY_CONTENT: GalleryGroup[] = [
     images: [
       {
         src: "/images/rooms/district-a/district-a-001.webp",
+        description: "TODO - test add description 1",
       },
       {
         src: "/images/rooms/district-a/district-a-002.webp",
+        description: "TODO - test add description 2",
       },
       {
         src: "/images/rooms/district-a/district-a-003.webp",
+        description: "TODO - test add description 3",
       },
     ],
   },

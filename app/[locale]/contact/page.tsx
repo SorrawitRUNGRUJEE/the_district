@@ -90,7 +90,7 @@ export default function ContactPage() {
                       ? "noopener noreferrer"
                       : undefined
                   }
-                  className="group flex items-start gap-8 cursor-pointer"
+                  className="group flex items-start gap-5 md:gap-8 cursor-pointer"
                 >
                   {/* Icon with Brand Masking */}
                   <div
@@ -107,13 +107,13 @@ export default function ContactPage() {
                     }}
                   />
 
-                  <div className="space-y-3">
+                  <div className="space-y-3 overflow-hidden">
                     <h3 className="text-brand group-hover:text-brand-light transition-colors text-[10px] font-black uppercase tracking-[0.5em] italic">
                       {item.label}
                     </h3>
                     <div className="space-y-2">
                       <div className="flex items-center gap-3">
-                        <p className="block text-2xl md:text-3xl font-light tracking-tight text-foreground group-hover:text-brand-light transition-all duration-300 uppercase border-b border-brand/10 group-hover:border-brand/60">
+                        <p className="block text-lg sm:text-xl md:text-2xl lg:text-3xl font-light tracking-tight text-foreground group-hover:text-brand-light transition-all duration-300 uppercase border-b border-brand/10 group-hover:border-brand/60 truncate sm:whitespace-normal">
                           {item.value}
                         </p>
                         {/* Subtle Link SVG */}
@@ -158,7 +158,7 @@ export default function ContactPage() {
             >
               {/* Follow Us Segment */}
               <div className="space-y-3">
-                <div className="flex items-center gap-8 group/socials cursor-default">
+                <div className="flex items-center gap-5 md:gap-8 group/socials cursor-default">
                   <div
                     className="w-8 h-8 md:w-10 md:h-10 bg-brand group-hover/socials:bg-brand-light group-hover/socials:drop-shadow-brand transition-all duration-500"
                     style={{
@@ -177,7 +177,7 @@ export default function ContactPage() {
                   </h3>
                 </div>
 
-                <div className="flex gap-8 pl-16 md:pl-18">
+                <div className="flex gap-6 md:gap-8 pl-13 md:pl-18">
                   {socialItems.map((social) => (
                     <a
                       key={social.name}
