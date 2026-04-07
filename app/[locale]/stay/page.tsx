@@ -38,6 +38,7 @@ function RoomNav({
 }: RoomNavProps) {
   const t = useTranslations("StayPage");
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const navRef = useRef<HTMLDivElement>(null);
   const initialScrollY = useRef(0);
 
   // Helper to get active room label
@@ -45,10 +46,11 @@ function RoomNav({
     (r) => r.id === activeSection,
   );
 
-  // Close menu on significant scroll
+  // Close menu on significant scroll or Escape key
   useEffect(() => {
     if (!isNavOpen) return;
 
+    // Capture initial scroll position
     initialScrollY.current = window.scrollY;
 
     const handleScroll = () => {
@@ -56,13 +58,29 @@ function RoomNav({
       if (scrollDiff > 80) setIsNavOpen(false);
     };
 
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setIsNavOpen(false);
+      }
+    };
+
+    const handleClickOutside = (e: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setIsNavOpen(false);
+      }
+    };
+
     const timeout = setTimeout(() => {
       window.addEventListener("scroll", handleScroll, { passive: true });
+      window.addEventListener("keydown", handleKeyDown);
+      document.addEventListener("mousedown", handleClickOutside);
     }, 100);
 
     return () => {
       clearTimeout(timeout);
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isNavOpen]);
 
@@ -72,7 +90,7 @@ function RoomNav({
   };
 
   return (
-    <div className="sticky top-[80px] z-60 transition-all font-bold py-6 pointer-events-none">
+    <div className="sticky top-[80px] z-40 transition-all font-bold pb-5 md:py-6 pointer-events-none">
       {/* Click Outside Overlay */}
       <AnimatePresence>
         {isNavOpen && (
@@ -87,10 +105,10 @@ function RoomNav({
       </AnimatePresence>
 
       <div
-        className={`${containerClass} relative flex items-center justify-between pointer-events-none min-h-[44px]`}
+        className={`${containerClass} px-2! md:px-12! lg:px-16! relative flex items-center justify-between pointer-events-none min-h-[44px]`}
       >
         {/* LEFT: Active Room Indicator (Floating Pill) */}
-        <div className="flex-none min-w-[120px] md:min-w-[160px] h-full flex items-center pointer-events-auto">
+        <div className="flex-none min-w-[100px] md:min-w-[160px] h-full flex items-center pointer-events-auto">
           <AnimatePresence mode="wait">
             {!isNavOpen && (
               <motion.div
@@ -99,7 +117,7 @@ function RoomNav({
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.2, ease: "easeOut" }}
-                className="bg-brand text-black text-[10px] font-black tracking-widest uppercase px-5 py-2.5 italic rounded-full inline-flex items-center gap-1 shadow-[0_10px_40px_-10px_rgba(var(--brand-rgb),0.5)] border border-white/20 select-none cursor-default"
+                className="bg-brand text-black text-[9px] md:text-[10px] font-black tracking-widest uppercase px-3 py-2 md:px-5 md:py-2.5 italic rounded-full inline-flex items-center gap-1 shadow-[0_10px_40px_-10px_rgba(var(--brand-rgb),0.5)] border border-white/20 select-none cursor-default"
               >
                 <span>{activeRoom?.label || t("exploreRooms")}</span>
               </motion.div>
@@ -108,71 +126,76 @@ function RoomNav({
         </div>
 
         {/* CENTER: Floating Menu (Visible when open) */}
-        <div className="absolute left-1/2 -translate-x-1/2 z-10 w-full flex justify-center top-1/2 -translate-y-1/2 pointer-events-none">
+        <div className="absolute left-1/2 -translate-x-1/2 z-10 w-full flex justify-center top-0 pointer-events-none">
           <AnimatePresence>
             {isNavOpen && (
               <motion.div
+                ref={navRef}
                 initial={{ opacity: 0, y: -20, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: -20, scale: 0.95 }}
                 transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
-                className="bg-background/95 backdrop-blur-3xl border border-border/50 shadow-[0_30px_100px_-20px_rgba(0,0,0,0.5)] rounded-[2.5rem] p-4 transition-shadow duration-500 overflow-hidden pointer-events-auto"
+                className="bg-background/95 backdrop-blur-3xl border border-white/15 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.8)] rounded-3xl md:rounded-[2.5rem] p-2 md:p-4 transition-shadow duration-500 overflow-hidden pointer-events-auto mt-4 md:mt-0"
               >
-                <div className="px-10 pt-8 pb-4 flex flex-col items-center gap-10 min-w-[320px]">
-                  <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 max-w-5xl">
+                <div className="px-4 py-4 md:px-10 md:pb-4 flex flex-col items-center gap-4 md:gap-8 min-w-[280px] md:min-w-none max-h-[70vh] md:max-h-none overflow-y-auto md:overflow-visible scrollbar-hide">
+                  <div className="flex flex-col md:flex-row md:flex-wrap items-center justify-center gap-4 md:gap-x-12 max-w-5xl">
                     {/* Dorms group */}
-                    <div className="flex items-center gap-6">
-                      <span className="hidden md:block text-[9px] font-black tracking-[0.3em] uppercase text-foreground/20 italic select-none leading-none">
+                    <div className="flex flex-col md:flex-row md:flex-wrap items-center justify-center gap-4 md:gap-x-8">
+                      <span className="text-[9px] font-black tracking-[0.3em] uppercase text-foreground/20 italic select-none leading-none mb-1 md:mb-0">
                         {t("dormLabel")}
                       </span>
-                      {STAY_DORM_ROOMS.map((room) => (
-                        <button
-                          key={room.id}
-                          onClick={() => handleScroll(room.id)}
-                          className={`text-[11px] cursor-pointer font-black tracking-[0.2em] uppercase transition-all duration-300 whitespace-nowrap leading-none ${
-                            activeSection === room.id
-                              ? "text-brand scale-110"
-                              : "text-soft-foreground hover:text-brand"
-                          }`}
-                        >
-                          {room.label}
-                        </button>
-                      ))}
+                      <div className="flex flex-col md:flex-row md:flex-wrap items-center justify-center gap-4 md:gap-x-8">
+                        {STAY_DORM_ROOMS.map((room) => (
+                          <button
+                            key={room.id}
+                            onClick={() => handleScroll(room.id)}
+                            className={`text-[11px] cursor-pointer font-black tracking-[0.2em] uppercase transition-all duration-300 whitespace-nowrap leading-none ${
+                              activeSection === room.id
+                                ? "text-brand scale-110"
+                                : "text-soft-foreground hover:text-brand"
+                            }`}
+                          >
+                            {room.label}
+                          </button>
+                        ))}
+                      </div>
                     </div>
 
-                    <div className="hidden lg:block h-4 w-px bg-border/40 mx-2 shrink-0" />
+                    <div className="hidden md:block h-6 w-px bg-border/40 mx-2 shrink-0" />
 
                     {/* Privates group */}
-                    <div className="flex items-center gap-6">
-                      <span className="hidden md:block text-[9px] font-black tracking-[0.3em] uppercase text-foreground/20 italic select-none leading-none">
+                    <div className="flex flex-col md:flex-row md:flex-wrap items-center justify-center gap-4 md:gap-x-8">
+                      <span className="text-[9px] font-black tracking-[0.3em] uppercase text-foreground/20 italic select-none leading-none mb-1 md:mb-0">
                         {t("privateLabel")}
                       </span>
-                      {STAY_PRIVATE_ROOMS.map((room) => (
-                        <button
-                          key={room.id}
-                          onClick={() => handleScroll(room.id)}
-                          className={`text-[11px] cursor-pointer font-black tracking-[0.2em] uppercase transition-all duration-300 whitespace-nowrap leading-none ${
-                            activeSection === room.id
-                              ? "text-brand scale-110"
-                              : "text-soft-foreground hover:text-brand"
-                          }`}
-                        >
-                          {room.label}
-                        </button>
-                      ))}
+                      <div className="flex flex-col md:flex-row md:flex-wrap items-center justify-center gap-4 md:gap-x-8">
+                        {STAY_PRIVATE_ROOMS.map((room) => (
+                          <button
+                            key={room.id}
+                            onClick={() => handleScroll(room.id)}
+                            className={`text-[11px] cursor-pointer font-black tracking-[0.2em] uppercase transition-all duration-300 whitespace-nowrap leading-none ${
+                              activeSection === room.id
+                                ? "text-brand scale-110"
+                                : "text-soft-foreground hover:text-brand"
+                            }`}
+                          >
+                            {room.label}
+                          </button>
+                        ))}
+                      </div>
                     </div>
                   </div>
 
                   {/* Inline Close Button */}
                   <button
                     onClick={() => setIsNavOpen(false)}
-                    className="flex flex-col items-center gap-1 group transition-all"
+                    className="flex flex-row items-center gap-3 group transition-all px-6 py-2 rounded-full border border-white/20 bg-white/5 hover:border-brand/40 hover:bg-white/10 cursor-pointer shrink-0"
                   >
-                    <span className="text-[9px] font-black tracking-[0.3em] uppercase text-foreground/30 group-hover:text-brand transition-colors">
+                    <span className="text-[9px] font-black tracking-[0.3em] uppercase text-foreground/50 group-hover:text-brand transition-colors">
                       {t("close")}
                     </span>
                     <motion.div
-                      className="w-4 h-4 bg-foreground/20 group-hover:bg-brand transition-colors"
+                      className="w-3.5 h-3.5 bg-foreground/40 group-hover:bg-brand transition-colors"
                       style={{
                         maskImage: "url(/icons/ui/chevron-down.svg)",
                         WebkitMaskImage: "url(/icons/ui/chevron-down.svg)",
@@ -202,14 +225,14 @@ function RoomNav({
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.2, ease: "easeOut" }}
                 onClick={() => setIsNavOpen(true)}
-                className="flex items-center justify-center gap-2 px-5 py-2.5 transition-all group min-w-[110px] md:min-w-[160px] rounded-full shadow-xl bg-surface/80 backdrop-blur-md border border-border text-foreground/50 hover:bg-brand/10 hover:border-brand/30 hover:text-brand"
+                className="flex items-center justify-center gap-2 px-3 py-2 md:px-5 md:py-2.5 transition-all group min-w-[100px] md:min-w-[160px] rounded-full shadow-lg bg-surface/95 backdrop-blur-md border border-white/10 text-foreground/70 hover:bg-brand/10 hover:border-brand/40 hover:text-brand"
               >
-                <span className="text-[10px] font-black tracking-widest uppercase italic leading-none">
+                <span className="text-[9px] md:text-[10px] font-black tracking-widest uppercase italic leading-none">
                   {t("explore")} (
                   {STAY_DORM_ROOMS.length + STAY_PRIVATE_ROOMS.length})
                 </span>
                 <div
-                  className="w-3 h-3 bg-foreground/20 group-hover:bg-brand transition-colors"
+                  className="w-3 h-3 bg-foreground/40 group-hover:bg-brand transition-colors"
                   style={{
                     maskImage: "url(/icons/ui/chevron-down.svg)",
                     WebkitMaskImage: "url(/icons/ui/chevron-down.svg)",
@@ -263,7 +286,7 @@ function RoomBlock({ room }: { room: StayRoom }) {
             <div className="flex flex-col items-center gap-2 group/stat w-20 md:w-24 text-center shrink-0">
               <div className="flex items-center gap-1.5 h-6">
                 <div
-                  className="w-5 h-5 bg-foreground/40 group-hover/stat:bg-brand transition-colors duration-300"
+                  className="w-4 h-4 md:w-5 md:h-5 bg-brand group-hover/stat:bg-brand-light transition-colors duration-300"
                   style={{
                     maskImage: "url(/icons/ui/users.svg)",
                     WebkitMaskImage: "url(/icons/ui/users.svg)",
@@ -275,11 +298,11 @@ function RoomBlock({ room }: { room: StayRoom }) {
                     WebkitMaskSize: "contain",
                   }}
                 />
-                <span className="text-[10px] font-black text-foreground/50 group-hover/stat:text-brand transition-colors italic">
+                <span className="text-[10px] font-black text-brand group-hover/stat:text-brand-light transition-colors italic">
                   x {room.capacity}
                 </span>
               </div>
-              <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-foreground/20">
+              <span className="text-[9px] md:text-[10px] font-bold tracking-[0.2em] uppercase text-foreground/40 group-hover/stat:text-brand transition-colors duration-300">
                 {t("facilities.capacity")}
               </span>
             </div>
@@ -316,7 +339,7 @@ function RoomBlock({ room }: { room: StayRoom }) {
                 >
                   <div className="flex items-center justify-center gap-1.5 h-6">
                     <div
-                      className="w-5 h-5 bg-foreground/30 group-hover/icon:bg-brand transition-colors duration-300 shrink-0"
+                      className="w-4 h-4 md:w-5 md:h-5 bg-brand group-hover/icon:bg-brand-light transition-colors duration-300 shrink-0"
                       style={{
                         maskImage: `url(${facility.icon})`,
                         WebkitMaskImage: `url(${facility.icon})`,
@@ -329,12 +352,12 @@ function RoomBlock({ room }: { room: StayRoom }) {
                       }}
                     />
                     {value && (
-                      <span className="text-[10px] font-extrabold text-foreground/50 group-hover/icon:text-brand transition-all italic leading-tight uppercase tracking-tight">
+                      <span className="text-[10px] font-extrabold text-brand group-hover/icon:text-brand-light transition-all italic leading-tight uppercase tracking-tight">
                         {value}
                       </span>
                     )}
                   </div>
-                  <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-foreground/20 shrink-0">
+                  <span className="text-[9px] md:text-[10px] font-bold tracking-[0.2em] uppercase text-foreground/40 group-hover/icon:text-brand-light transition-colors duration-300 shrink-0">
                     {t(facility.label)}
                   </span>
                 </div>

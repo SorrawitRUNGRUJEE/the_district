@@ -1,8 +1,8 @@
 "use client";
 
+import { Link } from "@/i18n/routing";
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
-import { Link } from "@/i18n/routing";
 
 interface AnimatedPostHeaderProps {
   children: ReactNode;
@@ -23,23 +23,28 @@ export default function AnimatedPostHeader({
         {/* Mobile Navigation (Passed as children or handled here, children is more flexible) */}
         {children}
 
-        {/* Meta Info */}
+        {/* Meta Info: High-contrast Brand Hierarchy (Fixed to vivid brand for hero clarity) */}
         <motion.div
           initial={{ opacity: 0, x: -10 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex flex-wrap items-center gap-6 mb-8"
+          className="flex flex-col gap-4 mb-10"
         >
-          <p className="text-brand text-[10px] font-black italic uppercase tracking-[0.5em]">
-            {date}
-          </p>
-          <div className="h-px w-12 bg-white/20" />
-          <div className="flex gap-4">
+          {/* Date Level - High Visibility (Fixed to pure yellow #fece00) */}
+          <div className="flex items-center gap-4">
+            <p className="text-[9px] font-black text-black uppercase tracking-[0.2em] px-3 py-1.5 rounded-full bg-[#fece00] italic shrink-0 shadow-[0_10px_20px_-5px_rgba(254,206,0,0.3)]">
+              {date}
+            </p>
+            <div className="h-px w-16 bg-[#fece00]/30" />
+          </div>
+
+          {/* Tags Level - Compact Branded Style (Fixed to pure yellow #fece00) */}
+          <div className="flex flex-wrap items-center gap-2">
             {tags.map((tag) => (
               <Link
                 key={tag}
                 href={`/blog?tag=${tag}`}
-                className="text-[9px] font-bold text-white/60 uppercase tracking-[0.2em] hover:text-brand transition-colors"
+                className="text-[8px] md:text-[9px] font-bold text-[#fece00] uppercase tracking-[0.15em] px-2.5 py-1 rounded-full border border-[#fece00]/30 bg-black/40 backdrop-blur-md hover:bg-[#fece00] hover:text-black hover:border-[#fece00] transition-all duration-300 whitespace-nowrap"
               >
                 #{tag}
               </Link>

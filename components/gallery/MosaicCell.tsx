@@ -61,7 +61,7 @@ export default function MosaicCell({
       role="button"
       tabIndex={0}
       aria-label={`View ${label} gallery`}
-      className={`relative group overflow-hidden rounded-xs bg-surface shadow-sm transition-all duration-500 hover:z-10 hover:shadow-brand/20 hover:shadow-xl hover:scale-[1.01] cursor-pointer ${className}`}
+      className={`relative group overflow-hidden rounded-[2px] bg-surface shadow-sm transition-all duration-500 hover:z-10 hover:shadow-brand-glow hover:scale-[1.02] cursor-pointer ${className}`}
       onClick={handleOpenLightbox}
       onKeyDown={(e) => {
         if (e.key === "Enter" || e.key === " ") {

@@ -13,6 +13,8 @@
   --color-soft: var(--soft);
   --color-soft-foreground: var(--soft-foreground);
   --color-border: var(--border);
+  --shadow-brand-glow: 0 0 25px
+    color-mix(in srgb, var(--brand) 60%, transparent);
 }
 
 @layer base {
@@ -26,7 +28,7 @@
     --surface: #ebe5dc;                      /* Warm Linen - Component surfaces */
     --surface-foreground: #3d3128;           /* Warm text on cards */
     --soft: #dfd8cc;                         /* Soft Taupe - Muted areas */
-    --soft-foreground: #a39b92;              /* Muted text */
+    --soft-foreground: #4d4c4a;              /* Muted text */
     --border: #d1c7b8;                       /* Taupe border */
     --border-strong: #141414;                /* Dark border for light theme */
   }

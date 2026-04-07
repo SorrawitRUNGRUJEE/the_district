@@ -137,6 +137,21 @@ export default async function PostPage({ params }: PostPageProps) {
 
       {/* 2. Hero Section: Fluid height with padding safety */}
       <div className="relative min-h-[70vh] md:min-h-[85vh] w-full flex flex-col justify-end pt-40 pb-20 md:pt-60 md:pb-32">
+        {/* Mobile Navigation: Breadcrumb style - Attached to top of hero */}
+        <div className="lg:hidden absolute top-3 left-3 z-20">
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.3em] text-white/50 group"
+          >
+            <span className="text-brand group-hover:-translate-x-1 transition-transform">
+              ←
+            </span>
+            <span className="border-b border-white/20 group-hover:border-white/50 transition-colors uppercase">
+              Discover More Stories
+            </span>
+          </Link>
+        </div>
+
         {/* Visual Background */}
         <div className="absolute inset-0 z-0">
           <SafeImage
@@ -157,20 +172,7 @@ export default async function PostPage({ params }: PostPageProps) {
           date={frontmatter.date as string}
           tags={tags}
         >
-          {/* Mobile Navigation: Breadcrumb style */}
-          <div className="lg:hidden mb-12">
-            <Link
-              href="/blog"
-              className="inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.3em] text-soft-foreground group"
-            >
-              <span className="text-brand group-hover:-translate-x-1 transition-transform">
-                ←
-              </span>
-              <span className="border-b border-border group-hover:border-foreground/30 transition-colors uppercase">
-                Discover More Stories
-              </span>
-            </Link>
-          </div>
+          <div />
         </AnimatedPostHeader>
       </div>
 

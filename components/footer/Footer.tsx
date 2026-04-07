@@ -79,7 +79,7 @@ const Footer = () => {
                     className="group transition-all duration-300"
                   >
                     <div
-                      className="w-5 h-5 bg-foreground opacity-60 group-hover:bg-brand group-hover:opacity-100 transition-all duration-300 cursor-pointer"
+                      className="w-7 h-7 bg-foreground opacity-60 group-hover:bg-brand group-hover:opacity-100 transition-all duration-300 cursor-pointer"
                       style={{
                         maskImage: `url(${item.icon})`,
                         maskRepeat: "no-repeat",

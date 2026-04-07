@@ -14,6 +14,7 @@ export default function LocaleSwitcher() {
   const [isPending, startTransition] = useTransition();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
 
   const languages = [
     { code: "en", flag: "/icons/flags/flag-uk.svg", label: "English" },
@@ -22,6 +23,8 @@ export default function LocaleSwitcher() {
   ];
 
   const currentLang = languages.find((l) => l.code === locale) || languages[0];
+
+  const toggleDropdown = () => setIsOpen(!isOpen);
 
   const onSelectChange = (nextLocale: string) => {
     if (nextLocale === locale) return;
@@ -32,14 +35,24 @@ export default function LocaleSwitcher() {
     });
   };
 
+  const initialScrollY = useRef(0);
+
   /**
-   * Close dropdown on click outside or Escape key
+   * Close dropdown on click outside, Escape key, or scroll
    */
   useEffect(() => {
+    if (!isOpen) return;
+
+    // Capture scroll position when opened
+    initialScrollY.current = window.scrollY;
+
     const handleClickOutside = (event: MouseEvent) => {
       if (
+        isOpen &&
         dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
+        !dropdownRef.current.contains(event.target as Node) &&
+        triggerRef.current &&
+        !triggerRef.current.contains(event.target as Node)
       ) {
         setIsOpen(false);
       }
@@ -49,22 +62,30 @@ export default function LocaleSwitcher() {
       if (event.key === "Escape") setIsOpen(false);
     };
 
-    if (isOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-      window.addEventListener("keydown", handleEsc);
-    }
+    const handleScroll = () => {
+      const scrollDiff = Math.abs(window.scrollY - initialScrollY.current);
+      if (scrollDiff > 60) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    window.addEventListener("keydown", handleEsc);
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
       window.removeEventListener("keydown", handleEsc);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [isOpen]);
 
   return (
-    <div className="relative" ref={dropdownRef}>
+    <div className="relative">
       {/* Current Selection Toggle */}
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        ref={triggerRef}
+        onClick={toggleDropdown}
         disabled={isPending}
         className={`cursor-pointer flex items-center transition-all hover:scale-110 active:scale-95 ${isPending ? "opacity-50" : ""}`}
       >
@@ -80,8 +101,9 @@ export default function LocaleSwitcher() {
 
       {/* Language Options Dropdown */}
       <div
+        ref={dropdownRef}
         className={`
-          absolute top-full mt-4 w-44 overflow-hidden rounded-2xl border border-border bg-surface/95 shadow-xl backdrop-blur-2xl z-20 transition-all duration-300 ease-out right-0 sm:right-auto sm:left-1/2 sm:-translate-x-1/2
+          absolute top-full right-0 sm:right-auto sm:left-1/2 sm:-translate-x-1/2 mt-4 w-44 overflow-hidden rounded-2xl border border-border bg-surface/95 shadow-xl backdrop-blur-2xl z-50 transition-all duration-300 ease-out
           
           ${
             isOpen

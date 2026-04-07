@@ -8,7 +8,7 @@ import { useTranslations } from "next-intl";
 const BAR_ITEMS = [
   {
     key: "item1",
-    image: "/images/dine/craft-beer-brand-1.webp",
+    image: "/images/dine/craft-beer-1-brand.webp",
     gallery: [
       "/images/dine/craft-beer-1-001.webp",
       "/images/dine/craft-beer-1-002.webp",
@@ -17,7 +17,7 @@ const BAR_ITEMS = [
   },
   {
     key: "item2",
-    image: "/images/dine/craft-beer-brand-2.webp",
+    image: "/images/dine/craft-beer-2-brand.webp",
     gallery: [
       "/images/dine/craft-beer-2-001.webp",
       "/images/dine/craft-beer-2-002.webp",
@@ -26,7 +26,7 @@ const BAR_ITEMS = [
   },
   {
     key: "item3",
-    image: "/images/dine/craft-beer-brand-3.webp",
+    image: "/images/dine/craft-beer-3-brand.webp",
     gallery: [
       "/images/dine/craft-beer-3-001.webp",
       "/images/dine/craft-beer-3-002.webp",
@@ -35,7 +35,7 @@ const BAR_ITEMS = [
   },
   {
     key: "item4",
-    image: "/images/dine/craft-beer-brand-1.webp",
+    image: "/images/dine/craft-beer-1-brand.webp",
     gallery: [
       "/images/dine/craft-beer-1-001.webp",
       "/images/dine/craft-beer-1-002.webp",

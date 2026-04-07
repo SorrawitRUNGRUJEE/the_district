@@ -25,12 +25,19 @@ export const GALLERY_CONTENT: GalleryGroup[] = [
     images: [
       {
         src: "/images/rooms/district-a/district-a-001.webp",
+        // TODO: Remove description in the future
+        description:
+          "Experience the absolute gold standard in urban travel with our meticulously crafted premium dormitory bunks, where every single detail has been thoughtfully engineered to provide an unparalleled blend of absolute privacy, sophisticated modern style, and deep restorative comfort for the most discerning global travelers who seek a peaceful and high-quality sanctuary in the very heart of the bustling city.",
       },
       {
         src: "/images/rooms/district-a/district-a-002.webp",
+        // TODO: Remove description in the future
+        description: "Modern vibes, cozy loft stay.",
       },
       {
         src: "/images/rooms/district-a/district-a-003.webp",
+        // TODO: Remove description in the future
+        description: "Premium comfort, tailored relaxation.",
       },
     ],
   },
@@ -49,8 +56,22 @@ export const GALLERY_CONTENT: GalleryGroup[] = [
     id: "dine-vibe-1",
     images: [
       {
-        src: "/images/dine/cocktail.jpg",
-        description: "Crafted Moments at The Bar",
+        src: "/images/dine/craft-beer-1-brand.webp",
+      },
+      {
+        src: "/images/dine/craft-beer-1-001.webp",
+      },
+      {
+        src: "/images/dine/craft-beer-1-002.webp",
+      },
+      {
+        src: "/images/dine/craft-beer-1-003.webp",
+      },
+      {
+        src: "/images/dine/craft-beer-2-brand.webp",
+      },
+      {
+        src: "/images/dine/craft-beer-2-001.webp",
       },
     ],
   },
@@ -292,8 +313,22 @@ export const GALLERY_CONTENT: GalleryGroup[] = [
     id: "dine-vibe-2",
     images: [
       {
-        src: "/images/dine/steak.jpg",
-        description: "Savory Flavors at The Restaurant",
+        src: "/images/dine/craft-beer-2-002.webp",
+      },
+      {
+        src: "/images/dine/craft-beer-2-003.webp",
+      },
+      {
+        src: "/images/dine/craft-beer-3-brand.webp",
+      },
+      {
+        src: "/images/dine/craft-beer-3-001.webp",
+      },
+      {
+        src: "/images/dine/craft-beer-3-002.webp",
+      },
+      {
+        src: "/images/dine/craft-beer-3-003.webp",
       },
     ],
   },
@@ -337,7 +372,6 @@ export const GALLERY_CONTENT: GalleryGroup[] = [
     ],
   },
   {
-    // TODO - เปลี่ยนรูป ตอนนี้ใส่ๆไว้ก่อน
     id: "the-district-signature",
     images: [
       {
