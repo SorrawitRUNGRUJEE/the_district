@@ -7,9 +7,8 @@ import Lightbox, {
   isImageSlide,
   SlideImage,
   useLightboxProps,
+  useLightboxState,
 } from "yet-another-react-lightbox";
-import Captions from "yet-another-react-lightbox/plugins/captions";
-import "yet-another-react-lightbox/plugins/captions.css";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
@@ -40,7 +39,7 @@ function NextJsImage({
       ? rect.width
       : Math.min(
           rect.width,
-          (rect.height / (slide.height || 1080)) * (slide.width || 1920),
+          (rect.height / (slide.height || 2160)) * (slide.width || 3840),
         );
 
   const height =
@@ -48,14 +47,11 @@ function NextJsImage({
       ? rect.height
       : Math.min(
           rect.height,
-          (rect.width / (slide.width || 1920)) * (slide.height || 1080),
+          (rect.width / (slide.width || 3840)) * (slide.height || 2160),
         );
 
   return (
-    <div
-      style={{ position: "relative", width, height }}
-      className="overflow-hidden rounded-xl shadow-2xl"
-    >
+    <div style={{ position: "relative", width, height }} className="shadow-2xl">
       <Image
         fill
         alt={slide.alt || "Gallery Image"}
@@ -66,6 +62,36 @@ function NextJsImage({
         sizes={`${Math.ceil((width / (typeof window !== "undefined" ? window.innerWidth : 1920)) * 100)}vw`}
         unoptimized
       />
+    </div>
+  );
+}
+
+/**
+ * Custom Floating Captions Overlay
+ * Replaces the built-in yarl__captions plugin to get rid of the "black bar".
+ */
+function CustomCaptions() {
+  const { slides, currentIndex } = useLightboxState();
+  const slide = slides[currentIndex] as any; // Cast as any because slide contains custom fields
+
+  if (!slide?.groupLabel && !slide?.description) return null;
+
+  return (
+    <div className="absolute bottom-[100px] md:bottom-[120px] right-4 md:right-8 z-50 flex flex-col items-end gap-1.5 pointer-events-none select-none max-w-[280px] md:max-w-md">
+      {slide.groupLabel && (
+        <div className="bg-black/40 backdrop-blur-md px-3 py-1 rounded-sm border-r-2 border-brand shadow-xl">
+          <span className="text-brand font-black italic tracking-[0.2em] uppercase text-[10px] md:text-sm drop-shadow-md">
+            {slide.groupLabel}
+          </span>
+        </div>
+      )}
+      {slide.description && (
+        <div className="bg-black/30 backdrop-blur-sm px-3 py-1.5 rounded-sm shadow-lg text-right">
+          <span className="text-white/80 text-[8px] md:text-[10px] font-bold tracking-widest uppercase italic leading-relaxed">
+            {slide.description}
+          </span>
+        </div>
+      )}
     </div>
   );
 }
@@ -86,16 +112,10 @@ export default function GalleryLightbox({
   // Transform GalleryImage to yet-another-react-lightbox Slide format
   const formattedSlides = slides.map((img) => ({
     src: img.src,
-    title: img.groupLabel ? (
-      <span className="text-brand font-black italic tracking-tighter uppercase text-lg md:text-2xl drop-shadow-sm">
-        {img.groupLabel}
-      </span>
-    ) : undefined,
-    description: img.description ? (
-      <span className="text-white/40 text-[10px] md:text-xs font-bold tracking-[0.15em] uppercase italic">
-        {img.description}
-      </span>
-    ) : undefined,
+    width: 3840,
+    height: 2560,
+    groupLabel: img.groupLabel,
+    description: img.description,
   }));
 
   return (
@@ -104,18 +124,17 @@ export default function GalleryLightbox({
       close={close}
       index={initialIndex}
       slides={formattedSlides}
-      render={{ slide: NextJsImage }}
-      plugins={[Zoom, Thumbnails, Captions]}
+      render={{
+        slide: NextJsImage,
+        controls: () => <CustomCaptions />,
+      }}
+      plugins={[Zoom, Thumbnails]}
       carousel={{
         finite: false,
         preload: 3,
       }}
-      captions={{
-        showToggle: false,
-        descriptionMaxLines: 1,
-      }}
       zoom={{
-        maxZoomPixelRatio: 3,
+        maxZoomPixelRatio: 5,
         scrollToZoom: true,
       }}
       thumbnails={{
@@ -127,16 +146,7 @@ export default function GalleryLightbox({
         padding: 4,
       }}
       styles={{
-        container: { backgroundColor: "rgba(0, 0, 0, 0.9)" },
-        captionsTitle: {
-          textAlign: "right",
-          paddingRight: "2rem",
-          paddingBottom: "1rem",
-        },
-        captionsDescription: {
-          textAlign: "right",
-          paddingRight: "2rem",
-        },
+        container: { backgroundColor: "rgba(0, 0, 0, 0.95)" },
       }}
       // Premium custom UI classes
       className="gallery-lightbox-premium"

@@ -104,7 +104,7 @@ export default function FloatingMessenger() {
 
       <div
         ref={containerRef}
-        className="fixed bottom-6 right-6 z-50 flex flex-col items-end"
+        className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 flex flex-col items-end"
       >
         <AnimatePresence>
           {isOpen && (
