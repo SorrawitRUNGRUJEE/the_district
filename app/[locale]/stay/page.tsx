@@ -7,13 +7,13 @@ import {
   STAY_PRIVATE_ROOMS,
   StayRoom,
 } from "@/components/stay/stay-data";
+import BookNowButton from "@/components/ui/BookNowButton";
 import ImageCarousel from "@/components/ui/ImageCarousel";
 import { useLightbox } from "@/components/ui/LightboxProvider";
 import { LAYOUT_CONFIG } from "@/lib/constants";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
-
 const ROOM_KEY_MAP: Record<string, string> = {
   "district-a": "districtA",
   "district-b": "districtB",
@@ -367,6 +367,7 @@ function RoomBlock({ room }: { room: StayRoom }) {
           <p className="text-sm md:text-base text-foreground/70 leading-relaxed max-w-md">
             {t(`${roomKey}.description`)}
           </p>
+          <BookNowButton className="mt-8" />
         </div>
       </section>
 

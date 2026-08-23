@@ -14,7 +14,8 @@
     "dine": "Dine",
     "neighbourhood": "Neighbourhood",
     "contact": "Contact",
-    "privacy": "Privacy Policy"
+    "privacy": "Privacy Policy",
+    "bookNow": "Book Now"
   },
   "FloatingMessenger": {
     "tagline": "Chat with us!",
